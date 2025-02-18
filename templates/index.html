@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allora - Header</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"rel="stylesheet"
+/> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <!-- First Header -->
+    <header class="header-bar">
+        <div class="container">
+            <div class="header-links">
+                <a href="#"><i class="fa fa-mobile-alt"></i> Get App</a>
+                <span class="divider">|</span>
+                <a href="#"><i class="fa fa-map-marker-alt"></i> Store & Events</a>
+                <span class="divider">|</span>
+                <a href="#"><i class="fa fa-gift"></i> Gift Card</a>
+                <span class="divider">|</span>
+                <a href="#"><i class="fa fa-question-circle"></i> Help</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Second Header -->
+    <header class="second-header">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <h1>Allora</h1>
+            </div>
+
+            <!-- Login Popup -->
+<div id="signin-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Login / Create an Account</h2>
+        <a href="{{ url_for('sign_in_mobile') }}" class="no-underline">
+        <button class="auth-btn">
+            Sign in with Mobile
+            <span class="arrow">&#8594;</span>
+        </button>
+        </a>
+        <button class="auth-btn">
+            <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo"> 
+            Sign in with Google 
+            <span class="arrow">&#8594;</span>
+        </button>
+    </div>
+</div>
+
+
+            <!-- Navigation Links -->
+            <nav class="nav-links">
+                <a href="/categories">Categories</a>
+                <a href="#">Brands</a>
+                <a href="#">Luxe</a>
+                <a href="#">Beauty Advice</a>
+            </nav>
+
+            <!-- Search Box, Sign In, and Cart -->
+            <!-- <div class="header-right"> -->
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search for Allora">
+                    <i class="fas fa-camera lens-icon" id="image-capture"></i>
+                    <i class="fas fa-microphone voice-icon" id="voice-search"></i>
+                </div>
+                <!-- <div class="search-box">
+                    <input type="text" placeholder="Search for Allora" />
+                    <button><i class="fa fa-search"></i></button>
+                </div> -->
+                <!-- QR Scanner Icon -->
+                <i class="fas fa-qrcode qr-icon" id="qr-scanner"></i>
+                <button id="signin-btn" class="sign-in-btn">Sign In</button>
+                <a href="#" class="cart-icon"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </header>
+    <!-- Third Header -->
+<header class="third-header">
+    <div class="container">
+        <nav class="nav-menu">
+            <div class="dropdown">
+                <a href="#" class="nav-link">Makeup</a>
+                <div class="dropdown-menu">
+                    <a href="#">Lipsticks</a>
+                    <a href="#">Foundations</a>
+                    <a href="#">Mascaras</a>
+                    <a href="#">Eyeliners</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Skin</a>
+                <div class="dropdown-menu">
+                    <a href="#">Cleansers</a>
+                    <a href="#">Moisturizers</a>
+                    <a href="#">Serums</a>
+                    <a href="#">Sunscreens</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Hair</a>
+                <div class="dropdown-menu">
+                    <a href="#">Shampoos</a>
+                    <a href="#">Conditioners</a>
+                    <a href="#">Hair Masks</a>
+                    <a href="#">Hair Oils</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Appliances</a>
+                <div class="dropdown-menu">
+                    <a href="#">Hair Dryers</a>
+                    <a href="#">Straighteners</a>
+                    <a href="#">Curlers</a>
+                    <a href="#">Trimmers</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Bath & Body</a>
+                <div class="dropdown-menu">
+                    <a href="#">Body Wash</a>
+                    <a href="#">Body Lotions</a>
+                    <a href="#">Scrubs</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Natural</a>
+                <div class="dropdown-menu">
+                    <a href="#">Organic Products</a>
+                    <a href="#">Ayurvedic</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Mom & Baby</a>
+                <div class="dropdown-menu">
+                    <a href="#">Baby Lotions</a>
+                    <a href="#">Diapers</a>
+                    <a href="#">Baby Oil</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Health & Wellness</a>
+                <div class="dropdown-menu">
+                    <a href="#">Supplements</a>
+                    <a href="#">Proteins</a>
+                    <a href="#">Vitamins</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Fragrance</a>
+                <div class="dropdown-menu">
+                    <a href="#">Perfumes</a>
+                    <a href="#">Deodorants</a>
+                    <a href="#">Body Mists</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Men</a>
+                <div class="dropdown-menu">
+                    <a href="#">Shaving Cream</a>
+                    <a href="#">Beard Oils</a>
+                    <a href="#">Trimmers</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Lingerie & Accessories</a>
+                <div class="dropdown-menu">
+                    <a href="#">Lingerie</a>
+                    <a href="#">Accessories</a>
+                    <a href="#">Nightwear</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+</header>
+<!-- Animated Video Section Below Third Header -->
+<div class="animated-video-banner">
+    <video autoplay loop muted playsinline>
+        <source src="{{ url_for('static', filename='videos/allora.mp4') }}" type="video/mp4">
+    </video>
+</div>
+
+
+<!-- <div class="carousel">
+    <div class="slides">
+        <img src="{{ url_for('static', filename='images/banner8.jpg') }}" alt="Photo 1">
+        <img src="{{ url_for('static', filename='images/banner5.jpg') }}" alt="Photo 2">
+        <img src="{{ url_for('static', filename='images/banner6.jpg') }}" alt="Photo 3">
+        <img src="{{ url_for('static', filename='images/banner7.jpg') }}" alt="Photo 4">
+        <img src="{{ url_for('static', filename='images/banner4.jpg') }}" alt="Photo 5">
+        <img src="{{ url_for('static', filename='images/banner9.jpg') }}" alt="Photo 6">
+        <img src="{{ url_for('static', filename='images/banner10.jpg') }}" alt="Photo 7">
+        <img src="{{ url_for('static', filename='images/banner1.jpg') }}" alt="Photo 8">
+        <img src="{{ url_for('static', filename='images/banner2.jpg') }}" alt="Photo 9">
+        <img src="{{ url_for('static', filename='images/banner3.jpg') }}" alt="Photo 10">
+    </div>
+    <div class="dots">
+        {% for i in range(10) %}
+        <span class="dot {% if i == 0 %}active{% endif %}"></span>
+        {% endfor %}
+    </div>
+</div> -->
+<!-- Bank Deals Banner Slider -->
+<div class="bank-deals-slider">
+    <div class="slides-container">
+        <div class="slide active"><img src="{{ url_for('static', filename='images/bankoff.jpg') }}" alt="Bank Deal 1"></div>
+        <div class="slide"><img src="{{ url_for('static', filename='images/bankoff2.jpg') }}" alt="Bank Deal 2"></div>
+    </div>
+    <button class="prev-btn">&#10094;</button>
+    <button class="next-btn">&#10095;</button>
+    <div class="indicator-container">
+        <div class="indicator active"></div>
+        <div class="indicator"></div>
+    </div>
+</div>
+<!-- Category Slider (Makeup, Skincare, Haircare, Bath & Body, Luxe) -->
+<div class="category-slider">
+    <button class="category-prev-btn">&#10094;</button>
+    <div class="category-slides-container">
+        <div class="category-slide"><img src="{{ url_for('static', filename='images/makeup.jpg') }}" alt="Makeup"></div>
+        <div class="category-slide"><img src="{{ url_for('static', filename='images/skincare.jpg') }}" alt="Skincare"></div>
+        <div class="category-slide"><img src="{{ url_for('static', filename='images/haircare.jpg') }}" alt="Haircare"></div>
+        <div class="category-slide"><img src="{{ url_for('static', filename='images/bath&body.jpg') }}" alt="Bath & Body"></div>
+        <div class="category-slide"><img src="{{ url_for('static', filename='images/luxe.jpg') }}" alt="Luxe"></div>
+        <div class="category-slide"><img src="{{ url_for('static', filename='images/fragrances.jpg') }}" alt="Fragrances"></div>
+    </div>
+    <button class="category-next-btn">&#10095;</button>
+</div>
+<!-- Special Offers Slider -->
+<div class="special-offers-section">
+    <h2 class="special-offers-title">Special Offers</h2>
+    <div class="special-offers-slider">
+        <button class="special-prev-btn">&#10094;</button>
+        <div class="special-slides-container">
+            <div class="special-slide"><img src="{{ url_for('static', filename='images/specialoffer1.avif') }}" alt="Offer 1"></div>
+            <div class="special-slide"><img src="{{ url_for('static', filename='images/specialoffer2.jpg') }}" alt="Offer 2"></div>
+            <div class="special-slide"><img src="{{ url_for('static', filename='images/specialoffer3.jpg') }}" alt="Offer 3"></div>
+            <div class="special-slide"><img src="{{ url_for('static', filename='images/specialoffer4.jpg') }}" alt="Offer 4"></div>
+        </div>
+        <button class="special-next-btn">&#10095;</button>
+    </div>
+</div>
+<div class="full-width-gif">
+    <img src="{{ url_for('static', filename='images/giftstore.gif') }}" alt="Promotional GIF">
+</div>
+<div class="container my-5 custom-carousel-container">
+    <div class="text-center mb-3">
+        <h2 class="celebrate-heading">Celebrate Love</h2>
+    </div>
+
+    <div id="customCarousel" class="carousel slide" >
+        <div class="carousel-inner">
+            <!-- First Slide (3 Images) -->
+            <div class="carousel-item active" style="margin-top: -20px;">
+                <div class="row justify-content-center"> <!-- Center Images -->
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='images/love&savings1.png') }}" class="d-block w-100" alt="Image 1">
+                        <div class="custom-caption">
+                            <div class="caption-bold">Min 45% Off</div>
+                            <div class="caption-normal">Bodycare Essentials</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='images/love&savings2.png') }}" class="d-block w-100" alt="Image 2">
+                        <div class="custom-caption">
+                            <div class="caption-bold">Upto 50% Off</div>
+                            <div class="caption-normal">Must-have Fragrances</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='images/love&savings3.png') }}" class="d-block w-100" alt="Image 3">
+                        <div class="custom-caption">
+                            <div class="caption-bold">Flat 35% Off</div>
+                            <div class="caption-normal">Lip Makeup</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Slide (3 Images) -->
+            <div class="carousel-item" style="margin-top: -20px;">
+                <div class="row justify-content-center"> <!-- Center Images -->
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='images/love&savings4.png') }}" class="d-block w-100" alt="Image 4">
+                        <div class="custom-caption">
+                            <div class="caption-bold">Upto 50% Off</div>
+                            <div class="caption-normal">Hydration Offers</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='images/love&savings5.png') }}" class="d-block w-100" alt="Image 5">
+                        <div class="custom-caption">
+                            <div class="caption-bold">Upto 60% Off</div>
+                            <div class="caption-normal">V-Day Stylers</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='images/love&savings6.png') }}" class="d-block w-100" alt="Image 6">
+                        <div class="custom-caption">
+                            <div class="caption-bold">Upto 40% Off</div>
+                            <div class="caption-normal">Luxury Haircare</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+ <!-- Left Arrow -->
+ <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.354 1.354a.5.5 0 0 1 0 .708L5.707 8l5.647 5.938a.5.5 0 1 1-.708.708l-6-6.313a.5.5 0 0 1 0-.708l6-6.271a.5.5 0 0 1 .708 0z"/></svg>
+</button>
+
+<!-- Right Arrow -->
+<button class="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.354a.5.5 0 0 1 .708 0l6 6.271a.5.5 0 0 1 0 .708l-6 6.313a.5.5 0 1 1-.708-.708L10.293 8 4.646 2.062a.5.5 0 0 1 0-.708z"/></svg>
+</button>
+      
+</div>
+</div>
+<div class="deals-section">
+    <h2 class="deal-heading">Hard-To Resist Deals</h2>
+  
+    <!-- First Row -->
+    <div class="deal-row">
+      <div class="deal-item">
+        <img src="{{ url_for('static', filename='images/deal1.png') }}"alt="Deal 1">
+        <div class="deal-title">Up To 40% Off</div>
+        <div class="deal-description">Free gifts worth ₹1000+</div>
+      </div>
+      <div class="deal-item">
+        <img src="{{ url_for('static', filename='images/deal2.png') }}" alt="Deal 2">
+        <div class="deal-title">Flat 15% Off</div>
+        <div class="deal-description">On Bestsellers</div>
+      </div>
+      <div class="deal-item">
+        <img src="{{ url_for('static', filename='images/deal3.png') }}" alt="Deal 3">
+        <div class="deal-title">Up To 40% Off</div>
+        <div class="deal-description">Extra 10% Off On ₹699</div>
+      </div>
+      <div class="deal-item">
+        <img src="{{ url_for('static', filename='images/deal4.png') }}"alt="Deal 4">
+        <div class="deal-title">Flat 25% Off</div>
+        <div class="deal-description">Free Mini On ₹2500</div>
+      </div>
+      <div class="deal-item">
+        <img src="{{ url_for('static', filename='images/deal5.png') }}" alt="Deal 5">
+        <div class="deal-title">Up To 35% Off</div>
+        <div class="deal-description">Free BB Cream on ₹499+</div>
+      </div>
+    </div>
+  
+    <!-- Second Row -->
+    <div class="deal-row">
+      <div class="deal-item">
+        <img src="{{ url_for('static', filename='images/deal6.png') }}"alt="Deal 6">
+        <div class="deal-title">Up To 40% Off</div>
+        <div class="deal-description">Extra 10% Off On ₹599</div>
+      </div>
+      <div class="deal-item">
+        <img src="{{ url_for('static', filename='images/deal7.png') }}"alt="Deal 7">
+        <div class="deal-title">Up To 40% Off</div>
+        <div class="deal-description">Extra 10% Off On ₹599</div>
+      </div>
+      <div class="deal-item">
+        <img src="{{ url_for('static', filename='images/deal8.png') }}"alt="Deal 8">
+        <div class="deal-title">Up To 30% Off</div>
+        <div class="deal-description">On Entire Range</Em></div>
+      </div>
+      <div class="deal-item">
+        <img src="{{ url_for('static', filename='images/deal9.png') }}"alt="Deal 9">
+        <div class="deal-title">Up To 30% Off</div>
+        <div class="deal-description">On Makeup Must-Haves!</div>
+      </div>
+      <div class="deal-item">
+        <img src="{{ url_for('static', filename='images/deal10.png') }}"alt="Deal 10">
+        <div class="deal-title">Min. 10% Off</div>
+        <div class="deal-description">Free gifts on all orders</div>
+      </div>
+    </div>
+  
+    <!-- Third Row -->
+    <div class="deal-row">
+      <div class="deal-item">
+        <img src="{{ url_for('static', filename='images/deal11.png') }}"alt="Deal 11">
+        <div class="deal-title">Up To 20% Off</div>
+        <div class="deal-description">Free gift on ₹1259</div>
+      </div>
+      <div class="deal-item">
+        <img src="{{ url_for('static', filename='images/deal12.png') }}"alt="Deal 12">
+        <div class="deal-title">Gifts On All Orders</div>
+        <div class="deal-description">Buy 2 Get A Shampoo</div>
+      </div>
+      <div class="deal-item">
+        <img src="{{ url_for('static', filename='images/deal13.png') }}"alt="Deal 13">
+        <div class="deal-title">Up To 40% Off</div>
+        <div class="deal-description">Extra 10% Off On ₹599</div>
+      </div>
+      <div class="deal-item">
+        <img src="{{ url_for('static', filename='images/deal14.png') }}"alt="Deal 14">
+        <div class="deal-title">Up To 50% Off</div>
+        <div class="deal-description">Free gift on ₹799</div>
+      </div>
+      <div class="deal-item">
+        <img src="{{ url_for('static', filename='images/deal15.png') }}"alt="Deal 15">
+        <div class="deal-title">Up To 30% Off</div>
+        <div class="deal-description">Buy 2 Get Extra 5% Off</div>
+      </div>
+    </div>
+  
+    <!-- Fourth Row -->
+    <div class="deal-row">
+      <div class="deal-item">
+        <img src="{{ url_for('static', filename='images/deal16.png') }}"alt="Deal 16">
+        <div class="deal-title">Up To 30% Off</div>
+        <div class="deal-description">Cleanser On ₹399</div>
+      </div>
+      <div class="deal-item">
+        <img src="{{ url_for('static', filename='images/deal17.png') }}"alt="Deal 17">
+        <div class="deal-title">Min. 25% Off</div>
+        <div class="deal-description">Free gift On ₹329+</div>
+      </div>
+      <div class="deal-item">
+        <img src="{{ url_for('static', filename='images/deal18.png') }}"alt="Deal 18">
+        <div class="deal-title">Up To 30% Off</div>
+        <div class="deal-description">Extra 10% Off On ₹499</div>
+      </div>
+      <div class="deal-item">
+        <img src="{{ url_for('static', filename='images/deal19.png') }}"alt="Deal 19">
+        <div class="deal-title">Up To 35% Off</div>
+        <div class="deal-description">Free gifts on ₹499</div>
+      </div>
+      <div class="deal-item">
+        <img src="{{ url_for('static', filename='images/deal20.png') }}"alt="Deal 20">
+        <div class="deal-title">Up To 50% Off</div>
+        <div class="deal-description">Extra 10% Off On ₹699</div>
+      </div>
+    </div>
+  <!-- Animated new arrivals -->
+<div class="animated-new-arrivals">
+    <video autoplay loop muted playsinline>
+        <source src="{{ url_for('static', filename='videos/newarrivalsvideo.mp4') }}" type="video/mp4">
+    </video>
+</div>
+</div>
+<!-- Beauty to fall for section -->
+<section class="beauty-section">
+    <h1 class="beauty-heading">Beauty To Fall For</h1>
+    <div class="image-container">
+        <div class="image-item">
+            <img src="{{ url_for('static', filename='images/beauty1.png') }}" alt="Beauty 1" class="beauty-image">
+            <p class="image-text">Makeup</p>
+        </div>
+        <div class="image-item">
+            <img src="{{ url_for('static', filename='images/beauty2.png') }}" alt="Beauty 2" class="beauty-image">
+            <p class="image-text">Skincare</p>
+        </div>
+        <div class="image-item">
+            <img src="{{ url_for('static', filename='images/beauty3.png') }}" alt="Beauty 3" class="beauty-image">
+            <p class="image-text">Haircare</p>
+        </div>
+    </div>
+</section>
+<!-- Heat stopping deals -->
+<div class="heart-stopping-deals">
+    <h2 class="heartdeal-heading">Heart Stopping Deals</h2>
+    <div class="heartdeal-row">
+      <div class="heartdeal-item">
+        <img src="{{ url_for('static', filename='images/heartdeal1.png') }}"alt="HeartDeal 1">
+        <div class="Heartdeal-title">Buy 2 Get 1 Free</div>
+        <div class="Heartdeal-description">Flat 15% Off</div>
+      </div>
+      <div class="heartdeal-item">
+        <img src="{{ url_for('static', filename='images/heartdeal2.png') }}"alt="HeartDeal 2">
+        <div class="Heartdeal-title">Up To 20% Off</div>
+        <div class="Heartdeal-description">Free gifts on ₹599+</div>
+      </div>
+      <div class="heartdeal-item">
+        <img src="{{ url_for('static', filename='images/heartdeal3.png') }}"alt="HeartDeal 3">
+        <div class="Heartdeal-title">Min 20% Off</div>
+        <div class="Heartdeal-description">Buy 2 Get Extra 10% Off</div>
+      </div>
+      <div class="heartdeal-item">
+        <img src="{{ url_for('static', filename='images/heartdeal4.png') }}"alt="HeartDeal 4">
+        <div class="Heartdeal-title">Min 20% Off</div>
+        <div class="Heartdeal-description">Free pimple patch on ₹1799+</div>
+      </div>
+      <div class="heartdeal-item">
+        <img src="{{ url_for('static', filename='images/heartdeal5.png') }}"alt="HeartDeal 5">
+        <div class="Heartdeal-title">Up To 50% Off</div>
+        <div class="Heartdeal-description">Free gift on ₹399+</div>
+      </div>
+      <div class="heartdeal-item">
+        <img src="{{ url_for('static', filename='images/heartdeal6.png') }}"alt="HeartDeal 6">
+        <div class="Heartdeal-title">Min 30% Off</div>
+        <div class="Heartdeal-description">Free gift on ₹599+</div>
+      </div>
+    </div>
+    </div>
+  <!-- New Section with White Background -->
+<div class="white-background-section">
+    <h2 class="white-section-heading">Crush-Worthy Beauty</h2>
+    <div class="white-section-content">
+        <div class="white-section-item">
+            <img src="{{ url_for('static', filename='images/crushworthy.png') }}" alt="Offer 1">
+            <div class="white-section-text">Bath & Body</div>
+        </div>
+        <div class="white-section-item">
+            <img src="{{ url_for('static', filename='images/crushworthy2.png') }}" alt="Offer 2">
+            <div class="white-section-text">Appliances</div>
+        </div>
+        <div class="white-section-item">
+            <img src="{{ url_for('static', filename='images/crushworthy3.png') }}" alt="Offer 3">
+            <div class="white-section-text">Fragrances</div>
+        </div>
+    </div>
+</div>
+<div class="full-width-allorastore">
+    <img src="{{ url_for('static', filename='images/visitallora.jpeg') }}" alt="Visit Allora Store">
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- <script>
+    let currentIndex = 0; // Track the current slide
+    const slides = document.querySelector('.slides');
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(index) {
+        const slideWidth = slides.clientWidth / 10; // Adjust for 10 images
+        slides.style.transform = `translateX(-${index * slideWidth}px)`;
+
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % 10; // Loop back to the first slide
+        showSlide(currentIndex);
+    }
+
+    // Auto-slide every 3 seconds
+    setInterval(nextSlide, 3000);
+
+    // Add click event for dots (optional)
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            currentIndex = i;
+            showSlide(currentIndex);
+        });
+    });
+
+    // Initialize the first slide
+    showSlide(0);
+</script> -->
+<script>
+    // Open the modal
+    document.getElementById("signin-btn").addEventListener("click", function () {
+        document.getElementById("signin-modal").style.display = "block";
+    });
+
+    // Close the modal
+    document.querySelector(".close-btn").addEventListener("click", function () {
+        document.getElementById("signin-modal").style.display = "none";
+    });
+
+    // Close the modal when clicking outside the modal
+    window.addEventListener("click", function (event) {
+        if (event.target === document.getElementById("signin-modal")) {
+            document.getElementById("signin-modal").style.display = "none";
+        }
+    });
+</script>
+<script>
+document.getElementById("voice-search").addEventListener("click", function () {
+    const searchBox = document.querySelector(".search-box input");
+
+    // Check if Speech Recognition API is supported
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    if (!SpeechRecognition) {
+        alert("Your browser does not support voice search.");
+        return;
+    }
+
+    // Create a new instance of Speech Recognition
+    const recognition = new SpeechRecognition();
+
+    recognition.lang = "en-US"; // Language: English
+    recognition.interimResults = false; // Only final results
+    recognition.maxAlternatives = 1; // One possible result
+
+    // Start listening when mic is clicked
+    recognition.start();
+
+    recognition.onstart = function () {
+        console.log("Listening...");
+        searchBox.placeholder = "Listening...";
+    };
+
+    recognition.onresult = function (event) {
+        const transcript = event.results[0][0].transcript; // Get spoken text
+        console.log("You said:", transcript);
+        searchBox.value = transcript; // Write it to the search box
+        searchBox.placeholder = "Search for Allora"; // Reset placeholder
+    };
+
+    recognition.onerror = function (event) {
+        console.error("Error:", event.error);
+        alert("Voice search error: " + event.error);
+        searchBox.placeholder = "Search for Allora";
+    };
+
+    recognition.onend = function () {
+        console.log("Stopped listening.");
+        searchBox.placeholder = "Search for Allora"; // Reset placeholder
+    };
+});
+
+</script>
+<script>document.getElementById("image-capture").addEventListener("click", function () {
+    const fileInput = document.createElement("input");
+    fileInput.type = "file";
+    fileInput.accept = "image/*";
+    fileInput.onchange = async (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const formData = new FormData();
+            formData.append("image", file);
+
+            const response = await fetch("/upload", {
+                method: "POST",
+                body: formData,
+            });
+
+            const result = await response.json();
+            if (response.ok) {
+                alert(`Image uploaded successfully! Filename: ${result.filename}`);
+            } else {
+                alert("Error: " + result.error);
+            }
+        }
+    };
+    fileInput.click();
+});
+</script>
+<script>document.addEventListener("DOMContentLoaded", function () {
+    const placeholderTexts = [
+        "Search for Allora",
+        "Search for Makeup",
+        "Search for Haircare",
+        "Search for Skincare",
+        "Search for Appliances",
+        "Search for Bath & Body",
+        "Search for Natural",
+        "Search for Mom & Baby",
+        "Search for Men",
+        "Search for Health & Awareness",
+        "Search for Lingerie & Accessories",
+        "Search for Fragrance",
+    ];
+
+    let currentIndex = 0;
+    const searchInput = document.getElementById("search-input");
+
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % placeholderTexts.length; // Cycle through the array
+        searchInput.setAttribute("placeholder", placeholderTexts[currentIndex]); // Update placeholder
+    }, 2000);
+});
+</script>
+<script>
+    document.getElementById("qr-scanner").addEventListener("click", function () {
+        alert("QR Scanner functionality is under development!");
+        // Here you can integrate a QR scanner library like Instascan or QRCode.js
+    });
+</script>
+<script>
+    (function() {
+        let bankDealIndex = 0; // Unique variable name
+        const slidesContainer = document.querySelector(".slides-container");
+        const indicators = document.querySelectorAll(".indicator");
+        const totalSlides = 2;
+    
+        function showSlide(index) {
+            slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle("active", i === index);
+            });
+        }
+    
+        document.querySelector(".prev-btn").addEventListener("click", () => {
+            bankDealIndex = (bankDealIndex - 1 + totalSlides) % totalSlides;
+            showSlide(bankDealIndex);
+        });
+    
+        document.querySelector(".next-btn").addEventListener("click", () => {
+            bankDealIndex = (bankDealIndex + 1) % totalSlides;
+            showSlide(bankDealIndex);
+        });
+    
+        setInterval(() => {
+            bankDealIndex = (bankDealIndex + 1) % totalSlides;
+            showSlide(bankDealIndex);
+        }, 3000);
+    })();
+    </script>
+    <script>
+    // Category Slider
+    let categoryCurrentIndex = 0;
+    const categorySlidesContainer = document.querySelector(".category-slides-container");
+    const categoryTotalSlides = document.querySelectorAll(".category-slide").length;
+    const categorySlidesToShow = 5;
+    const categoryTotalGroups = Math.ceil(categoryTotalSlides / categorySlidesToShow);
+    
+    function showCategorySlide(index) {
+        categorySlidesContainer.style.transform = `translateX(-${index * (100 / categorySlidesToShow)}%)`;
+    }
+    
+    document.querySelector(".category-prev-btn").addEventListener("click", () => {
+        categoryCurrentIndex = (categoryCurrentIndex - 1 + categoryTotalGroups) % categoryTotalGroups;
+        showCategorySlide(categoryCurrentIndex);
+    });
+    
+    document.querySelector(".category-next-btn").addEventListener("click", () => {
+        categoryCurrentIndex = (categoryCurrentIndex + 1) % categoryTotalGroups;
+        showCategorySlide(categoryCurrentIndex);
+    });
+    
+    setInterval(() => {
+        categoryCurrentIndex = (categoryCurrentIndex + 1) % categoryTotalGroups;
+        showCategorySlide(categoryCurrentIndex);
+    }, 3000);
+    </script>
+    <script>
+        let specialIndex = 0;
+        const specialSlidesContainer = document.querySelector(".special-slides-container");
+        const specialTotalSlides = document.querySelectorAll(".special-slide").length;
+        
+        function showSpecialSlide(index) {
+            specialSlidesContainer.style.transform = `translateX(-${index * 33.33}%)`;
+        }
+        
+        document.querySelector(".special-prev-btn").addEventListener("click", () => {
+            specialIndex = (specialIndex - 1 + specialTotalSlides) % specialTotalSlides;
+            showSpecialSlide(specialIndex);
+        });
+        
+        document.querySelector(".special-next-btn").addEventListener("click", () => {
+            specialIndex = (specialIndex + 1) % specialTotalSlides;
+            showSpecialSlide(specialIndex);
+        });
+        </script>
+        
+    
+
+</body>
+</html>
