@@ -584,52 +584,69 @@
     });
 </script>
 <script>
-document.getElementById("voice-search").addEventListener("click", function () {
-    const searchBox = document.querySelector(".search-box input");
-
-    // Check if Speech Recognition API is supported
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-
-    if (!SpeechRecognition) {
-        alert("Your browser does not support voice search.");
-        return;
-    }
-
-    // Create a new instance of Speech Recognition
-    const recognition = new SpeechRecognition();
-
-    recognition.lang = "en-US"; // Language: English
-    recognition.interimResults = false; // Only final results
-    recognition.maxAlternatives = 1; // One possible result
-
-    // Start listening when mic is clicked
-    recognition.start();
-
-    recognition.onstart = function () {
-        console.log("Listening...");
-        searchBox.placeholder = "Listening...";
-    };
-
-    recognition.onresult = function (event) {
-        const transcript = event.results[0][0].transcript; // Get spoken text
-        console.log("You said:", transcript);
-        searchBox.value = transcript; // Write it to the search box
-        searchBox.placeholder = "Search for Allora"; // Reset placeholder
-    };
-
-    recognition.onerror = function (event) {
-        console.error("Error:", event.error);
-        alert("Voice search error: " + event.error);
-        searchBox.placeholder = "Search for Allora";
-    };
-
-    recognition.onend = function () {
-        console.log("Stopped listening.");
-        searchBox.placeholder = "Search for Allora"; // Reset placeholder
-    };
-});
-
-</script>
+    document.getElementById("voice-search").addEventListener("click", function () {
+        const searchBox = document.querySelector(".search-box input");
+    
+        // Check if Speech Recognition API is supported
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    
+        if (!SpeechRecognition) {
+            alert("Your browser does not support voice search.");
+            return;
+        }
+    
+        // Create a new instance of Speech Recognition
+        const recognition = new SpeechRecognition();
+    
+        recognition.lang = "en-US"; // Language: English
+        recognition.interimResults = false; // Only final results
+        recognition.maxAlternatives = 1; // One possible result
+    
+        // Start listening when mic is clicked
+        recognition.start();
+    
+        recognition.onstart = function () {
+            console.log("Listening...");
+            searchBox.placeholder = "Listening...";
+        };
+    
+        recognition.onresult = function (event) {
+            const transcript = event.results[0][0].transcript; // Get spoken text
+            console.log("You said:", transcript);
+            searchBox.value = transcript; // Write it to the search box
+            searchBox.placeholder = "Search for Allora"; // Reset placeholder
+    
+            // Send the voice input to the Flask backend
+            fetch('/save_voice_input', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ search_text: transcript }) // Send the voice input
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === "success") {
+                    console.log("Voice input saved successfully!");
+                }
+            })
+            .catch(error => {
+                console.error("Error sending data to the backend:", error);
+            });
+        };
+    
+        recognition.onerror = function (event) {
+            console.error("Error:", event.error);
+            alert("Voice search error: " + event.error);
+            searchBox.placeholder = "Search for Allora";
+        };
+    
+        recognition.onend = function () {
+            console.log("Stopped listening.");
+            searchBox.placeholder = "Search for Allora"; // Reset placeholder
+        };
+    });
+    </script>
 <script>document.getElementById("image-capture").addEventListener("click", function () {
     const fileInput = document.createElement("input");
     fileInput.type = "file";
