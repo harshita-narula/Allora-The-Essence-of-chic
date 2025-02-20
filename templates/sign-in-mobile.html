@@ -120,28 +120,64 @@ function sendOTP() {
         alert("Please enter a valid mobile number.");
         return;
     }
-    alert("OTP sent to " + mobileNumber);
 
-    // Switch to OTP input form
-    document.getElementById("mobile-step").style.display = "none";
-    document.getElementById("otp-step").style.display = "block";
-
-    // Start the timer
-    startTimer();
-
-    // Simulate OTP sent
-    otpSent = true;
+    // Make the AJAX request to Flask to send OTP
+    fetch('/send_otp', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ mobile_number: mobileNumber }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.message === 'OTP generated and saved successfully') {
+            alert('OTP sent to ' + mobileNumber);
+            // Switch to OTP input form
+            document.getElementById("mobile-step").style.display = "none";
+            document.getElementById("otp-step").style.display = "block";
+            // Start the timer
+            startTimer();
+        } else {
+            alert('Error sending OTP: ' + (data.error || 'Unknown error'));
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to send OTP.');
+    });
 }
 
 // Step 2: Verify OTP
 function verifyOTP() {
+    const mobileNumber = document.getElementById("mobile-number").value;
     const otp = document.getElementById("otp").value;
-    if (otp === "1234") { // Placeholder for actual OTP verification
-        alert("OTP Verified Successfully");
-        window.location.href = "home.html"; // Redirect to the home page or dashboard
-    } else {
-        alert("Invalid OTP. Please try again.");
+    if (!otp) {
+        alert("Please enter OTP.");
+        return;
     }
+
+    // Make the AJAX request to Flask to verify OTP
+    fetch('/verify_otp', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ mobile_number: mobileNumber, otp: otp }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.message === 'OTP verified successfully') {
+            alert("OTP Verified Successfully");
+            window.location.href = "/"; // Redirect to the home page or dashboard
+        } else {
+            alert("Invalid OTP. Please try again.");
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to verify OTP.');
+    });
 }
 
 // Resend OTP
@@ -172,7 +208,6 @@ function validateMobileNumber(mobileNumber) {
     const regex = /^[0-9]{10}$/; // Check if the mobile number is exactly 10 digits
     return regex.test(mobileNumber);
 }
-
 </script>
 </body>
 </html>
