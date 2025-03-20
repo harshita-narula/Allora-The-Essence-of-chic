@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allora Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chatbotstyle.css') }}">
+</head>
+<body>
+
+   
+    <div id="chatIcon" onclick="toggleChat()">
+        <img src="{{ url_for('static', filename='images/chatbot.jpg') }}" alt="Chat Icon">
+    </div>
+
+    
+    <div id="chatContainer">
+        <div id="chatHeader">
+            <img src="{{ url_for('static', filename='images/chatbot.jpg') }}" alt="Chat">
+            How may we help you?
+            <button id="closeChat" onclick="toggleChat()">✖</button>
+        </div>
+        <div id="chatBody">Welcome to Allora! How can I assist you?</div>
+        <div id="chatInputContainer">
+            <input type="text" id="chatInput" placeholder="Type a message...">
+            <button id="sendButton">Send</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='chatbotscript.js') }}"></script>
+
+</body>
+</html>

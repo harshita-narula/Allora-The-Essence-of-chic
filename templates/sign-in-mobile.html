@@ -5,22 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In - Mobile</title>
     <style>
-        /* Nykaa Theme Background */
-/* Nykaa Theme Background with Pink Gradient */
-/* Nykaa Theme Background with Pink Gradient */
+        
 body {
-    background: linear-gradient(to bottom, #f7668a, #fea6ba); /* Pink gradient background */
+    background: linear-gradient(to bottom, #f7668a, #fea6ba); 
     background-size: cover;
     background-position: center;
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
-    display: flex; /* Make the body a flex container */
-    justify-content: center; /* Center the box horizontally */
-    align-items: center; /* Center the box vertically */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
-/* Sign-in Box Styling */
+
 .sign-in-box {
     background-color: rgba(255, 255, 255, 0.9);
     width: 400px;
@@ -29,22 +27,22 @@ body {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column; /* Stack the elements vertically */
-    justify-content: center; /* Center the content vertically */
-    align-items: center; /* Center the content horizontally */
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
 }
 
-/* Input Fields */
+
 input[type="text"] {
     width: 100%;
     padding: 10px;
     margin: 15px 0;
     border-radius: 5px;
     border: 1px solid #ccc;
-    text-align: center; /* Center the text inside the input field */
+    text-align: center; 
 }
 
-/* Buttons */
+
 button {
     width: 100%;
     padding: 10px;
@@ -53,7 +51,7 @@ button {
     color: white;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px; /* Adjusted font size */
+    font-size: 16px; 
 }
 
 button:hover {
@@ -61,7 +59,7 @@ button:hover {
 }
 
 
-/* Timer and Resend OTP Styling */
+
 #timer {
     font-size: 14px;
     margin-top: 10px;
@@ -87,23 +85,23 @@ h2 {
     </style>
 </head>
 <body>
-    <!-- Page Background (Nykaa theme) -->
+    
     <div class="background">
-        <!-- Sign-in Box -->
+        
         <div class="sign-in-box">
             <h2>Sign In with Mobile</h2>
 
-            <!-- Step 1: Mobile Number Input -->
+           
             <div id="mobile-step">
                 <input type="text" id="mobile-number" placeholder="Enter your mobile number" required />
                 <button type="button" onclick="sendOTP()">Send OTP</button>
             </div>
 
-            <!-- Step 2: OTP Input and Timer -->
+            
             <div id="otp-step" style="display:none;">
                 <input type="text" id="otp" placeholder="Enter OTP" required />
                 <button type="button" onclick="verifyOTP()">Verify OTP</button>
-                <div id="timer"></div> <!-- Timer display -->
+                <div id="timer"></div> 
                 <button id="resend-otp" type="button" onclick="resendOTP()" style="display:none;">Resend OTP</button>
             </div>
         </div>
@@ -111,9 +109,9 @@ h2 {
 <script>
     let timerInterval;
 let otpSent = false;
-let countdown = 30; // 30-second countdown
+let countdown = 30; 
 
-// Step 1: Send OTP
+
 function sendOTP() {
     const mobileNumber = document.getElementById("mobile-number").value;
     if (!validateMobileNumber(mobileNumber)) {
@@ -121,7 +119,7 @@ function sendOTP() {
         return;
     }
 
-    // Make the AJAX request to Flask to send OTP
+    
     fetch('/send_otp', {
         method: 'POST',
         headers: {
@@ -133,10 +131,10 @@ function sendOTP() {
     .then(data => {
         if (data.message === 'OTP generated and saved successfully') {
             alert('OTP sent to ' + mobileNumber);
-            // Switch to OTP input form
+           
             document.getElementById("mobile-step").style.display = "none";
             document.getElementById("otp-step").style.display = "block";
-            // Start the timer
+            
             startTimer();
         } else {
             alert('Error sending OTP: ' + (data.error || 'Unknown error'));
@@ -148,7 +146,7 @@ function sendOTP() {
     });
 }
 
-// Step 2: Verify OTP
+
 function verifyOTP() {
     const mobileNumber = document.getElementById("mobile-number").value;
     const otp = document.getElementById("otp").value;
@@ -157,7 +155,7 @@ function verifyOTP() {
         return;
     }
 
-    // Make the AJAX request to Flask to verify OTP
+    
     fetch('/verify_otp', {
         method: 'POST',
         headers: {
@@ -169,7 +167,7 @@ function verifyOTP() {
     .then(data => {
         if (data.message === 'OTP verified successfully') {
             alert("OTP Verified Successfully");
-            window.location.href = "/"; // Redirect to the home page or dashboard
+            window.location.href = "/"; 
         } else {
             alert("Invalid OTP. Please try again.");
         }
@@ -180,22 +178,22 @@ function verifyOTP() {
     });
 }
 
-// Resend OTP
+
 function resendOTP() {
     if (countdown <= 0) {
-        // Reset the timer
+        
         countdown = 30;
-        document.getElementById("resend-otp").style.display = "none"; // Hide resend button
+        document.getElementById("resend-otp").style.display = "none"; 
         sendOTP();
     }
 }
 
-// Start the countdown timer
+
 function startTimer() {
     timerInterval = setInterval(function () {
         if (countdown <= 0) {
             clearInterval(timerInterval);
-            document.getElementById("resend-otp").style.display = "block"; // Show resend button after 30 seconds
+            document.getElementById("resend-otp").style.display = "block"; 
         } else {
             document.getElementById("timer").innerHTML = `Resend OTP in ${countdown}s`;
             countdown--;
@@ -203,9 +201,9 @@ function startTimer() {
     }, 1000);
 }
 
-// Validate mobile number (basic validation for demo purposes)
+
 function validateMobileNumber(mobileNumber) {
-    const regex = /^[0-9]{10}$/; // Check if the mobile number is exactly 10 digits
+    const regex = /^[0-9]{10}$/; 
     return regex.test(mobileNumber);
 }
 </script>

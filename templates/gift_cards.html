@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allora Gift Cards</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/giftcard_styles.css') }}">
+</head>
+<body>
+
+    <header class="gift-card-header">
+        <img src="{{ url_for('static', filename='images/logo.webp') }}" alt="Nykaa Gift Card">
+        <nav class="gift-card-nav">
+            <a href="#" class="active">E-Gift Card</a>
+            <a href="/corporate">Allora For Corporates <span class="new-badge">NEW</span></a>
+            <a href="/how-to-use">How To Use</a>
+            <a href="/terms-conditions">Terms And Conditions</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Choose a design</h1>
+        <p>That captures the mood</p>
+
+        <div class="gift-card-container">
+            <div class="gift-card">
+                <img src="{{ url_for('static', filename='images/GiftCard1.png') }}" alt="Gift Card 1">
+                <h3>You are valued!!</h3>
+                <p>Special One</p>
+                <p>Ask your loved one to share the joy with a special gift of love.</p>
+                <button class="buy-now">Buy Now</button>
+            </div>
+        
+            <div class="gift-card">
+                <img src="{{ url_for('static', filename='images/GiftCard2.png') }}" alt="Gift Card 2">
+                <h3>You are my favourite!!!</h3>
+                <p>Loved One</p>
+                <p>This is your time to show him how special he is!!!</p>
+                <button class="buy-now">Buy Now</button>
+            </div>
+        
+            <div class="gift-card">
+                <img src="{{ url_for('static', filename='images/GiftCard3.jpg') }}" alt="Gift Card 3">
+                <h3>Best Friends Forever!!!</h3>
+                <p>Someone Special</p>
+                <p>Let your friend know she is special.</p>
+                <button class="buy-now">Buy Now</button>
+            </div>
+        
+            <div class="gift-card">
+                <img src="{{ url_for('static', filename='images/HappyBirthday.jpg') }}" alt="Gift Card 4">
+                <h3>Happy Birthday!!!</h3>
+                <p>Buddy!!!</p>
+                <p>Make anyone's birthday happier with this and add to their celebration!</p>
+                <button class="buy-now">Buy Now</button>
+            </div>
+
+            <div class="gift-card">
+                <img src="{{ url_for('static', filename='images/Giftcard4.webp') }}" alt="Gift Card 4">
+                <h3>She said YES!!!</h3>
+                <p>Engagement Announcement</p>
+                <p>Be it an engagement party or bridal shower, choose this design to celebrate the happy couple.</p>
+                <button class="buy-now">Buy Now</button>
+            </div>
+
+            <div class="gift-card">
+                <img src="{{ url_for('static', filename='images/GiftCard5.png') }}" alt="Gift Card 4">
+                <h3>Congratulations!!!</h3>
+                <p>Yeahhhhhhh!!!!</p>
+                <p>Send this design bursting with enthusiasm to a friend or family!</p>
+                <button class="buy-now">Buy Now</button>
+            </div>
+
+            <div class="gift-card">
+                <img src="{{ url_for('static', filename='images/GiftCard6.jpg') }}" alt="Gift Card 4">
+                <h3>Sorryyyyy!!!</h3>
+                <p>Apologize!!</p>
+                <p>Said something you wish you could take back? Did you do something</p>
+                <button class="buy-now">Buy Now</button>
+            </div>
+        </div>
+        
+    </main>
+
+</body>
+</html>

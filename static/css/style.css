@@ -1,12 +1,13 @@
-/* Header Styling */
+
 .header-bar {
-    background-image: url('../images/header1.jpg'); /* Path to the image */
+    background-image: url('../images/header1.jpg'); 
+
     background-size: cover;
     background-position: center;
     padding: 10px 20px;
     font-size: 14px;
     font-family: Arial, sans-serif;
-    color: #fff; /* Default text color */
+    color: #fff; 
     position: fixed;
     top: 0;
     left: 0;
@@ -18,11 +19,11 @@
     max-width: 1200px;
     margin: auto;
     display: flex;
-    justify-content: flex-end; /* Align links to the right */
+    justify-content: flex-end; 
     align-items: center;
 }
 
-/* Links Section */
+
 .header-bar .header-links {
     display: flex;
     align-items: center;
@@ -35,31 +36,31 @@
     font-weight: 500;
     display: flex;
     align-items: center;
-    gap: 5px; /* Space between text and icon */
+    gap: 5px; 
     transition: color 0.3s ease;
 }
 
 .header-bar .header-links a:hover {
-    color: #100f0f; /* Nykaa-themed hover color */
+    color: #100f0f; 
 }
 
-/* Divider */
+
 .header-bar .divider {
-    color: rgba(255, 255, 255, 0.6); /* Light white divider */
+    color: rgba(255, 255, 255, 0.6); 
 }
 
-/* Icons */
+
 .header-bar i {
     font-size: 14px;
 }
-/* Second Header Styles */
+
 .second-header {
     background-color: #fff;
     padding: 20px 20px;
     border-bottom: 1px solid #e5e5e5;
     font-family: Arial, sans-serif;
     position: fixed;
-    top: 40px; /* Adjust based on the exact height of .header-bar */
+    top: 40px; 
     left: 0;
     width: 100%;
     z-index: 1000;
@@ -70,10 +71,10 @@
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Spread out the content */
+    justify-content: space-between; 
 }
 
-/* Logo */
+
 .second-header .logo h1 {
     font-family: 'Playfair Display', serif;
     font-size: 42px;
@@ -81,22 +82,22 @@
     margin: 0;
 }
 
-/* Navigation Links */
+
 .second-header .nav-links {
     display: flex;
-    gap: 40px; /* Maintain increased space between headings */
+    gap: 40px; 
 }
 
 .second-header .nav-links a {
     text-decoration: none;
     color: #2c2c2c;
-    font-size: 16px; /* Reverted to the original size */
+    font-size: 16px; 
     font-weight: bold;
-    transition: color 0.3s ease; /* Smooth hover transition */
+    transition: color 0.3s ease; 
 }
 
 .second-header .nav-links a:hover {
-    color: #ff5a83; /* Highlight on hover */
+    color: #ff5a83; 
 }
 
 .search-box {
@@ -104,7 +105,7 @@
     align-items: center;
     position: relative;
     width: 300px;
-    border: 1px solid #ccc; /* Optional: add or remove */
+    border: 1px solid #ccc; 
     border-radius: 20px;
     padding: 5px 10px;
     background-color: white;
@@ -124,15 +125,15 @@
     width: 100%;
     font-size: 16px;
     padding: 5px;
-    background: none; /* Removes any box color */
-    color: #333; /* Sets text color */
+    background: none;
+    color: #333; 
 }
 
 .search-box input::placeholder {
-    color: #bbb; /* Placeholder text styling */
+    color: #bbb; 
 }
 
-/* Removes box shadow for cleaner look */
+
 .search-box:focus-within {
     box-shadow: none;
 }
@@ -145,30 +146,29 @@
 }
 
 .voice-icon:hover {
-    color: #ff3f6c; /* Highlight on hover */
+    color: #ff3f6c; 
 }
 .search-box .lens-icon {
-    margin-right: 10px; /* Adjust spacing */
-    color: #6c757d; /* Icon color */
-    font-size: 18px; /* Icon size */
+    margin-right: 10px; 
+    color: #6c757d; 
+    font-size: 18px; 
     cursor: pointer;
-    transition: transform 0.3s ease; /* Smooth animation on hover */
+    transition: transform 0.3s ease; 
 }
 
 .search-box .lens-icon:hover {
-    transform: scale(1.2); /* Slight zoom effect on hover */
-    color: #ff3f6c; /* Highlight color on hover */
+    transform: scale(1.2); 
+    color: #ff3f6c; 
 }
 
-/* Sign In Button */
 .sign-in-btn {
     background-color: #ff5a83;
     color: #fff;
     border: none;
-    padding: 10px 20px; /* Larger button size */
+    padding: 10px 20px; 
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px; /* Slightly larger font size */
+    font-size: 16px; 
     font-weight: bold;
     margin-right: 10px;
 }
@@ -177,48 +177,48 @@
     background-color: #e04b71;
 }
 
-/* Cart Icon */
+
 .cart-icon {
     color: #2c2c2c;
-    font-size: 22px; /* Slightly larger icon size */
+    font-size: 22px; 
     text-decoration: none;
-    margin-left: 20px; /* Add spacing between Sign In and cart icon */
+    margin-left: 20px; 
 }
 
 .cart-icon:hover {
     color: #ff5a83;
 }
 
-/* Right Section: Adjust spacing */
+
 .header-right {
     display: flex;
     align-items: center;
-    gap: 20px; /* Space between search, sign-in, and cart */
+    gap: 20px; 
 }
-/* Third Header */
+
 .third-header {
     background-color: #fff;
-    padding: 15px 0; /* Top and bottom padding */
+    padding: 15px 0; 
     border-bottom: 1px solid #e5e5e5;
     font-family: Arial, sans-serif;
-    margin-top: 130px; /* Adjust to avoid overlap with fixed headers */
+    margin-top: 130px;
 }
 
 .third-header .container {
-    max-width: 1200px; /* Controls the width of the header */
+    max-width: 1200px; 
     margin: auto;
-    padding: 0 20px; /* Adds space on left and right sides */
+    padding: 0 20px; 
     display: flex;
-    flex-wrap: wrap; /* Allows links to wrap if needed */
-    justify-content: flex-start; /* Aligns nav links to the left */
-    gap: 30px; /* Space between dropdowns */
+    flex-wrap: wrap; 
+    justify-content: flex-start; 
+    gap: 30px; 
 }
 
-/* Navigation Links */
+
 .nav-menu {
     display: flex;
-    gap: 30px; /* Space between nav links */
-    flex-wrap: wrap; /* Adjust for smaller screens */
+    gap: 30px; 
+    flex-wrap: wrap; 
 }
 
 .nav-menu .nav-link {
@@ -226,22 +226,22 @@
     color: #8d8d8d;
     font-size: 14px;
     font-weight: bold;
-    position: relative; /* Required for dropdown */
+    position: relative; 
 }
 
 .nav-menu .nav-link:hover {
-    color: #ff5a83; /* Highlight on hover */
+    color: #ff5a83; 
 }
 
-/* Dropdown Menu */
+
 .dropdown {
-    position: relative; /* Required for dropdown positioning */
+    position: relative; 
 }
 
 .dropdown-menu {
-    display: none; /* Hidden by default */
+    display: none; 
     position: absolute;
-    top: 100%; /* Position below the nav link */
+    top: 100%; 
     left: 0;
     background-color: #fff;
     border: 1px solid #e5e5e5;
@@ -265,18 +265,18 @@
     color: #ff5a83;
 }
 
-/* Show dropdown on hover */
+
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 .animated-video-banner video {
     width: 100%;
     height: 60%;
-    /* display: block; */
+    
 }
 
 
-/* Popup Styles */
+
 .modal {
     display: none;
     position: fixed;
@@ -285,7 +285,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999; /* Ensure it appears above everything */
+    z-index: 9999; 
 }
 
 .modal-content {
@@ -293,27 +293,27 @@
     padding: 20px;
     position: absolute !important;
     top: 50%;
-    right: 5%; /* Move the modal slightly to the left by adjusting the right value */
-    transform: translateY(-50%); /* Center the modal vertically */
-    width: 35%; /* Increase the width */
-    max-width: 400px; /* Slightly increase max-width */
-    max-height: 350px; /* Decrease the max height */
+    right: 5%; 
+    transform: translateY(-50%);
+    width: 35%; 
+    max-width: 400px; 
+    max-height: 350px; 
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     text-align: left;
-    overflow-y: auto; /* Add scroll if content overflows */
+    overflow-y: auto; 
 }
 
-/* Close button */
+
 .close-btn {
-    position: absolute; /* Position it at the top-right */
+    position: absolute; 
     top: 10px;
     right: 10px;
     font-size: 24px;
     cursor: pointer;
 }
 
-/* Authentication buttons */
+
 .auth-btn {
     display: flex;
     align-items: center;
@@ -328,15 +328,15 @@
     color: #ff3f6c;
 }
 
-/* Google logo inside the auth button */
+
 .auth-btn img {
     width: 24px;
     height: 24px;
     margin-right: 10px;
 }
-/* Remove the blue underline from the link */
+
 .no-underline {
-    text-decoration: none;  /* Removes the default underline from the link */
+    text-decoration: none;  
 }
 
 .arrow {
@@ -345,28 +345,28 @@
 }
 .qr-icon {
     font-size: 22px;
-    margin: 0 15px; /* Adjust spacing */
-    color: #6c757d; /* Icon color */
+    margin: 0 15px; 
+    color: #6c757d; 
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
 .qr-icon:hover {
-    transform: scale(1.2); /* Slight hover effect */
-    color: #ff3f6c; /* Highlight color */
+    transform: scale(1.2); 
+    color: #ff3f6c; 
 }
 
 .bank-deals-slider {
     position: relative;
     width: 100%;
-    max-width: 100%; /* Full width */
+    max-width: 100%; 
     margin: auto;
     overflow: hidden;
 }
 
 .slides-container {
     display: flex;
-    width: 200%; /* Since we have 2 slides */
+    width: 200%; 
     transition: transform 0.5s ease-in-out;
 }
 
@@ -376,12 +376,12 @@
 }
 
 .slide img {
-    width: 100vw; /* Full viewport width */
+    width: 100vw; 
     height: auto;
 }
 
 
-/* Navigation Buttons */
+
 .prev-btn, .next-btn {
     position: absolute;
     top: 50%;
@@ -397,7 +397,7 @@
 .prev-btn { left: 10px; }
 .next-btn { right: 10px; }
 
-/* Indicators (Thin Rectangles) */
+
 .indicator-container {
     display: flex;
     justify-content: center;
@@ -416,7 +416,7 @@
     background-color: black;
 }
 
-/* Category Slider */
+
 .category-slider {
     position: relative;
     width: 100%;
@@ -428,11 +428,11 @@
 .category-slides-container {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 500%; /* Adjust for number of slides */
+    width: 500%;
 }
 
 .category-slide {
-    width: 20%; /* Show 5 images at a time */
+    width: 20%; 
     flex-shrink: 0;
     padding: 5px;
 }
@@ -482,11 +482,11 @@
 .special-slides-container {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 300%; /* Adjust based on number of slides */
+    width: 300%; 
 }
 
 .special-slide {
-    width: 33.33%; /* Show 3 images at a time */
+    width: 33.33%; 
     flex-shrink: 0;
     padding: 5px;
 }
@@ -516,8 +516,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0; /* Remove extra space */
-    padding: 0; /* Ensure no padding */
+    margin: 0; 
+    padding: 0;
 }
 
 .full-width-gif img {
@@ -546,28 +546,28 @@
     width: 100%;
     border-radius: 10px;
 }
-/* Custom caption styles */
+
 .custom-caption {
-    text-align: center; /* Center align text below images */
-    margin-top: 10px; /* Adjust spacing between image and text */
+    text-align: center; 
+    margin-top: 10px; 
 }
 
 .caption-bold {
-    font-weight: bold; /* Bold text for the top line */
-    font-size: 25px;  /* Adjust font size */
+    font-weight: bold; 
+    font-size: 25px;  
 }
 
 .caption-normal {
-    font-weight: normal; /* Normal text for the bottom line */
-    font-size: 20px;  /* Adjust font size */
-    color: #666; /* Optional: Make bottom line text lighter */
+    font-weight: normal; 
+    font-size: 20px;  
+    color: #666; 
 }
 
- /* Arrows Styling */
+ 
  .carousel-control-prev, .carousel-control-next {
     width: 50px;
     height: 50px;
-    background-color: white; /* White Circle */
+    background-color: white; 
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -578,21 +578,21 @@
 .carousel-control-next svg {
     width: 24px;
     height: 24px;
-    fill: black; /* Black arrow inside */
+    fill: black; 
 }
 .celebrate-heading {
-    font-size: 36px;  /* Adjust size as needed */
+    font-size: 36px;  
     font-weight: bold;
-    color: #da0f74;  /* Adjust color as needed */
-    text-transform: uppercase; /* Optional: Make text uppercase */
-    margin-top: -50px;  /* Reduced gap from GIF */
-    margin-bottom: 40px;  /* Reduced gap between heading and carousel */
+    color: #da0f74;  
+    text-transform: uppercase; 
+    margin-top: -50px;  
+    margin-bottom: 40px;  
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
 }
 .deals-section {
     text-align: center;
     padding: 20px;
-    background-color: rgb(255, 245, 250); /* Set background color to pink */
+    background-color: rgb(255, 245, 250); 
   }
   
   .deals-section h2 {
@@ -619,13 +619,13 @@
   }
   
   .deal-title {
-    font-weight: bold; /* Bold for the first line of text */
+    font-weight: bold; 
     font-size: 22px;
     color: #222222;
   }
   
   .deal-description {
-    font-weight: normal; /* Lighter for the second line of text */
+    font-weight: normal; 
     font-size: 18px;
     color: #3d3d3d;
   }
@@ -635,7 +635,7 @@
   }
   
   .last-row .deal-item {
-    flex: 0 0 45%; /* Ensures that the last row items are centered */
+    flex: 0 0 45%; 
   }
   
   @media (max-width: 768px) {
@@ -652,16 +652,16 @@
     }
   }
   .deal-heading {
-    font-size:50px;  /* Adjust size as needed */
+    font-size:50px;  
     font-weight: bold;
-    color: #980a51;  /* Adjust color as needed */
+    color: #980a51;  
 }
 .animated-new-arrivals {
     width: 100%;
     height: auto;
-    /* display: block; */
+    
 }
-/* Style for the whole section */
+
 .beauty-section {
     background-color: rgb(252, 199, 225);
     padding: 10px;
@@ -669,115 +669,113 @@
     width:100%;
 }
 
-/* Style for the heading */
 .beauty-heading {
-    font-size: 30px; /* Increased font size for the heading */
+    font-size: 30px; 
     color:rgb(143, 12, 75);
     margin-bottom: 40px;
 }
 
-/* Style for the image container */
+
 .image-container {
     display: flex;
     justify-content: center;
     gap: 30px;
 }
 
-/* Style for each image item (including the text below) */
+
 .image-item {
-    text-align: center; /* Center text below each image */
+    text-align: center; 
 }
-/* Style for the text below each image */
+
 .image-text {
-    font-size: 30px; /* Slightly larger font size for the h3 */
+    font-size: 30px; 
     margin-top: 10px;
     color:rgb(143, 12, 75);
     font-weight: bold;
-    font-style: italic; /* Make the text italic */
+    font-style: italic; 
 }
 
-/* Style for each image */
 .beauty-image {
     width: 250px;
     height: 250px;
     object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
-/* Zoom effect on hover */
+
 .beauty-image:hover {
-    transform: scale(1.1); /* Slightly zoom in */
+    transform: scale(1.1); 
 }
 
-/* Shadow effect on hover */
+
 .beauty-image:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
 
-/* Heart-stopping deals section */
+
 .heart-stopping-deals {
     text-align: center;
     padding: 20px;
-    background-color: rgb(255, 245, 250); /* Set background color to pink */
+    background-color: rgb(255, 245, 250); 
 }
 
 .heartdeal-heading {
-    font-size: 30px;  /* Adjust size as needed */
+    font-size: 30px;  
     font-weight: bold;
-    color: #980a51;  /* Adjust color as needed */
+    color: #980a51;  
     margin-bottom: 20px;
 }
 
-/* Heart deal row */
+
 .heartdeal-row {
     display: flex;
     justify-content: space-between;
-    gap: 10px;  /* Space between items */
-    flex-wrap: nowrap;  /* Prevent items from wrapping to the next line */
-    overflow: hidden;  /* Prevent overflow */
+    gap: 10px;  
+    flex-wrap: nowrap;  
+    overflow: hidden;  
 }
 
-/* Heart deal item */
+
 .heartdeal-item {
-    flex: 1 1 16%;  /* Each item will take up approximately 16% of the container's width */
+    flex: 1 1 16%;  
     text-align: center;
-    box-sizing: border-box;  /* Include padding and margin in the element's total width */
-    margin: 0 5px;  /* Space between images */
+    box-sizing: border-box; 
+    margin: 0 5px;  
 }
 
-/* Style for each image inside heart deal item */
+
 .heartdeal-item img {
-    width: 100%;  /* Ensures images fill their container */
+    width: 100%;  
     height: auto;
     border-radius: 8px;
-    object-fit: cover; /* Ensures images are nicely cropped without distortion */
+    object-fit: cover; 
 }
 
-/* Title under each image */
+
 .Heartdeal-title {
-    font-weight: bold; /* Bold for the first line of text */
+    font-weight: bold; 
     font-size: 22px;
     color: #222222;
 }
 
-/* Description under each title */
+
 .Heartdeal-description {
-    font-weight: normal; /* Lighter for the second line of text */
+    font-weight: normal; 
     font-size: 18px;
     color: #3d3d3d;
 }
 
-/* Section with white background */
+
 .white-background-section {
-    background-color: #ffffff; /* White background */
-    padding: 40px 20px; /* Padding around the section */
+    background-color: #ffffff; 
+    padding: 40px 20px; 
     text-align: center;
-    margin-right: 100px; /* Extra space on the right side of the last image */
+    margin-right: 100px; 
 }
 
-/* Heading of the section */
+
 .white-section-heading {
     font-size: 40px;
     color: #862057;
@@ -785,45 +783,45 @@
     margin-bottom: 30px;
 }
 
-/* Content area containing images and text */
+
 .white-section-content {
     display: flex;
-    justify-content: flex-start; /* Align items to the left */
-    gap: 5px; /* Reduced space between images to 5px */
-    max-width: 100%; /* Ensure content stays within container width */
-    overflow: hidden; /* Prevent overflow */
+    justify-content: flex-start;
+    gap: 5px; 
+    max-width: 100%; 
+    overflow: hidden; 
 }
 
-/* Individual item with image and text */
+
 .white-section-item {
-    text-align: center; /* Align text under the image */
-    flex: 0 0 30%; /* Take up 30% of the container width */
-    box-sizing: border-box; /* Prevent overflow */
+    text-align: center; 
+    flex: 0 0 30%; 
+    box-sizing: border-box; 
     padding: 10px;
 }
 
-/* Style for each image */
+
 .white-section-item img {
-    width: 70%; /* Adjust image width to 70% of the container (smaller size) */
+    width: 70%; 
     height: auto;
-    border-radius: 8px; /* Rounded corners for images */
-    object-fit: cover; /* Ensure the image covers the space without distortion */
+    border-radius: 8px; 
+    object-fit: cover; 
 }
 
-/* Text below each image */
+
 .white-section-text {
-    font-size: 30px;  /* Adjust font size for single line text */
+    font-size: 30px;  
     font-weight: bold;
     color:#862057;
-    margin-top: 10px; /* Space above the text */
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Ensure no overflow */
-    text-overflow: ellipsis; /* Add ellipsis if text is too long */
+    margin-top: 10px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
     font-style:italic
 }
 .full-width-allorastore img {
     max-width: 100%;
-    max-height: 100vh;  /* Set a max height of 100% of the viewport */
-    object-fit: contain;  /* Ensures the image fits without distortion */
+    max-height: 100vh;  
+    object-fit: contain;  
   }
   

@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Allora - Header</title>
+    <title>Allora-The Essence Of Chic</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <!-- Add Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"rel="stylesheet"
@@ -14,7 +13,6 @@
 
 </head>
 <body>
-    <!-- First Header -->
     <header class="header-bar">
         <div class="container">
             <div class="header-links">
@@ -22,22 +20,18 @@
                 <span class="divider">|</span>
                 <a href="#"><i class="fa fa-map-marker-alt"></i> Store & Events</a>
                 <span class="divider">|</span>
-                <a href="#"><i class="fa fa-gift"></i> Gift Card</a>
+                <a href="/gift_cards"><i class="fa fa-gift"></i> Gift Card</a>
                 <span class="divider">|</span>
                 <a href="#"><i class="fa fa-question-circle"></i> Help</a>
             </div>
         </div>
     </header>
 
-    <!-- Second Header -->
     <header class="second-header">
         <div class="container">
-            <!-- Logo -->
             <div class="logo">
                 <h1>Allora</h1>
             </div>
-
-            <!-- Login Popup -->
 <div id="signin-modal" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
@@ -57,34 +51,29 @@
 </div>
 
 
-            <!-- Navigation Links -->
+           
             <nav class="nav-links">
                 <a href="/categories">Categories</a>
                 <a href="#">Brands</a>
-                <a href="#">Luxe</a>
+                <a href="/luxe">Luxe</a>
                 <a href="#">Beauty Advice</a>
             </nav>
 
-            <!-- Search Box, Sign In, and Cart -->
-            <!-- <div class="header-right"> -->
+            
                 <div class="search-box">
                     <i class="fas fa-search search-icon"></i>
                     <input type="text" id="search-input" placeholder="Search for Allora">
                     <i class="fas fa-camera lens-icon" id="image-capture"></i>
                     <i class="fas fa-microphone voice-icon" id="voice-search"></i>
                 </div>
-                <!-- <div class="search-box">
-                    <input type="text" placeholder="Search for Allora" />
-                    <button><i class="fa fa-search"></i></button>
-                </div> -->
-                <!-- QR Scanner Icon -->
+              
                 <i class="fas fa-qrcode qr-icon" id="qr-scanner"></i>
                 <button id="signin-btn" class="sign-in-btn">Sign In</button>
                 <a href="#" class="cart-icon"><i class="fa fa-shopping-cart"></i></a>
             </div>
         </div>
     </header>
-    <!-- Third Header -->
+    
 <header class="third-header">
     <div class="container">
         <nav class="nav-menu">
@@ -183,7 +172,7 @@
     </div>
     
 </header>
-<!-- Animated Video Section Below Third Header -->
+
 <div class="animated-video-banner">
     <video autoplay loop muted playsinline>
         <source src="{{ url_for('static', filename='videos/allora.mp4') }}" type="video/mp4">
@@ -191,26 +180,8 @@
 </div>
 
 
-<!-- <div class="carousel">
-    <div class="slides">
-        <img src="{{ url_for('static', filename='images/banner8.jpg') }}" alt="Photo 1">
-        <img src="{{ url_for('static', filename='images/banner5.jpg') }}" alt="Photo 2">
-        <img src="{{ url_for('static', filename='images/banner6.jpg') }}" alt="Photo 3">
-        <img src="{{ url_for('static', filename='images/banner7.jpg') }}" alt="Photo 4">
-        <img src="{{ url_for('static', filename='images/banner4.jpg') }}" alt="Photo 5">
-        <img src="{{ url_for('static', filename='images/banner9.jpg') }}" alt="Photo 6">
-        <img src="{{ url_for('static', filename='images/banner10.jpg') }}" alt="Photo 7">
-        <img src="{{ url_for('static', filename='images/banner1.jpg') }}" alt="Photo 8">
-        <img src="{{ url_for('static', filename='images/banner2.jpg') }}" alt="Photo 9">
-        <img src="{{ url_for('static', filename='images/banner3.jpg') }}" alt="Photo 10">
-    </div>
-    <div class="dots">
-        {% for i in range(10) %}
-        <span class="dot {% if i == 0 %}active{% endif %}"></span>
-        {% endfor %}
-    </div>
-</div> -->
-<!-- Bank Deals Banner Slider -->
+
+
 <div class="bank-deals-slider">
     <div class="slides-container">
         <div class="slide active"><img src="{{ url_for('static', filename='images/bankoff.jpg') }}" alt="Bank Deal 1"></div>
@@ -223,7 +194,7 @@
         <div class="indicator"></div>
     </div>
 </div>
-<!-- Category Slider (Makeup, Skincare, Haircare, Bath & Body, Luxe) -->
+
 <div class="category-slider">
     <button class="category-prev-btn">&#10094;</button>
     <div class="category-slides-container">
@@ -236,7 +207,7 @@
     </div>
     <button class="category-next-btn">&#10095;</button>
 </div>
-<!-- Special Offers Slider -->
+
 <div class="special-offers-section">
     <h2 class="special-offers-title">Special Offers</h2>
     <div class="special-offers-slider">
@@ -260,9 +231,9 @@
 
     <div id="customCarousel" class="carousel slide" >
         <div class="carousel-inner">
-            <!-- First Slide (3 Images) -->
+            
             <div class="carousel-item active" style="margin-top: -20px;">
-                <div class="row justify-content-center"> <!-- Center Images -->
+                <div class="row justify-content-center"> 
                     <div class="col-md-4">
                         <img src="{{ url_for('static', filename='images/love&savings1.png') }}" class="d-block w-100" alt="Image 1">
                         <div class="custom-caption">
@@ -287,9 +258,9 @@
                 </div>
             </div>
 
-            <!-- Second Slide (3 Images) -->
+           
             <div class="carousel-item" style="margin-top: -20px;">
-                <div class="row justify-content-center"> <!-- Center Images -->
+                <div class="row justify-content-center">
                     <div class="col-md-4">
                         <img src="{{ url_for('static', filename='images/love&savings4.png') }}" class="d-block w-100" alt="Image 4">
                         <div class="custom-caption">
@@ -315,12 +286,12 @@
             </div>
         </div>
         
- <!-- Left Arrow -->
+ 
  <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.354 1.354a.5.5 0 0 1 0 .708L5.707 8l5.647 5.938a.5.5 0 1 1-.708.708l-6-6.313a.5.5 0 0 1 0-.708l6-6.271a.5.5 0 0 1 .708 0z"/></svg>
 </button>
 
-<!-- Right Arrow -->
+
 <button class="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.354a.5.5 0 0 1 .708 0l6 6.271a.5.5 0 0 1 0 .708l-6 6.313a.5.5 0 1 1-.708-.708L10.293 8 4.646 2.062a.5.5 0 0 1 0-.708z"/></svg>
 </button>
@@ -330,7 +301,7 @@
 <div class="deals-section">
     <h2 class="deal-heading">Hard-To Resist Deals</h2>
   
-    <!-- First Row -->
+   
     <div class="deal-row">
       <div class="deal-item">
         <img src="{{ url_for('static', filename='images/deal1.png') }}"alt="Deal 1">
@@ -359,7 +330,7 @@
       </div>
     </div>
   
-    <!-- Second Row -->
+   
     <div class="deal-row">
       <div class="deal-item">
         <img src="{{ url_for('static', filename='images/deal6.png') }}"alt="Deal 6">
@@ -388,7 +359,7 @@
       </div>
     </div>
   
-    <!-- Third Row -->
+    
     <div class="deal-row">
       <div class="deal-item">
         <img src="{{ url_for('static', filename='images/deal11.png') }}"alt="Deal 11">
@@ -417,7 +388,7 @@
       </div>
     </div>
   
-    <!-- Fourth Row -->
+    
     <div class="deal-row">
       <div class="deal-item">
         <img src="{{ url_for('static', filename='images/deal16.png') }}"alt="Deal 16">
@@ -445,14 +416,14 @@
         <div class="deal-description">Extra 10% Off On ₹699</div>
       </div>
     </div>
-  <!-- Animated new arrivals -->
+  
 <div class="animated-new-arrivals">
     <video autoplay loop muted playsinline>
         <source src="{{ url_for('static', filename='videos/newarrivalsvideo.mp4') }}" type="video/mp4">
     </video>
 </div>
 </div>
-<!-- Beauty to fall for section -->
+
 <section class="beauty-section">
     <h1 class="beauty-heading">Beauty To Fall For</h1>
     <div class="image-container">
@@ -470,7 +441,7 @@
         </div>
     </div>
 </section>
-<!-- Heat stopping deals -->
+
 <div class="heart-stopping-deals">
     <h2 class="heartdeal-heading">Heart Stopping Deals</h2>
     <div class="heartdeal-row">
@@ -506,7 +477,7 @@
       </div>
     </div>
     </div>
-  <!-- New Section with White Background -->
+  
 <div class="white-background-section">
     <h2 class="white-section-heading">Crush-Worthy Beauty</h2>
     <div class="white-section-content">
@@ -527,56 +498,25 @@
 <div class="full-width-allorastore">
     <img src="{{ url_for('static', filename='images/visitallora.jpeg') }}" alt="Visit Allora Store">
 </div>
+<iframe src="{{ url_for('chatbot') }}" width="100%" height="500px" style="border: none;"></iframe>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
-<!-- <script>
-    let currentIndex = 0; // Track the current slide
-    const slides = document.querySelector('.slides');
-    const dots = document.querySelectorAll('.dot');
 
-    function showSlide(index) {
-        const slideWidth = slides.clientWidth / 10; // Adjust for 10 images
-        slides.style.transform = `translateX(-${index * slideWidth}px)`;
-
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === index);
-        });
-    }
-
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % 10; // Loop back to the first slide
-        showSlide(currentIndex);
-    }
-
-    // Auto-slide every 3 seconds
-    setInterval(nextSlide, 3000);
-
-    // Add click event for dots (optional)
-    dots.forEach((dot, i) => {
-        dot.addEventListener('click', () => {
-            currentIndex = i;
-            showSlide(currentIndex);
-        });
-    });
-
-    // Initialize the first slide
-    showSlide(0);
-</script> -->
 <script>
-    // Open the modal
+    
     document.getElementById("signin-btn").addEventListener("click", function () {
         document.getElementById("signin-modal").style.display = "block";
     });
 
-    // Close the modal
+   
     document.querySelector(".close-btn").addEventListener("click", function () {
         document.getElementById("signin-modal").style.display = "none";
     });
 
-    // Close the modal when clicking outside the modal
+    
     window.addEventListener("click", function (event) {
         if (event.target === document.getElementById("signin-modal")) {
             document.getElementById("signin-modal").style.display = "none";
@@ -587,7 +527,7 @@
     document.getElementById("voice-search").addEventListener("click", function () {
         const searchBox = document.querySelector(".search-box input");
     
-        // Check if Speech Recognition API is supported
+        
         const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     
         if (!SpeechRecognition) {
@@ -595,14 +535,14 @@
             return;
         }
     
-        // Create a new instance of Speech Recognition
+        
         const recognition = new SpeechRecognition();
     
-        recognition.lang = "en-US"; // Language: English
-        recognition.interimResults = false; // Only final results
-        recognition.maxAlternatives = 1; // One possible result
+        recognition.lang = "en-US"; 
+        recognition.interimResults = false; 
+        recognition.maxAlternatives = 1; 
     
-        // Start listening when mic is clicked
+        
         recognition.start();
     
         recognition.onstart = function () {
@@ -611,18 +551,18 @@
         };
     
         recognition.onresult = function (event) {
-            const transcript = event.results[0][0].transcript; // Get spoken text
+            const transcript = event.results[0][0].transcript; 
             console.log("You said:", transcript);
-            searchBox.value = transcript; // Write it to the search box
-            searchBox.placeholder = "Search for Allora"; // Reset placeholder
+            searchBox.value = transcript; 
+            searchBox.placeholder = "Search for Allora";
     
-            // Send the voice input to the Flask backend
+            
             fetch('/save_voice_input', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ search_text: transcript }) // Send the voice input
+                body: JSON.stringify({ search_text: transcript })
             })
             .then(response => response.json())
             .then(data => {
@@ -643,7 +583,7 @@
     
         recognition.onend = function () {
             console.log("Stopped listening.");
-            searchBox.placeholder = "Search for Allora"; // Reset placeholder
+            searchBox.placeholder = "Search for Allora"; 
         };
     });
     </script>
@@ -693,20 +633,20 @@
     const searchInput = document.getElementById("search-input");
 
     setInterval(() => {
-        currentIndex = (currentIndex + 1) % placeholderTexts.length; // Cycle through the array
-        searchInput.setAttribute("placeholder", placeholderTexts[currentIndex]); // Update placeholder
+        currentIndex = (currentIndex + 1) % placeholderTexts.length; 
+        searchInput.setAttribute("placeholder", placeholderTexts[currentIndex]); 
     }, 2000);
 });
 </script>
 <script>
     document.getElementById("qr-scanner").addEventListener("click", function () {
         alert("QR Scanner functionality is under development!");
-        // Here you can integrate a QR scanner library like Instascan or QRCode.js
+        
     });
 </script>
 <script>
     (function() {
-        let bankDealIndex = 0; // Unique variable name
+        let bankDealIndex = 0; 
         const slidesContainer = document.querySelector(".slides-container");
         const indicators = document.querySelectorAll(".indicator");
         const totalSlides = 2;
@@ -735,7 +675,7 @@
     })();
     </script>
     <script>
-    // Category Slider
+    
     let categoryCurrentIndex = 0;
     const categorySlidesContainer = document.querySelector(".category-slides-container");
     const categoryTotalSlides = document.querySelectorAll(".category-slide").length;

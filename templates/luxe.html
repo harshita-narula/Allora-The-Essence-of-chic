@@ -20,26 +20,25 @@
             text-align: center;
         }
 
-        /* Header Styling */
+       
 .header-bar {
-    background-image: url('header.jpeg'); /* Path to the image */
+    background-image: url('header.jpeg');
     background-size: cover;
     background-position: center;
     padding: 10px 20px;
     font-size: 14px;
     font-family: Arial, sans-serif;
-    color: #fff; /* Default text color */
+    color: #fff; 
 }
 
 .header-bar .container1 {
     max-width: 1200px;
     margin: auto;
     display: flex;
-    justify-content: flex-end; /* Align links to the right */
+    justify-content: flex-end; 
     align-items: center;
 }
 
-/* Links Section */
 .header-bar .header-links {
     display: flex;
     align-items: center;
@@ -52,24 +51,24 @@
     font-weight: 500;
     display: flex;
     align-items: center;
-    gap: 5px; /* Space between text and icon */
+    gap: 5px; 
     transition: color 0.3s ease;
 }
 
 .header-bar .header-links a:hover {
-    color: #100f0f; /* Nykaa-themed hover color */
+    color: #100f0f; 
 }
 
-/* Divider */
+
 .header-bar .divider {
-    color: rgba(255, 255, 255, 0.6); /* Light white divider */
+    color: rgba(255, 255, 255, 0.6); 
 }
 
-/* Icons */
+
 .header-bar i {
     font-size: 18px;
 }
-/* Second Header Styles */
+
 .second-header {
     background-color: #fff;
     padding: 20px 20px;
@@ -82,10 +81,10 @@
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Spread out the content */
+    justify-content: space-between; 
 }
 
-/* Logo */
+
 .second-header .logo h1 {
     font-family: 'Playfair Display', serif;
     font-size: 42px;
@@ -93,38 +92,36 @@
     margin: 0;
 }
 
-/* Navigation Links */
+
 .second-header .nav-links {
     display: flex;
-    gap: 40px; /* Maintain increased space between headings */
+    gap: 40px; 
 }
 
 .second-header .nav-links a {
     text-decoration: none;
     color: #2c2c2c;
-    font-size: 16px; /* Reverted to the original size */
+    font-size: 16px; 
     font-weight: bold;
-    transition: color 0.3s ease; /* Smooth hover transition */
+    transition: color 0.3s ease; 
 }
 
 .second-header .nav-links a:hover {
-    color: #ff5a83; /* Highlight on hover */
-}
+    color: #ff5a83; }
 
 
-/* Search Box */
 .search-box {
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
     border-radius: 5px;
     overflow: hidden;
-    width: 300px; /* Increase the width for a larger search box */
+    width: 300px; 
 }
 
 .search-box input {
     border: none;
-    padding: 8px 12px; /* Increase padding for a larger input */
+    padding: 8px 12px; 
     font-size: 14px;
     outline: none;
     width: 100%;
@@ -134,19 +131,19 @@
     border: none;
     background: #ff5a83;
     color: #fff;
-    padding: 8px 12px; /* Increase button size */
+    padding: 8px 12px; 
     cursor: pointer;
 }
 
-/* Sign In Button */
+
 .sign-in-btn {
     background-color: #ff5a83;
     color: #fff;
     border: none;
-    padding: 10px 20px; /* Larger button size */
+    padding: 10px 20px; 
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px; /* Slightly larger font size */
+    font-size: 16px; 
     font-weight: bold;
 }
 
@@ -154,29 +151,28 @@
     background-color: #e04b71;
 }
 
-/* Cart Icon */
+
 .cart-icon {
     color: #2c2c2c;
-    font-size: 22px; /* Slightly larger icon size */
+    font-size: 22px; 
     text-decoration: none;
-    margin-left: 20px; /* Add spacing between Sign In and cart icon */
+    margin-left: 20px; 
 }
 
 .cart-icon:hover {
     color: #ff5a83;
 }
 
-/* Right Section: Adjust spacing */
+
 .header-right {
     display: flex;
     align-items: center;
-    gap: 20px; /* Space between search, sign-in, and cart */
+    gap: 20px; 
 }
 
-        /* Hero Section with Background Image */
         .hero {
-            background: url('main.png') no-repeat center center/cover; /* Change 'your-image.jpg' to actual image path */
-            height: 580px; /* Adjust height as needed */
+            background: url('main.png') no-repeat center center/cover; 
+            height: 580px; 
             display: flex;
             align-items: center;
             justify-content: center;
@@ -197,35 +193,8 @@
             z-index: 2;
         }
 
-        /* Promo Banner Section */
-        .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 70px;
-            max-width: 1500px;
-            margin: 50px auto;
-            background-color: #fbcfe8;
-            padding: 20px;
-            border-radius: 15px;
-        }
-        
-        .title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        .discount {
-            color: #d946ef;
-            font-weight: bold;
-        }
-
-        .details {
-            color: gray;
-            font-size: 14px;
-        }
-
-        /* Footer */
+       
+    
         .footer {
             text-align: center;
             padding: 20px;
@@ -242,8 +211,9 @@
             font-weight: bold;
             text-transform: uppercase;
             background: linear-gradient(135deg, #7b002c, #ff66b2);
-            -webkit-background-clip: text;
-            color: transparent;
+            background-clip: text; 
+           -webkit-background-clip: text; 
+           -webkit-text-fill-color: transparent;
             margin-bottom: 20px;
         }
 
@@ -372,7 +342,7 @@
             margin: 20px 0;
         }
         .container2 {
-            background-color: #ffc0cb; /* Light pink background */
+            background-color: #ffc0cb;
             font-family: Arial, sans-serif;
             text-align: center;
         }
@@ -386,7 +356,7 @@
         }
 
         .card1 {
-            background: #ff5f9e; /* Vibrant pink */
+            background: #ff5f9e; 
             border-radius: 20px;
             padding: 15px;
             width: 200px;
@@ -451,8 +421,161 @@
         transform: scale(1.1);
         box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
     }
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f6f4;
+            text-align: center;
+        }
+        .headerr {
+            background: linear-gradient(to right, #fff, #f8f6f4);
+            padding: 20px;
+            font-size: 50px;
+            font-weight: bold;
+            color: #333;
+        }
+        .brands {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .brand {
+            background: #fff;
+            margin: 10px;
+            padding: 15px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .Lux {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .lux {
+            width: 400px;
+            margin: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .lux img {
+            width: 100%;
+            height: 100%;
+        }
+        .banner {
+            padding: 50px 20px;
+            color: #880e4f;
+            font-size: 24px;
+            font-weight: bold;
+            width: auto;
+        
+        }
+        .offer {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        
+#chatIcon {
+    width: 50px;
+    height: 50px;
+    background-color: #ff4da6;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-        /* Mobile Responsiveness */
+#chatIcon img {
+    width: 30px;
+    height: 30px;
+}
+
+#chatContainer {
+    width: 300px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: white;
+    overflow: hidden;
+    display: none; /* Initially hidden */
+}
+
+#chatHeader {
+    background-color: #ff4da6;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#chatHeader img {
+    width: 20px;
+    height: 20px;
+}
+
+#closeChat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#chatBody {
+    height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+#chatInputContainer {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+#chatInput {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+#sendButton {
+    background: #ff4da6;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#sendButton:hover {
+    background: #e60073;
+}
+
+#chatInput:focus {
+    border: 2px solid #ff4da6;
+}
+
+#sendButton:active {
+    background: #b30059;
+}
+
+        
         @media (max-width: 600px) {
             .product-card {
                 width: 180px;
@@ -470,7 +593,7 @@
     </style>
 </head>
 <body>
-<!-- First Header -->
+
 <header class="header-bar">
     <div class="container1">
         <div class="header-links">
@@ -485,15 +608,14 @@
     </div>
 </header>
 
-<!-- Second Header -->
 <header class="second-header">
     <div class="container1">
-        <!-- Logo -->
+        
         <div class="logo">
             <h1>Allora</h1>
         </div>
 
-        <!-- Navigation Links -->
+        
         <nav class="nav-links">
             <a href="category.html">Categories</a>
             <a href="#">Brands</a>
@@ -501,7 +623,7 @@
             <a href="#">Beauty Advice</a>
         </nav>
 
-        <!-- Search Box, Sign In, and Cart -->
+        
         <div class="header-right">
             <div class="search-box">
                 <input type="text" placeholder="Search for Allora" />
@@ -512,42 +634,39 @@
         </div>
     </div>
 </header>
-
-    <!-- Hero Section -->
+    
     <div class="hero">
         <div class="hero-overlay"></div>
-        <!-- <div class="hero-content">
-            <a href="#" class="shop-btn">Shop Now</a>
-        </div> -->
     </div>
 
-    <!-- Promo Banner -->
-    <h1 class="header">Swoon-Worthy Deals</h1>
-    <div class="container">
-        <a href="ga.html">
-        <div class="card"><img src="static/images/GA.png" alt="Giorgio Armani"><div class="title"></div><div class="discount">Flat 10% Off</div><div class="details">On Entire Range</div></div></a>
-        <a href="ga.html">
-        <div class="card"><img src="static/images/eliff.png" alt="Belif"><div class="title"></div><div class="discount">Up to 20% Off</div><div class="details">Free Gift on ₹1499+</div></div></a>
-        <a href="ga.html">
-        <div class="card"><img src="static/images/huda.png" alt="Huda Beauty"><div class="title"></div><div class="discount">Up to 40% Off</div><div class="details">On Bestsellers</div></div></a>
-        <a href="ga.html">
-        <div class="card"><img src="static/images/lancome.png" alt="Lancome Beauty"><div class="title"></div><div class="discount">Flat 15% Off</div><div class="details">Buy 2 Get 20% Off</div></div></a>
-        <a href="ga.html"><div class="card"><img src="static/images/Urban decay.png" alt="Urban decay"><div class="title"></div><div class="discount">Up to 30% Off</div><div class="details">On Bestsellers</div></div></a>
-        <a href="ga.html"><div class="card"><img src="static/images/kiehl's.png" alt="kiehl's"><div class="title"></div><div class="discount">Flat 15% Off</div><div class="details">Buy 2 Get 20% Off</div></div></a>
-        <a href="ga.html"><div class="card"><img src="static/images/YSL.png" alt="YSL"><div class="title"></div><div class="discount">up to 10% Off</div><div class="details">Bestsellers Vial on All Orders</div></div></a>
-        <a href="ga.html"><div class="card"><img src="static/images/Estee Lauder.png" alt="Estee Lauder"><div class="title"></div><div class="discount">Up to 25% Off</div><div class="details">On 4-PC On ₹5000 </div></div></a>
-        <a href="ga.html"><div class="card"><img src="static/images/c&t.png" alt="Charlotte Tilbury"><div class="title"></div><div class="discount">Flat 15% Off</div><div class="details">On Bestsellers</div></div></a>
-        <a href="redken.html"><div class="card"><img src="static/images/Redken.png" alt="Redken"><div class="title"></div><div class="discount">Up to 25% Off</div><div class="details"> 2 Gifts on All ₹2500+</div></div></a>
-        <a href="ga.html"><div class="card"><img src="static/images/Sol de janeiro.png" alt="Sol De janeiro"><div class="title"></div><div class="discount">2 Minis on ₹2600</div><div class="details">Gifts on All Orders</div></div></a>
-        <a href="ga.html"><div class="card"><img src="static/images/Nars.png" alt="Nars"><div class="title"></div><div class="discount">Flat 15% Off</div><div class="details">Free Gifts on All Orders</div></div></a>
-        <a href="ga.html"><div class="card"><img src="static/images/Burberry.png" alt="Burberry"><div class="title"></div><div class="discount">Free Gifts</div><div class="details">On Checkout</div></div></a>
-        <a href="ga.html"><div class="card"><img src="static/images/Nudestick.png" alt="Nudestick"><div class="title"></div><div class="discount">Flat 30% Off</div><div class="details">On Bestsellers</div></div></a>
-        <a href="ga.html"><div class="card"><img src="static/images/Kerastase.png" alt="Kerastase"><div class="title"></div><div class="discount">Gifts Worth ₹1200</div><div class="details">On Order above ₹3999</div></div></a>
-
+    <div class="headerr">LUXE BRANDS - The Best of Luxury</div>
+    
+    <div class="brands">
+        <div class="brand">Giorgio Armani</div>
+        <div class="brand">MAC</div>
+        <div class="brand">Prada</div>
+        <div class="brand">Kerastase</div>
+        <div class="brand">Redken</div>
+        <div class="brand">Sol De janeiro</div>
+    </div>
+    
+    <div class="Lux">
+        <div class="lux">
+            <img src="https://images-static.nykaa.com/uploads/c871c040-943f-4a20-8ced-9f71fe6e5b6e.jpg?tr=cm-pad_resize,w-900" alt="Luxury Lipstick">
+        </div>
+        <div class="lux">
+            <img src="https://images-static.nykaa.com/uploads/700557f3-c660-43a3-b89e-6836a04a3ef8.jpg?tr=cm-pad_resize,w-900" alt="Premium Foundation">
+        </div>
+        <div class="lux">
+            <img src="https://images-static.nykaa.com/uploads/21245b65-cdb1-4d97-950c-9722d4835a98.jpg?tr=cm-pad_resize,w-900" alt="Luxury Skincare">
+        </div>
+        
     </div>
 
 
-    <h1>Tiny Treasures</h1>
+    <div class="banner"><a href='love.html'> <img src="static/images/alloraa.png" alt="Luxury Serum"></a></div>
+
+    <div class="headerr">Tiny Treasures</div>
 
     <div class="carousel-container">
         <button class="arrow arrow-left" onclick="scrollLeft('productCarousel1')">&#8249;</button>
@@ -614,48 +733,21 @@
         <button class="arrow arrow-right" onclick="scrollRight('productCarousel1')">&#8250;</button>
     </div>
 
+    <div class="headerr">Focus on: Today's standout brands</div>
 
-    <h1>Influencer Store</h1>
-
-    <div class="container2">
-        <div class="card1">
-            <img src="static/images/riya.png" alt="Riya Kohli">
-            <h3>Riya Kohli</h3>
-            <p>Budgeted Picks Under ₹999</p>
-            <a href="riya-store.html">→</a>
+    <div class="Lux">
+        <div class="lux">
+            <img src="https://images-static.nykaa.com/creatives/de7c4bc6-91b9-48b0-bc5d-cb56f6c86c96/default.jpg?tr=cm-pad_resize,w-900" alt="Luxury Lipstick">
         </div>
-
-        <div class="card1">
-            <img src="static/images/nagma.png" alt="Nagma Mirajkar">
-            <h3>Nagma Mirajkar</h3>
-            <p>Makeup Vanity Under ₹1999</p>
-            <a href="nagma-store.html">→</a>
+        <div class="lux">
+            <img src="https://images-static.nykaa.com/creatives/423da41a-40cc-4c3b-850b-c9ed5cfceb8b/default.jpg?tr=cm-pad_resize,w-900" alt="Premium Foundation">
         </div>
-
-        <div class="card1">
-            <img src="static/images/suchita.png" alt="Suchita Mukerji">
-            <h3>Suchita Mukerji</h3>
-            <p>Luxe Favs To Invest In</p>
-            <a href="suchita-store.html">→</a>
-        </div>
-
-        <div class="card1">
-            <img src="static/images/sarah.png" alt="Sarah Sarosh">
-            <h3>Sarah Sarosh</h3>
-            <p>Hair Routine Under ₹1999</p>
-            <a href="sarah-store.html">→</a>
-        </div>
-
-        <div class="card1">
-            <img src="static/images/muskan.png" alt="Muskan Rawat">
-            <h3>Muskan Rawat</h3>
-            <p>Personal Care & Fragrance Essentials</p>
-            <a href="muskan-store.html">→</a>
+        <div class="lux">
+            <img src="https://images-static.nykaa.com/creatives/0345f1a6-70f7-4975-8991-5c79cec8273c/default.jpg?tr=cm-pad_resize,w-900" alt="Luxury Skincare">
         </div>
     </div>
-
-
-    <h1>Me-time Essentials</h1>
+    
+    <div class="headerr">Me-time Essentials</div>
 
     <div class="carousel-container">
         <button class="arrow arrow-left" onclick="scrollLeft('productCarousel2')">&#8249;</button>
@@ -720,9 +812,48 @@
         </div>
         <button class="arrow arrow-right" onclick="scrollRight('productCarousel2')">&#8250;</button>
     </div>
-    <div class="shopb">
-        <a href="mainl.html">Shop All Luxe</a>
+    <div class="headerr">Influencer Store</div>
+
+    <div class="container2">
+        <div class="card1">
+            <img src="static/images/riya.png" alt="Riya Kohli">
+            <h3>Riya Kohli</h3>
+            <p>Budgeted Picks Under ₹999</p>
+            <a href="riyakohli.html">→</a>
+        </div>
+
+        <div class="card1">
+            <img src="static/images/nagma.png" alt="Nagma Mirajkar">
+            <h3>Nagma Mirajkar</h3>
+            <p>Makeup Vanity Under ₹1999</p>
+            <a href="nagma-store.html">→</a>
+        </div>
+
+        <div class="card1">
+            <img src="static/images/suchita.png" alt="Suchita Mukerji">
+            <h3>Suchita Mukerji</h3>
+            <p>Luxe Favs To Invest In</p>
+            <a href="suchita-store.html">→</a>
+        </div>
+
+        <div class="card1">
+            <img src="static/images/sarah.png" alt="Sarah Sarosh">
+            <h3>Sarah Sarosh</h3>
+            <p>Hair Routine Under ₹1999</p>
+            <a href="sarah-store.html">→</a>
+        </div>
+
+        <div class="card1">
+            <img src="static/images/muskan.png" alt="Muskan Rawat">
+            <h3>Muskan Rawat</h3>
+            <p>Personal Care & Fragrance Essentials</p>
+            <a href="muskan-store.html">→</a>
+        </div>
     </div>
+    <div class="shopb">
+        <a href="main.html">Shop All Luxe</a>
+    </div>
+    
     
     <div class="footer">&copy; 2025 Allora Luxe | Luxury Beauty, Redefined.</div>
 
@@ -746,12 +877,11 @@ function autoScroll(carouselId) {
     }
 }
 
-// Use setInterval separately for each carousel
-setInterval(() => autoScroll("productCarousel1"), 3000);  // First carousel
-setInterval(() => autoScroll("productCarousel2"), 3000);  // Second carousel
+setInterval(() => autoScroll("productCarousel1"), 3000);  
+setInterval(() => autoScroll("productCarousel2"), 3000);
 
 
-    </script>
+</script>
 
 
 </body>

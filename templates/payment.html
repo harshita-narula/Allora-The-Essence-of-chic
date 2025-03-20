@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+    <style> 
+        .logo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #ff5a83;
+    margin: 0;
+
+    /* navbar  */
+*{
+    margin: 0;
+    padding: 0;
+}
+#nav{
+    display: flex;
+    gap: 25%;
+    padding: 17px;
+    border-bottom: 1px solid gray;
+}
+#img{
+
+margin-left:7% ;
+}
+#singup ,#addres_nav ,#payment{
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+    align-items: center;
+}
+#singup>div ,#addres_nav >div,#payment >div {
+ background-color: rgba(255, 0, 0, 0.806);
+ width: 30px;
+ height: 30px;
+ text-align: center;
+border-radius:50% ;
+color: white;
+}
+ .fa-check ,.fa-pencil{
+    position: relative;
+    top: 6px;
+}
+
+
+/* payment */
+#payment_board {
+    width: 50%;
+    margin-left: 15%;
+ 
+    height: 85vh;
+    margin-top: 30px;
+   
+}
+#Choose{
+
+margin-top: 30px;
+
+}
+#select-way{
+ 
+    
+    
+    margin-top: 10px;
+    padding:10px;
+    display: flex;
+    justify-content: space-between;
+   
+}
+#choose-way{
+   
+    padding: 20px 10px;
+    margin-right: 10px;
+}
+.card-way{
+ height: 50px;
+padding: 15px 25px;
+background-color: #fff;
+
+}
+.upi-way{
+    height: 50px;
+padding: 15px 25px;
+
+background-color:rgb(220, 220, 220);
+}
+
+.cards-box{
+    width: 55%;
+}
+.card >div{
+    display: flex;
+    
+    justify-content: space-between;
+}
+input{
+    width: 100%;
+    height: 40px;
+    margin-top:10px ;
+    border: 1px solid gray;
+    border-radius: 7px;
+}
+.card >div >input{
+    width: 45%;
+
+}
+.card{
+    
+    margin-right: 10px;
+    box-shadow: 0px 0px 10px 3px #ccc ;
+    padding: 10px;
+    border-radius: 5px;
+}
+.card >button{
+    width: 100%;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(167, 103, 103);
+    border: none;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+#card h3{
+margin-bottom: 10px;
+}
+.img1{
+    /* background-color: #e11c1c; */
+    text-align: center;
+    width: 60%;
+    height: 54%;
+ 
+ border-radius: 50%;
+ margin-top: 10px;
+margin-bottom: 2px;
+}
+
+.img2{
+    
+    text-align: center;
+    width: 78%;
+    height: 53%;
+ 
+ border-radius: 50%;
+ margin-top: 10px;
+margin-bottom: 2px;
+}
+.img3{
+    background-color: #ffffff;
+    text-align: center;
+    width: 89%;
+    height: 53%;
+ 
+ border-radius: 50%;
+ margin-top: 10px;
+margin-bottom: 2px;
+ 
+}
+.img4{
+    background-color: #ffffff;
+    text-align: center;
+    width: 65%;
+    height: 53%;
+ 
+ border-radius: 50%;
+ margin-top: 10px;
+margin-bottom: 2px;
+ 
+}
+.img11{
+    border: 2px solid rgb(245, 134, 134);
+}
+
+.img21{
+    border: 2px solid rgb(245, 134, 134);
+}
+.img31{
+    border: 2px solid rgb(245, 134, 134);
+}
+.img41{
+    border: 2px solid rgb(245, 134, 134);
+}
+.card2{
+    display: none;
+}
+.card-way1{
+background-color: rgb(220, 220, 220);
+}
+.card11{
+    display: none;
+}
+.upy-way1{
+    background-color: #ffffff;
+}
+.card22{
+    display: inline-block;
+}
+#singup.active, #addres_nav.active, #payment.active {
+    background-color: #ff5a83; /* Or any color you prefer */
+    color: white;
+  }
+  
+  #singup.active div, #addres_nav.active div, #payment.active div {
+    background-color: #ff5a83; /* Color for the circle */
+  }
+}
+    </style>
+    <link
+      rel="icon"
+      href="https://lh3.googleusercontent.com/RllZf42XounX60rftJqa0K3EfoCMmzGqdOgbZvtQiPETcOVaes8cw1bEeBhW7UGeNb0=h200"
+      type="image/x-icon"
+    />
+    <script
+      src="https://kit.fontawesome.com/eed82eddcd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="nav">
+      <div id="img">
+        <a href="luxe.html"
+          ><div class="logo">
+            <h1>Allora</h1>
+        </div> </a>
+      </div>
+      <a href="address.html">
+      <div id="addres_nav">
+        <div>
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h3>Address</h3>
+        </div></a>
+
+        <a href="payment.html">
+      <div id="payment">
+        <div>
+          <i class="fa-solid fa-pencil"></i>
+        </div>
+        <h3>Payment</h3>
+      </div></a>
+    </div>
+
+    <div id="payment_board">
+      <h1>Choose payment method</h1>
+      <p>Choose the payment method you prefer</p>
+      <div id="Choose">
+        <h2>payment methods</h2>
+        <div id="select-way">
+          <div id="choose-way">
+            <div class="card-way">
+              <h4>Credit/Debit Card</h4>
+              <p>Visa, Mastercard, Rupay & more</p>
+            </div>
+
+            <div class="upi-way">
+              <h4>UPI</h4>
+              <p>Google Pay, PhonePe, Paytm & more</p>
+            </div>
+          </div>
+          <div class="cards-box">
+            <div class="card card1">
+              <h3>One card for all Nykaa apps</h3>
+              <hr />
+              <input type="text" id="card-number" placeholder="Card-Number" />
+              <div>
+                <input
+                  type="text"
+                  id="card-expiry"
+                  placeholder="Expiry(MM/YY)"
+                />
+                <input type="text" id="cvv" placeholder="CVV" />
+              </div>
+              <button class="paynow">Pay Now</button>
+            </div>
+            <div class="card card2">
+              <h3>Pay With UPI</h3>
+              <hr />
+              <p>1. Select UPI App</p>
+              <div id="select-app">
+                <div>
+                  <div class="img1">
+                    <img
+                      src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/fashion_icons/googlePay.svg"
+                      alt=""
+                    />
+                  </div>
+                  <p>Google Pay</p>
+                </div>
+                <div>
+                  <div class="img2">
+                    <img
+                      src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/UPImWeb/PhonePe.svg"
+                      alt=""
+                    />
+                  </div>
+                  <p>PhonePe</p>
+                </div>
+                <div>
+                  <div class="img3">
+                    <img
+                      src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/UPImWeb/Paytm.svg"
+                      alt=""
+                    />
+                  </div>
+                  <p>Paytm</p>
+                </div>
+                <div>
+                  <div class="img4">
+                    <img
+                      src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/UPImWeb/UPI-Logo-vector%201.svg"
+                      alt=""
+                    />
+                  </div>
+                  <p>Other UPI</p>
+                </div>
+              </div>
+              <input type="text" id="upinum" placeholder="Enter UPI Id" />
+
+              <button class="paynow1">Pay Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        document.querySelector(".paynow").addEventListener("click", check);
+
+function check() {
+  var cardnum = document.getElementById("card-number").value;
+  var expiry = document.getElementById("card-expiry").value;
+  var cvv = document.getElementById("cvv").value;
+  var upi = document.getElementById("upinum").value;
+  if (cardnum.length !== 16) {
+    alert("please fill 16 digit card number");
+    return;
+  }
+  if (expiry.length !== 5) {
+    alert("please fill correct expiry date");
+    return;
+  }
+  if (cvv.length !== 3 || cvv === "") {
+    alert("please fill correct cvv");
+    return;
+  }
+
+  window.location.href = "otp.html";
+}
+document.querySelector(".paynow1").addEventListener("click", check1);
+
+function check1() {
+  var upi = document.getElementById("upinum").value;
+  if (upi !== "8209633900@oksbi") {
+    alert("please fill correct upi id");
+    return;
+  }
+
+  window.location.href = "sign-in.html";
+}
+document.querySelector(".upi-way").addEventListener("click", showupi);
+
+function showupi() {
+  document.querySelector(".upi-way").classList.add("upy-way1");
+  document.querySelector(".card1").classList.add("card11");
+  document.querySelector(".card-way").classList.add("card-way1");
+  document.querySelector(".card2").classList.add("card22");
+}
+
+document.querySelector(".card-way").addEventListener("click", showcard);
+
+function showcard() {
+  document.querySelector(".upi-way").classList.remove("upy-way1");
+  document.querySelector(".card1").classList.remove("card11");
+  document.querySelector(".card-way").classList.remove("card-way1");
+  document.querySelector(".card2").classList.remove("card22");
+}
+
+document.querySelector(".img1").addEventListener("click", img1bor);
+
+function img1bor() {
+  document.querySelector(".img1").classList.add("img11");
+  document.querySelector(".img2").classList.remove("img21");
+  document.querySelector(".img3").classList.remove("img31");
+  document.querySelector(".img4").classList.remove("img41");
+}
+
+document.querySelector(".img2").addEventListener("click", img2bor);
+
+function img2bor() {
+  document.querySelector(".img1").classList.remove("img11");
+  document.querySelector(".img2").classList.add("img21");
+  document.querySelector(".img3").classList.remove("img31");
+  document.querySelector(".img4").classList.remove("img41");
+}
+document.querySelector(".img3").addEventListener("click", img3bor);
+
+function img3bor() {
+  document.querySelector(".img1").classList.remove("img11");
+  document.querySelector(".img2").classList.remove("img21");
+  document.querySelector(".img3").classList.add("img31");
+  document.querySelector(".img4").classList.remove("img41");
+}
+document.querySelector(".img4").addEventListener("click", img4bor);
+
+function img4bor() {
+  document.querySelector(".img1").classList.remove("img11");
+  document.querySelector(".img2").classList.remove("img21");
+  document.querySelector(".img3").classList.remove("img31");
+  document.querySelector(".img4").classList.add("img41");
+}
+
+document.querySelector("#singup").addEventListener("click", toggleStep);
+document.querySelector("#addres_nav").addEventListener("click", toggleStep);
+document.querySelector("#payment").addEventListener("click", toggleStep);
+
+function toggleStep(event) {
+  const target = event.target.closest('div');
+  const steps = ['#singup', '#addres_nav', '#payment'];
+
+  // Remove active class from all steps
+  steps.forEach(step => {
+    document.querySelector(step).classList.remove("active");
+  });
+
+  // Add active class to clicked step
+  target.classList.add("active");
+
+  // Show the respective content for the selected step
+  const stepId = target.id;
+  if (stepId === "singup") {
+    // Show or update the signup content
+    // Example: document.querySelector("#signup-content").style.display = "block";
+  } else if (stepId === "addres_nav") {
+    // Show or update the address content
+    // Example: document.querySelector("#address-content").style.display = "block";
+  } else if (stepId === "payment") {
+    // Show or update the payment content
+    // Example: document.querySelector("#payment-content").style.display = "block";
+  }
+}
+    </script>
+  </body>
+</html>
