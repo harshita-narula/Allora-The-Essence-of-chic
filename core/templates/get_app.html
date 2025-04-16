@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Allora App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<style>
+    .get-app {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8d7da; /* Light pink background */
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+}
+
+.app-content {
+    max-width: 50%;
+}
+
+.app-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #d63384;
+}
+
+.app-content p {
+    font-size: 16px;
+    color: #555;
+}
+
+.store-buttons {
+    margin-top: 20px;
+}
+
+.store-buttons img {
+    width: 140px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.app-preview img {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+</style></head>
+<body>
+
+    <section class="get-app">
+        <div class="app-content">
+            <h2>BEAUTY TO GO!</h2>
+            <p>Download the Allora App for the best beauty products and offers!</p>
+
+            <div class="store-buttons">
+                <a href="#" target="_blank">
+                    <img src="{{ url_for('static', filename='images/app-store.png') }}" alt="App Store">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="{{ url_for('static', filename='images/play-store.png') }}" alt="Play Store">
+                </a>
+            </div>
+        </div>
+
+        <div class="app-preview">
+            <img src="{{ url_for('static', filename='images/mobile-preview.png') }}" alt="Allora App">
+        </div>
+    </section>
+
+</body>
+</html>

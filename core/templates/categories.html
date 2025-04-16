@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap');
+
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ebbdc2, #ee9ca7);
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; 
+        }
+
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 50px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #ffffff, #ffcbf2);
+            -webkit-background-clip: text;
+            color: rgb(241, 231, 231);
+            text-align: center;
+            margin-top: 20px; 
+        }
+
+        
+        .store-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 50px 20px;
+            margin-top: 20px;
+        }
+
+        
+        .store-card {
+            width: 450px;
+            height: 250px;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+
+        .store-card:hover {
+            transform: scale(1.05) rotateX(10deg) rotateY(-10deg);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+       
+        .store-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .store-card:hover img {
+            transform: scale(1.1);
+        }
+
+        
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .store-card:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay h2 {
+            font-size: 24px;
+            margin: 0;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .overlay p {
+            font-size: 14px;
+            margin: 5px 0 10px;
+            opacity: 0.8;
+        }
+
+        .overlay a {
+            display: inline-block;
+            font-size: 14px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+
+        .overlay a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        
+        .glow {
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .store-card:hover .glow {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Select Your Store</h1>
+
+    <div class="store-container">
+        <!-- Store 1 -->
+        <div class="store-card">
+            <div class="glow"></div>
+            <img src="https://i.pinimg.com/736x/89/b2/b1/89b2b17bfa9d068c318e1d8b70e221f5.jpg" alt="Allora">
+            <div class="overlay">
+                <h2>Allora</h2>
+                <p>India’s Fashion & Beauty Experts</p>
+                <a href="/">Enter Store →</a>
+            </div>
+        </div>
+
+        <!-- Store 2 -->
+        <div class="store-card">
+            <div class="glow"></div>
+            <img src="https://images.pexels.com/photos/167964/pexels-photo-167964.jpeg" alt="FWD">
+            <div class="overlay">
+                <h2>FWD</h2>
+                <p>Gen-Z Fresh Drops Under ₹999</p>
+                <a href="#">Enter Store →</a>
+            </div>
+        </div>
+
+        <!-- Store 3 -->
+        <div class="store-card">
+            <div class="glow"></div>
+            <img src="https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg" alt="Luxe">
+            <div class="overlay">
+                <h2>LUXE</h2>
+                <p>Unlock The World Of Luxury</p>
+                <a href="/luxe">Enter Store →</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

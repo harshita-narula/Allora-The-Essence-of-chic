@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allora Chatbot</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/chatbotstyle.css' %}">
+</head>
+<body>
+
+   
+    <div id="chatIcon" onclick="toggleChat()">
+        <img src="{% static 'images/chatbot.jpg' %}">
+    </div>
+
+    
+    <div id="chatContainer">
+        <div id="chatHeader">
+            <img src="{% static 'images/chatbot.jpg' %}" alt="Chat">
+            How may we help you?
+            <button id="closeChat" onclick="toggleChat()">✖</button>
+        </div>
+        <div id="chatBody">Welcome to Allora! How can I assist you?</div>
+        <div id="chatInputContainer">
+            <input type="text" id="chatInput" placeholder="Type a message...">
+            <button id="sendButton">Send</button>
+        </div>
+    </div>
+
+    {% load static %}
+    <script src="{% static 'chatbotscript.js' %}"></script>
+
+
+</body>
+</html>

@@ -44,6 +44,19 @@ def terms_conditions():
 def luxe():
     return render_template('luxe.html')
 
+@app.route('/getapp')
+def get_app():
+    return render_template('get_app.html')
+
+@app.route('/makeup-store')
+def makeup_store():
+    return render_template('makeup.html')
+
+@app.route('/makeup-products')
+def makeup_products():
+    return render_template('makeup_products.html')
+
+
 @app.route("/ask", methods=["POST"])
 def ask():
     user_message = request.json["message"].strip().lower()

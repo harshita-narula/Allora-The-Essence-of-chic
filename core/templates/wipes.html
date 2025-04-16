@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allora - BabyCare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<style>
+    /* Reset & base */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header 1 */
+.header-bar {
+    background-image: url('https://images-static.naikaa.com/media/wysiwyg/2021/common-strip.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-bar .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-links a {
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+}
+
+.header-links a:hover {
+    color: #100f0f;
+}
+
+.divider {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.header-bar i {
+    font-size: 14px;
+}
+
+/* Header 2 */
+.second-header {
+    background-color: #fff;
+    padding: 20px 20px;
+    border-bottom: 1px solid #e5e5e5;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.second-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #ff5a83;
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: #2c2c2c;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff5a83;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background-color: white;
+}
+
+.search-icon,
+.lens-icon {
+    color: #999;
+    font-size: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.lens-icon:hover,
+.voice-icon:hover {
+    color: #ff3f6c;
+    transform: scale(1.2);
+}
+
+.voice-icon {
+    color: #999;
+    margin-left: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 5px;
+    background: none;
+    color: #333;
+}
+
+.search-box input::placeholder {
+    color: #bbb;
+}
+
+.search-box:focus-within {
+    box-shadow: none;
+}
+
+.sign-in-btn {
+    background-color: #ff5a83;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.sign-in-btn:hover {
+    background-color: #e04b71;
+}
+
+.cart-icon {
+    color: #2c2c2c;
+    font-size: 22px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.cart-icon:hover {
+    color: #ff5a83;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Header 3 */
+.third-header {
+    background-color: #fff;
+    padding: 15px 0;
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: 130px;
+}
+
+.third-header .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: #8d8d8d;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #ff5a83;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+    min-width: 200px;
+}
+
+.dropdown-menu a {
+    color: #2c2c2c;
+    padding: 8px 15px;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f8f8f8;
+    color: #ff5a83;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 90%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    text-align: left;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.auth-btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #ff3f6c;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: white;
+    color: #ff3f6c;
+}
+
+.auth-btn img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.arrow {
+    margin-left: auto;
+    font-size: 20px;
+}
+
+.qr-icon {
+    font-size: 22px;
+    margin: 0 15px;
+    color: #6c757d;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.qr-icon:hover {
+    transform: scale(1.2);
+    color: #ff3f6c;
+}
+
+/* Diaper Section */
+.diaper-hero {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #fdfdfd;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    padding: 20px 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Brands Mom Love */
+.brands-section {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.brands-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Carousel */
+.carousel-container {
+    position: relative;
+    display: flex;
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+.carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-track img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn.prev {
+    left: 0;
+}
+
+.carousel-btn.next {
+    right: 0;
+}
+
+.brands-carousel {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    .second-header .container,
+    .third-header .container,
+    .header-bar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-box {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-links,
+    .header-right {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .carousel-track img {
+        width: 250px;
+    }
+}
+
+    .product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  position: relative;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.badge {
+  color: green;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.badge.new {
+  color: blue;
+  right: 10px;
+  left: auto;
+}
+
+.discount {
+  color: green;
+  font-weight: bold;
+}
+
+.size-preview {
+  margin-top: 8px;
+  position: relative;
+}
+
+.hover-options {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  width: 100%;
+  top: -10px;
+  left: 0;
+  background: white;
+  padding: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 2;
+}
+
+.size-preview:hover .hover-options {
+  display: flex;
+}
+
+.preview-btn {
+  background: #ec008c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wishlist-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #ec008c;
+  cursor: pointer;
+}
+
+    .product-section {
+      display: flex;
+      gap: 20px;
+      margin-top: 30px;
+    }
+  
+    .filters {
+      width: 250px;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+  
+    .filter-box {
+      margin-bottom: 20px;
+    }
+  
+    .filter-box h4 {
+      margin-bottom: 10px;
+    }
+  
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      flex: 1;
+    }
+  
+    .product-card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: relative;
+    }
+  
+    .product-card img {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+  
+    .badge {
+      color: green;
+      font-size: 12px;
+      font-weight: bold;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+  
+    .badge.new {
+      color: blue;
+      left: auto;
+      right: 10px;
+    }
+  
+    .discount {
+      color: green;
+      font-weight: bold;
+    }
+  
+    .preview-btn {
+      background: #ec008c;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* bodyyy */
+
+.main-container {
+            display: flex;
+            margin: 20px;
+        }
+
+        .sidebar {
+            width: 500px;
+            background-color: #fff;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar select, .sidebar button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: gray;
+            margin-right: 5px;
+        }
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+        .product-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .add-to-bag {
+            background: hotpink;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+ /* footer */
+        .allora-footer {
+        background-color: #2d2f31;
+        color: white;
+        padding: 20px 0;
+    }
+    .allora-footer-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    
+    .allora-footer-subscribe,
+    .allora-footer-app,
+    .allora-footer-contact {
+        flex: 1;
+        margin: 10px;
+        max-width: 300px;
+    }
+  /* Email Subscription Box */
+.allora-subscribe-box {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between input and button */
+    margin-top:15px;
+}
+
+/* Email Input Field */
+.allora-email-input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid white; /* Bottom line only */
+    color: white;
+    padding: 8px 5px;
+    width: 200px;
+    font-size: 16px;
+    outline: none;
+}
+
+.allora-email-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: normal;
+}
+
+/* Send Button (Transparent with White Border & Text) */
+.allora-send-btn {
+    background: transparent;  /* No background */
+    border: 2px solid white;  /* White border */
+    color: white;  /* White text */
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    outline: none;
+}
+
+.allora-send-btn:hover {
+    background: rgba(255, 255, 255, 0.2); /* Light white effect on hover */
+}
+
+    .allora-footer-app-buttons img {
+        width: 120px;
+        margin: 5px;
+    }
+
+    .allora-info-footer {
+    background-color: #6a6a6a;
+    padding: 30px 0;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.allora-info-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.allora-info-column {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.allora-info-heading {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.allora-info-links {
+    list-style: none;
+    padding: 0;
+    font-size:14px;
+}
+
+.allora-info-links li {
+    margin-bottom: 10px;
+}
+
+.allora-info-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.allora-info-links a:hover {
+    color: #fc53a8; /* Pink hover effect */
+}
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 20px 0;
+}
+
+.feature-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.feature-text {
+    text-align: left;
+}
+
+.social-media-section {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+}
+.footer-bottom {
+    background-color: #e4006d;
+    text-align: center;
+    padding: 10px 0;
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 5px;
+}
+.footer-link {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 500;
+}
+.footer-link:hover {
+    text-decoration: underline;
+}
+.footer-copyright {
+    color: white;
+    font-size: 12px;
+    margin-top:10px
+}
+.popular-links-container {
+    background-color: #f5f5f5;
+    padding: 35px;
+    text-align: left;
+}
+
+.popular-links-heading {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.popular-links-text {
+    font-size: 14px;
+    color: #7d7d7d;
+    line-height: 1.6;
+}
+
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+    }
+
+    .heading {
+      text-align: center;
+      font-size: 26px;
+      font-weight: bold;
+      padding: 10px;
+    }
+
+    .heading span {
+      font-weight: normal;
+      color: #666;
+      font-size: 22px;
+    }
+
+    .carousel {
+      position: relative;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .carousel img {
+      width: 90%;
+      max-width: 1000px;
+      height: auto;
+      border-radius: 8px;
+      display: none;
+    }
+
+    .carousel img.active {
+      display: inline-block;
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 30px;
+      transform: translateY(-50%);
+    }
+
+    .carousel-buttons button {
+      background: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .dots {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .dot {
+      height: 10px;
+      width: 10px;
+      margin: 0 4px;
+      background-color: pink;
+      border-radius: 50%;
+      display: inline-block;
+      opacity: 0.5;
+    }
+
+    .dot.active {
+      opacity: 1;
+    }
+
+    /* page */
+    
+  .pagination {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .page-btn {
+    background-color: #f3f3f3;
+    border: none;
+    margin: 0 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+
+  .page-btn:hover {
+    background-color: #e91e63;
+    color: white;
+  }
+
+  .product-card {
+    display: none; /* JS controls visibility */
+  }
+
+
+  </style>
+  
+<body>
+        <header class="header-bar">
+            <div class="container">
+                <div class="header-links">
+                    <a href="/getapp"><i class="fa fa-mobile-alt"></i> Get App</a>
+                    <span class="divider">|</span>
+                    <a href="#"><i class="fa fa-map-marker-alt"></i> Store & Events</a>
+                    <span class="divider">|</span>
+                    <a href="/gift_cards"><i class="fa fa-gift"></i> Gift Card</a>
+                    <span class="divider">|</span>
+                    <a href="#"><i class="fa fa-question-circle"></i> Help</a>
+                </div>
+            </div>
+        </header>
+
+    <header class="second-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Allora</h1>
+            </div>
+<div id="signin-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Login / Create an Account</h2>
+        <a href="{% url 'sign_in_mobile' %}" class="no-underline">
+        <button class="auth-btn">
+            Sign in with Mobile
+            <span class="arrow">&#8594;</span>
+        </button>
+        </a>
+        <button class="auth-btn">
+            <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo"> 
+            Sign in with Google 
+            <span class="arrow">&#8594;</span>
+        </button>
+    </div>
+</div>
+
+            <nav class="nav-links">
+                <a href="/categories">Categories</a>
+                <a href="#">Brands</a>
+                <a href="/luxe">Luxe</a>
+                <a href="#">Beauty Advice</a>
+            </nav>
+
+            
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search for Allora">
+                    <i class="fas fa-camera lens-icon" id="image-capture"></i>
+                    <i class="fas fa-microphone voice-icon" id="voice-search"></i>
+                </div>
+              
+                <i class="fas fa-qrcode qr-icon" id="qr-scanner"></i>
+                <button id="signin-btn" class="sign-in-btn">Sign In</button>
+                <a href="#" class="cart-icon"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </header>
+    
+<header class="third-header">
+    <div class="container">
+        <nav class="nav-menu">
+            <div class="dropdown">
+                <a href="/makeup-store" class="nav-link">Makeup</a>
+                <div class="dropdown-menu">
+                    <a href="#">Lipsticks</a>
+                    <a href="#">Foundations</a>
+                    <a href="#">Mascaras</a>
+                    <a href="#">Eyeliners</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Skin</a>
+                <div class="dropdown-menu">
+                    <a href="#">Cleansers</a>
+                    <a href="#">Moisturizers</a>
+                    <a href="#">Serums</a>
+                    <a href="#">Sunscreens</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Hair</a>
+                <div class="dropdown-menu">
+                    <a href="#">Shampoos</a>
+                    <a href="#">Conditioners</a>
+                    <a href="#">Hair Masks</a>
+                    <a href="#">Hair Oils</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Appliances</a>
+                <div class="dropdown-menu">
+                    <a href="#">Hair Dryers</a>
+                    <a href="#">Straighteners</a>
+                    <a href="#">Curlers</a>
+                    <a href="#">Trimmers</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Bath & Body</a>
+                <div class="dropdown-menu">
+                    <a href="#">Body Wash</a>
+                    <a href="#">Body Lotions</a>
+                    <a href="#">Scrubs</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Natural</a>
+                <div class="dropdown-menu">
+                    <a href="#">Organic Products</a>
+                    <a href="#">Ayurvedic</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Mom & Baby</a>
+                <div class="dropdown-menu">
+                    <a href="#">Baby Lotions</a>
+                    <a href="#">Diapers</a>
+                    <a href="#">Baby Oil</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Health & Wellness</a>
+                <div class="dropdown-menu">
+                    <a href="#">Supplements</a>
+                    <a href="#">Proteins</a>
+                    <a href="#">Vitamins</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Fragrance</a>
+                <div class="dropdown-menu">
+                    <a href="#">Perfumes</a>
+                    <a href="#">Deodorants</a>
+                    <a href="#">Body Mists</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Men</a>
+                <div class="dropdown-menu">
+                    <a href="#">Shaving Cream</a>
+                    <a href="#">Beard Oils</a>
+                    <a href="#">Trimmers</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Lingerie & Accessories</a>
+                <div class="dropdown-menu">
+                    <a href="#">Lingerie</a>
+                    <a href="#">Accessories</a>
+                    <a href="#">Nightwear</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+</header>
+
+<!-- Wipes Section -->
+<section class="diaper-hero">
+    <div class="container">
+        <h2 class="section-title">Best Wipes and Buds Online</h2>
+    </div>
+    <div class="hero-image">
+        <img src="https://images-static.nykaa.com/uploads/00e22650-013f-4b1e-a041-ef2266d697c1.jpg?tr=cm-pad_resize,w-1800" alt="Best Wipes and Buds Online">
+    </div>
+</section>
+
+<h1 align="center">All Products</h1>
+<div class="main-container">
+  <div class="sidebar">
+      <h3>Sort By:</h3>
+      <select>
+          <option value="low-high">Price: Low to High</option>
+          <option value="high-low">Price: High to Low</option>
+      </select>
+
+      <h3>Select Any Brand:</h3>
+      <select>
+          <option value="mamaearth">Mamaearth</option>
+          <option value="wow">WOW</option>
+          <option value="mcaffeine">McCaffeine</option>
+          <option value="biotique">Biotique</option>
+      </select>
+
+      <button>Filter</button>
+  </div>
+
+  <div id="product-wrapper" class="product-container">
+      <div class="product-card">
+          <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/7/3/73afca2BELAA00000011ab_1.png" alt="Product 2">
+          <p class="product-name">Bella Cotton Pads, 100% Cotton, Double Sided</p>
+          <p class="price"><span class="old-price">₹189</span> ₹168<span class="discount">11% Off</span></p>
+          <button class="add-to-bag" data-name="Bella Cotton Pads, 100% Cotton, Double Sided" data-price="189">Add to Bag</button>
+      </div>
+      <div class="product-card">
+          <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/6/3/63369698908009149398ab_01.jpg" alt="Product 2">
+          <p class="product-name">Mother Sparsh 99% Pure Water Unscented Baby</p>
+          <p class="price"><span class="old-price">₹598</span> ₹568 
+          <button class="add-to-bag" data-name="Mother Sparsh 99% Pure Water Unscented Baby" data-price="568">Add to Bag</button>
+      </div>
+      <div class="product-card">
+          <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/7/3/73afca25900516400033ab_1.png">
+          <p class="product-name">Bella Cooton Pads, 100% Cotton, Double Sided, Skin</p>
+          <p class="price">₹142</p>
+          <button class="add-to-bag" data-name="Bella Cooton Pads, 100% Cotton, Double Sided, Skin" data-price="142">Add to Bag</button>
+      </div>
+      <div class="product-card">
+          <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/a/9/a9b30ddn_8901138513184as__1_.jpg" alt="Product 2">
+          <p class="product-name">Himalaya Gentle Baby Wipes</p>
+          <p class="price">₹280</p>
+          <button class="add-to-bag" data-name="Himalaya Gentle Baby Wipes" data-price="280">Add to Bag</button>
+      </div>
+      <div class="product-card">
+          <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/b/3/b31acdf8904117401083_new1.jpg" alt="Product 4">
+          <p class="product-name">Tulips Sensitive Baby Wet Wipes - 20 Pcs</p>
+          <p class="price"><span class="old-price">₹52</span> ₹46 <span class="discount">12% Off</span></p>
+          <button class="add-to-bag" data-name="Tulips Sensitive Baby Wet Wipes - 20 Pcs" data-price="46">Add to Bag</button>
+      </div>
+      <div class="product-card">
+          <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/5/a/5abb67e8908004343241_2311_1.jpg" alt="Product 5">
+          <p class="product-name">Boduguard Aloe Vera Based Natural Wet Wipes</p>
+          <p class="price">₹104</p>
+          <button class="add-to-bag" data-name="Boduguard Aloe Vera Based Natural Wet Wipes" data-price="104">Add to Bag</button>
+      </div>
+      
+      <div class="product-card">
+          <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/e/8e792578908009149343a_1.jpg" alt="Product 6">
+          <p class="product-name">Mother Sparsh 99% Pure water Unscented Baby</p>
+          <p class="price">₹299</p>
+          <button class="add-to-bag" data-name="Mother Sparsh 99% Pure water Unscented Baby" data-price="299">Add to Bag</button>
+      </div>
+
+      <div class="product-card">
+          <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/9/6/96085355900516400729_1.jpg" alt="Product 7">
+          <p class="product-name">Bella A30 Cotton Pads - 30 Pieces</p>
+          <p class="price">₹61</p>
+          <button class="add-to-bag" data-name="Bella A30 Cotton Pads - 30 Pieces" data-price="61">Add to Bag</button>
+      </div>
+  
+      
+      <div class="product-card">
+          <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/9/c/9cacfb08058664163458_1.jpg" alt="Product 8">
+          <p class="product-name">Chicco Soft Cleansing Wet Baby Wipes</p>
+          <p class="price">₹99</p>
+          <button class="add-to-bag" data-name="Chicco Soft Cleansing Wet Baby Wipes" data-price="449">Add to Bag</button>
+      </div>
+
+      <div class="product-card">
+          <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/7/3/73afca25900516401832ab_1.png" alt="Product 9">
+          <p class="product-name">Bella Cotton Pads With Aloevera Extracts, 100%</p>
+          <p class="price"> ₹163</p>
+          <button class="add-to-bag" data-name="Bella Cotton Pads With Aloevera Extracts, 100%" data-price="163">Add to Bag</button>
+      </div>
+      
+      <div class="product-card">
+          <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/2/5/2589fa7JOHNS00003021_1.jpg" alt="Product 12">
+          <p class="product-name">Johnson's Baby Skincare Wipes</p>
+          <p class="price"> ₹280</p>
+          <button class="add-to-bag" data-name="Johnson's Baby Skincare Wipes" data-price="280">Add to Bag</button>
+      </div>
+      
+      <div class="product-card">
+          <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/2/5/2589fa78901012155035_1.jpg" alt="Product 11">
+          <p class="product-name">Johnsons Gentle Cotton Buds 75 N stems</p>
+         <p class="price" > ₹165</p>         
+          <button class="add-to-bag" data-name="Johnsons Gentle Cotton Buds 75 N stems" data-price="165">Add to Bag</button>
+      </div>
+      <!-- 2 -->
+       <!-- START of additional products -->
+<div class="product-card">
+  <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/9/8906087770350_4_.jpg" alt="Product 13">
+  <p class="product-name">Mamaearth India's First Organic Bamboo Based</p>
+  <p class="price">₹249</p>
+  <button class="add-to-bag" data-name="Pampers Premium Care Pants Diapers, Medium" data-price="249">Add to Bag</button>
+</div>
+
+<div class="product-card">
+  <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/5/5/5581faeFSP044_2.jpg" alt="Product 14">
+  <p class="product-name">Sirona Sanitary Disposal Bags for Discreet Disposal </p>
+  <p class="price">₹153</p>
+  <button class="add-to-bag" data-name="Himalaya Baby Care Baby Diapers Medium - 24" data-price="153">Add to Bag</button>
+</div>
+
+<div class="product-card">
+  <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/6/5/65e1ec58904417316414_1.jpg" alt="Product 15">
+  <p class="product-name">Mamaearth Baby 99% Pure Water Gentle Towel Wipes</p>
+  <p class="price">₹275</p>
+  <button class="add-to-bag" data-name="Mamaearth Baby 99% Pure Water Gentle Towel Wipes" data-price="275">Add to Bag</button>
+</div>
+
+<div class="product-card">
+  <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/2/5/2589fa78901012119136_1.jpg" alt="Product 16">
+  <p class="product-name">Johnsons Baby Skincare Wipes 72N Pack of 2</p>
+  <p class="price">₹540</p>
+  <button class="add-to-bag" data-name="Johnsons Baby Skincare Wipes 72N Pack of 2" data-price="540">Add to Bag</button>
+</div>
+
+<div class="product-card">
+  <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/d/8d07cdf8904117401052_new1.jpg" alt="Product 17">
+  <p class="product-name">Tulips Sensitive Baby Wet Wipes - 72 Pcs</p>
+  <p class="price">₹122</p>
+  <button class="add-to-bag" data-name="Tulips Sensitive Baby Wet Wipes - 72 Pcs" data-price="122">Add to Bag</button>
+</div>
+
+<div class="product-card">
+  <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/7/3/73afca2BELAA00000001ab_1.png" alt="Product 18">
+  <p class="product-name">Bella Cotton Pads, 100% Cotton, Double Sided</p>
+  <p class="price">₹268</p>
+  <button class="add-to-bag" data-name="Bella Cotton Pads, 100% Cotton, Double Sided" data-price="268">Add to Bag</button>
+</div>
+
+<div class="product-card">
+  <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/6/d/6db50d6THEMO00000051_1.jpg" alt="Product 19">
+  <p class="product-name">The Moms Co Rash-free Baby Wipes: 99% Pure</p>
+  <p class="price">₹224</p>
+  <button class="add-to-bag" data-name="The Moms Co Rash-free Baby Wipes: 99% Pure" data-price="224">Add to Bag</button>
+</div>
+
+<div class="product-card">
+  <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/0/1/010900f8906154951040_1.jpg" alt="Product 20">
+  <p class="product-name">Mother Sparsh Milky Soft Baby Lotion With Milk</p>
+  <p class="price">₹269</p>
+  <button class="add-to-bag" data-name="Mother Sparsh Milky Soft Baby Lotion With Milk" data-price="269">Add to Bag</button>
+</div>
+
+<div class="product-card">
+  <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/5/a/5abb67e8908004343531_2311_1.jpg" alt="Product 21">
+  <p class="product-name">Bodyguard Baby diaper Disposable Bags, Oxo</p>
+  <p class="price">₹208</p>
+  <button class="add-to-bag" data-name="Bodyguard Baby diaper Disposable Bags, Oxo" data-price="208">Add to Bag</button>
+</div>
+
+<div class="product-card">
+  <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/e/1/e11651bBABYF00000041_1a.jpg" alt="Product 22">
+  <p class="product-name">BABY FOREST Neer 99.9% Water Baby Wipes - Pack of 4</p>
+  <p class="price">₹1099</p>
+  <button class="add-to-bag" data-name="BABY FOREST Neer 99.9% Water Baby Wipes - Pack of 4" data-price="1099">Add to Bag</button>
+</div>
+
+<div class="product-card">
+  <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/a/d/ad565598906000423912_1.jpg" alt="Product 23">
+  <p class="product-name">GUBB Hypoallergenic 100% White Cotton Balls for Face</p>
+  <p class="price">66</p>
+  <button class="add-to-bag" data-name="GUBB Hypoallergenic 100% White Cotton Balls for Face" data-price="66">Add to Bag</button>
+</div>
+
+<div class="product-card">
+  <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/5/a/5abb67eFSP043_2311_1.jpg" alt="Product 24">
+  <p class="product-name">Sirona Oxo Biodegradable and Leak-Proof Sanitary</p>
+  <p class="price">₹69</p>
+  <button class="add-to-bag" data-name="Sirona Oxo Biodegradable and Leak-Proof Sanitary" data-price="69">Add to Bag</button>
+</div>
+
+<div class="product-card">
+  <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/6/7/6754fb08058664169399_1.jpg" alt="Product 25">
+  <p class="product-name">Chicco Soft Cleansing Wet Wipes- Pack of 2</p>
+  <p class="price">₹198</p>
+  <button class="add-to-bag" data-name="Chicco Soft Cleansing Wet Wipes- Pack of 2" data-price="198">Add to Bag</button>
+</div>
+
+<div class="product-card">
+  <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/6/1/61cdc888058664170821_1.jpg" alt="Product 26">
+  <p class="product-name">Chicco Soft Cleansing Wet Wipes - Pack of 3</p>
+  <p class="price">₹297</p>
+  <button class="add-to-bag" data-name="Chicco Soft Cleansing Wet Wipes - Pack of 3" data-price="297">Add to Bag</button>
+</div>
+
+<div class="product-card">
+  <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/e/1e472bb7449332296225_1.jpg" alt="Product 27">
+  <p class="product-name">Allure Bamboo Earbuds</p>
+  <p class="price">₹49</p>
+  <button class="add-to-bag" data-name="Allure Bamboo Earbuds" data-price="49">Add to Bag</button>
+</div>
+
+<div class="product-card">
+  <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/b/b/bb229855900516400330_1.jpg" alt="Product 28">
+  <p class="product-name">Bella Cotton Buds with Paper Stick</p>
+  <p class="price">₹52</p>
+  <button class="add-to-bag" data-name="Bella Cotton Buds with Paper Stick" data-price="52">Add to Bag</button>
+</div>
+
+<div class="product-card">
+  <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/0/8058664092437.jpg" alt="Product 29">
+  <p class="product-name">Chicco Cotton Buds Safe Hygiene with Ear</p>
+  <p class="price">₹249</p>
+  <button class="add-to-bag" data-name="Chicco Cotton Buds Safe Hygiene with Ear" data-price="249">Add to Bag</button>
+</div>
+
+<div class="product-card">
+  <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/d/2/d2a9110mocom5.jpg" alt="Product 30">
+  <p class="product-name">Mother Sparsh 99% Pure Water Baby Wipes</p>
+  <p class="price">₹1136</p>
+  <button class="add-to-bag" data-name="Mother Sparsh 99% Pure Water Baby Wipes" data-price="1136">Add to Bag</button>
+</div>
+
+<!-- <div class="product-card">
+  <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/5/b/5b35daa4987176093318(1).jpg" alt="Product 31">
+  <p class="product-name">Pampers Active Baby Diapers (XL)</p>
+  <p class="price">₹999</p>
+  <button class="add-to-bag" data-name="Pampers Active Diapers" data-price="999">Add to Bag</button>
+</div>
+
+<div class="product-card"><img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/4/6/46b8a934501517077203_1.jpg" alt="Product 33"><p class="product-name">SanNap Baby Diaper Disposal Bags (Pack Of 50)</p><p class="price">₹299</p><button class="add-to-bag" data-name="SanNap Baby Diaper Disposal Bags (Pack Of 50)" data-price="299">Add to Bag</button></div> -->
+
+<!-- Products 33-48 -->
+<div class="product-card"><img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/7/87069e88906152840186_1.jpg" alt="Product 33"><p class="product-name">BABY FOREST Mulmul Baby Wipes</p><p class="price">₹399</p><button class="add-to-bag" data-name="BABY FOREST Mulmul Baby Wipes" data-price="399">Add to Bag</button></div>
+
+
+<div class="product-card">
+  <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/7/5/7524110mocom8.jpg" alt="Product 22">
+  <p class="product-name">Mother Sparsh 99% Pure Water Baby Wipes </p>
+  <p class="price">₹2990</p>
+  <button class="add-to-bag" data-name="Mother Sparsh 99% Pure Water Baby Wipes" data-price="2990">Add to Bag</button>
+</div>
+
+<div class="product-card"><img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/b/b/bb229855900516400040_1.jpg" alt="Product 35"><p class="product-name">Bella Cotton Buds with Paper Stick</p><p class="price">₹147</p><button class="add-to-bag" data-name="Bella Cotton Buds with Paper Stick" data-price="147">Add to Bag</button></div>
+
+<div class="product-card"><img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/c/f/cf5f3988059147052948_main.jpg" alt="Product 36"><p class="product-name">Chicco soft Cotton Squares Baby Moments </p><p class="price">₹479</p><button class="add-to-bag" data-name="Chicco soft Cotton Squares Baby Moments" data-price="479">Add to Bag</button></div>
+
+<div class="product-card">
+  <img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/e/1/e11651bBABYF00000040_1a.jpg">
+  <p class="product-name">BABY FOREST Neer 99.9% Water Baby Wipes</p>
+  <p class="price">₹449</p>
+  <button class="add-to-bag" data-name="BABY FOREST Neer 99.9% Water Baby Wipes" data-price="449">Add to Bag</button>
+</div>
+
+<div class="product-card">
+<img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/5/f/5fec660MAJAB00000227_01.jpg">
+  <p class="product-name">Majestique Baby Safety Cotton Swab</p>
+  <p class="price">₹170</p>
+  <button class="add-to-bag" data-name="Majestique Baby Safety Cotton Swab" data-price="170">Add to Bag</button>
+</div>
+
+<!-- <div class="product-card"><img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/a/0/a03bdaa4987176056276(1).jpg" alt="Product 39"><p class="product-name">Pampers Premium Care Diaper - NB (Pack of 70)</p><p class="price">₹1499</p><button class="add-to-bag" data-name="Pampers Premium Care Diaper - NB (Pack of 70)" data-price="1499">Add to Bag</button></div>
+
+<div class="product-card"><img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/b/e/beecdaa4987176093349(1).jpg" alt="Product 40"><p class="product-name">Pampers Active Baby Diapers, Medium</p><p class="price">₹1849</p><button class="add-to-bag" data-name="Pampers Active Baby Diapers, Medium" data-price="1849">Add to Bag</button></div>
+
+<div class="product-card"><img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/5/b/5b35daa4987176093318(1).jpg" alt="Product 41"><p class="product-name">Pampers Active Baby Diapers, XL </p><p class="price">₹999</p><button class="add-to-bag" data-name="Pampers Active Baby Diapers, XL" data-price="999">Add to Bag</button></div>
+
+<div class="product-card"><img src="https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/4/0/401cdaa4987176135025(1).jpg" alt="Product 42"><p class="product-name">Pampers New Diaper Pants Super Value Box -L</p><p class="price">₹2898</p><button class="add-to-bag" data-name="Pampers New Diaper Pants Super Value Box -L" data-price="2898">Add to Bag</button></div>
+
+<div class="product-card"><img src="https://images-static.nykaa.com/media/catalog/product/9/9/99881.jpg" alt="Product 43"><p class="product-name">Johnson's Baby Cologne</p><p class="price">₹175</p><button class="add-to-bag" data-name="Johnson's Baby Cologne" data-price="175">Add to Bag</button></div>
+
+<div class="product-card"><img src="https://images-static.nykaa.com/media/catalog/product/8/8/88771.jpg" alt="Product 44"><p class="product-name">Cetaphil Baby Shampoo</p><p class="price">₹310</p><button class="add-to-bag" data-name="Cetaphil Baby Shampoo" data-price="310">Add to Bag</button></div>
+
+<div class="product-card"><img src="https://images-static.nykaa.com/media/catalog/product/7/7/77661.jpg" alt="Product 45"><p class="product-name">Sebamed Diaper Rash Cream</p><p class="price">₹479</p><button class="add-to-bag" data-name="Sebamed Rash Cream" data-price="479">Add to Bag</button></div>
+
+<div class="product-card"><img src="https://images-static.nykaa.com/media/catalog/product/6/6/66551.jpg" alt="Product 46"><p class="product-name">The Moms Co. Natural Baby Cream</p><p class="price">₹399</p><button class="add-to-bag" data-name="Natural Baby Cream" data-price="399">Add to Bag</button></div>
+
+<div class="product-card"><img src="https://images-static.nykaa.com/media/catalog/product/5/5/55441.jpg" alt="Product 47"><p class="product-name">Himalaya Baby Hair Oil</p><p class="price">₹130</p><button class="add-to-bag" data-name="Himalaya Baby Hair Oil" data-price="130">Add to Bag</button></div>
+
+<div class="product-card"><img src="https://images-static.nykaa.com/media/catalog/product/4/4/44331.jpg" alt="Product 48"><p class="product-name">Chicco Natural Sensation Face Cream</p><p class="price">₹279</p><button class="add-to-bag" data-name="Chicco Face Cream" data-price="279">Add to Bag</button></div>
+
+<div class="product-card"><img src="https://images-static.nykaa.com/media/catalog/product/9/9/99881.jpg" alt="Product 43"><p class="product-name">Johnson's Baby Cologne</p><p class="price">₹175</p><button class="add-to-bag" data-name="Johnson's Baby Cologne" data-price="175">Add to Bag</button></div>
+
+<div class="product-card"><img src="https://images-static.nykaa.com/media/catalog/product/8/8/88771.jpg" alt="Product 44"><p class="product-name">Cetaphil Baby Shampoo</p><p class="price">₹310</p><button class="add-to-bag" data-name="Cetaphil Baby Shampoo" data-price="310">Add to Bag</button></div>
+
+<div class="product-card"><img src="https://images-static.nykaa.com/media/catalog/product/7/7/77661.jpg" alt="Product 45"><p class="product-name">Sebamed Diaper Rash Cream</p><p class="price">₹479</p><button class="add-to-bag" data-name="Sebamed Rash Cream" data-price="479">Add to Bag</button></div>
+
+<div class="product-card"><img src="https://images-static.nykaa.com/media/catalog/product/6/6/66551.jpg" alt="Product 46"><p class="product-name">The Moms Co. Natural Baby Cream</p><p class="price">₹399</p><button class="add-to-bag" data-name="Natural Baby Cream" data-price="399">Add to Bag</button></div>
+
+<div class="product-card"><img src="https://images-static.nykaa.com/media/catalog/product/5/5/55441.jpg" alt="Product 47"><p class="product-name">Himalaya Baby Hair Oil</p><p class="price">₹130</p><button class="add-to-bag" data-name="Himalaya Baby Hair Oil" data-price="130">Add to Bag</button></div>
+
+<div class="product-card"><img src="https://images-static.nykaa.com/media/catalog/product/4/4/44331.jpg" alt="Product 48"><p class="product-name">Chicco Natural Sensation Face Cream</p><p class="price">₹279</p><button class="add-to-bag" data-name="Chicco Face Cream" data-price="279">Add to Bag</button></div> -->
+
+<!-- END of additional products -->
+
+      
+</div>
+</div>
+<div class="pagination">
+  <button class="page-btn" onclick="changePage(-1)">«</button>
+  <button class="page-btn" onclick="goToPage(1)">1</button>
+  <button class="page-btn" onclick="goToPage(2)">2</button>
+  <button class="page-btn" onclick="goToPage(3)">3</button>
+  <!-- <button class="page-btn" onclick="goToPage(4)">4</button> -->
+  <button class="page-btn" onclick="changePage(1)">»</button>
+</div>
+
+
+<footer class="allora-footer">
+  <div class="allora-footer-container">
+      <!-- Email Subscription -->
+      <div class="allora-footer-subscribe">
+          <i class="fa fa-envelope"></i>
+          <span>Get special discount on your inbox</span>
+          <div class="allora-subscribe-box">
+              <input type="email" class="allora-email-input" placeholder="Your Email">
+              <button class="allora-send-btn">SEND</button>
+          </div>
+      </div>
+      
+      <!-- Mobile App Download -->
+      <div class="allora-footer-app">
+          <i class="fa fa-mobile-alt"></i>
+          <span>EXPERIENCE THE ALLORA MOBILE APP</span>
+          <div class="allora-footer-app-buttons">
+              <img src="https://png.pngtree.com/png-vector/20230817/ourmid/pngtree-google-play-app-icon-vector-png-image_9183316.png" alt="Google Play">
+              <img src="https://cmsphoto.ww-cdn.com/superstatic/129568/art/grande/79767595-57712201.jpg?v=1713969716.0553339.png" alt="App Store">
+          </div>
+      </div>
+      
+      <!-- Customer Support Contact -->
+      <div class="allora-footer-contact">
+          <i class="fa fa-phone-alt"></i>
+          <span>FOR ANY HELP, YOU MAY CALL US AT</span>
+          <strong>1800-267-4444</strong>
+          <p>(Monday to Saturday, 8AM to 10PM and Sunday, 10AM to 7PM)</p>
+      </div>
+  </div>
+</footer>
+
+<footer class="allora-info-footer">
+  <div class="allora-info-container">
+      <div class="allora-info-column">
+          <h2 class="allora-info-heading">ALLORA</h2>
+          <ul class="allora-info-links">
+              <li><a href="#">Who are we?</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Authenticity</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">Allora CSR</a></li>
+              <li><a href="#">Responsible Disclosure</a></li>
+              <li><a href="#">Investor Relations</a></li>
+              <li><a href="#">Link to Smart ODR</a></li>
+          </ul>
+      </div>
+      <div class="allora-info-column">
+          <h2 class="allora-info-heading">Help</h2>
+          <ul class="allora-info-links">
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Store Locator</a></li>
+              <li><a href="#">Cancellation & Return</a></li>
+              <li><a href="#">Shipping & Delivery</a></li>
+              <li><a href="#">Sell on Allora</a></li>
+          </ul>
+      </div>
+      <div class="allora-info-column">
+          <h2 class="allora-info-heading">Inspire Me</h2>
+          <ul class="allora-info-links">
+              <li><a href="#">Beauty Book</a></li>
+              <li><a href="#">Allora Network</a></li>
+              <li><a href="#">Buying Guides</a></li>
+          </ul>
+      </div>
+      <div class="allora-info-column">
+          <h2 class="allora-info-heading">Quick Links</h2>
+          <ul class="allora-info-links">
+              <li><a href="#">Offer Zone</a></li>
+              <li><a href="#">New Launches</a></li>
+              <li><a href="#">Allora Man</a></li>
+              <li><a href="#">Allora Fashion</a></li>
+              <li><a href="#">Allora Pro</a></li>
+              <li><a href="#">Sitemap</a></li>
+          </ul>
+      </div>
+      <div class="allora-info-column">
+          <h2 class="allora-info-heading">Top Categories</h2>
+          <ul class="allora-info-links">
+              <li><a href="#">Makeup</a></li>
+              <li><a href="#">Skin</a></li>
+              <li><a href="#">Hair</a></li>
+              <li><a href="#">Bath & Body</a></li>
+              <li><a href="#">Appliances</a></li>
+              <li><a href="#">Mom and Baby</a></li>
+              <li><a href="#">Health & Wellness</a></li>
+              <li><a href="#">Fragrance</a></li>
+              <li><a href="#">Natural</a></li>
+              <li><a href="#">Luxe</a></li>
+          </ul>
+      </div>
+  </div>
+</footer>
+<section class="features-container">
+  <div class="feature-box">
+      <img src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Free-shipping.svg" alt="Free Shipping" class="feature-icon">
+      <div class="feature-text">
+          <h5>FREE SHIPPING</h5>
+          <p>On Orders Above ₹299</p>
+      </div>
+  </div>
+  <div class="feature-box">
+      <img src="https://adn-static2.nykaa.com/media/wysiwyg/2021/return_accepted.svg" alt="Easy Returns" class="feature-icon">
+      <div class="feature-text">
+          <h5>EASY RETURNS</h5>
+          <p>15-Day Return Policy</p>
+      </div>
+  </div>
+  <div class="feature-box">
+      <img src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Authenticity.svg" alt="100% Authentic" class="feature-icon">
+      <div class="feature-text">
+          <h5>100% AUTHENTIC</h5>
+          <p>Products Sourced Directly</p>
+      </div>
+  </div>
+  <div class="feature-box">
+      <img src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Brands.svg" alt="1900+ Brands" class="feature-icon">
+      <div class="feature-text">
+          <h5>1900+ BRANDS</h5>
+          <p>1.2 Lakh+ Products</p>
+      </div>
+  </div>
+  <div class="social-media-section">
+      <p>Show us some love ❤ on social media</p>
+      <div class="social-icons">
+          <img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-instagram-filled.svg" alt="Instagram" class="social-icon">
+          <img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-facebook-filled.svg" alt="Facebook" class="social-icon">
+          <img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-youtube-filled.svg" alt="YouTube" class="social-icon">
+          <img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-twitter-filled.svg" alt="Twitter" class="social-icon">
+          <img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-pinterest-filled.svg" alt="Pinterest" class="social-icon">
+      </div>
+  </div>
+</section>
+<footer class="footer-bottom">
+  <div class="footer-links">
+      <a href="#" class="footer-link">Terms & Conditions</a>
+      <a href="#" class="footer-link">Shipping Policy</a>
+      <a href="#" class="footer-link">Cancellation Policy</a>
+      <a href="#" class="footer-link">Privacy Policy</a>
+  </div>
+  <div class="footer-copyright">
+      &copy; 2025 ALLORA E-RETAIL LIMITED All Rights Reserved.
+  </div>
+</footer>
+
+<section class="popular-links-container">
+  <h2 class="popular-links-heading">Popular Links</h2>
+  <p class="popular-links-text">
+      Lipstick, Highlighter, Hair Serum, Concealer, Face Mask, Biotique, Lip Gloss, Perfume For Women, Facial Kit, Bb Cream, Victoria Secret, Love Beauty And Planet Shampoo, Eyeliner, Hair Mask, Face Wash For Oily Skin, Ordinary, Toner, Eyeshadow Palette, Cleanser, Chemist At Play, Mascara, Loreal Professional, Hair Extensions, Olay Cream, Fogg, Lip Tint, Under Eye Cream, Wax Strips, Shower Gel, Sunscreen For Face, Insight Cosmetics, Face Foundation, Hair Removal Machine, Mac Foundation, Choker, Oud Perfume, Makeup Pouch, Olaplex, Body Mist, Wella Shampoo, Huda Beauty Foundation, Night Cream, Facewash, Nyx, Schwarzkopf Shampoo, Blue Heaven, Peel Off Mask, Best Lip Balm, Face Scrub, Cetaphil Face Wash, Mederma Cream, Multivitamins Tablet, Himalaya Face Wash, Garnier Face Wash, Hair Color For Women, Cetaphil Moisturizers, Ponds Face Wash, Streax Hair Serum, Nivea Body Lotions, Vaseline Body Lotions, Sugar Lipstick, Biotin Tablet, Aqualogica Sunscreen, Salicylic Acid Face Wash, Clear Face Wash, Neutrogena Sunscreen, Pears Soaps, Hair Color For Men, Dry Cleansers, Face Serum
+  </p>
+</section>
+
+
+<script>
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('.carousel img');
+  const dots = document.querySelectorAll('.dot');
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+      dots[i].classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+  }
+  // page 1 to5
+  const productsPerPage = 9;
+const products = document.querySelectorAll('.product-card');
+const totalPages = Math.ceil(products.length / productsPerPage);
+let currentPage = 1;
+
+function showPage(page) {
+products.forEach((product, index) => {
+  product.style.display =
+    index >= (page - 1) * productsPerPage && index < page * productsPerPage
+      ? 'block'
+      : 'none';
+});
+}
+
+function goToPage(page) {
+if (page >= 1 && page <= totalPages) {
+  currentPage = page;
+  showPage(currentPage);
+
+  // Smart scroll adjustment
+  const productWrapper = document.getElementById('product-wrapper');
+  if (productWrapper) {
+    const yOffset = -200; // Adjust based on navbar height or desired offset
+    const y = productWrapper.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+}
+}
+
+function changePage(offset) {
+goToPage(currentPage + offset);
+}
+
+// Initial render
+showPage(currentPage);
+
+
+</script>
+  
+<script>
+    const carousels = document.querySelectorAll('.carousel-container');
+
+    carousels.forEach(container => {
+        const track = container.querySelector('.carousel-track');
+        const nextBtn = container.querySelector('.carousel-btn.next');
+        const prevBtn = container.querySelector('.carousel-btn.prev');
+
+        const scrollStep = 250; // Increased for bigger images
+
+        nextBtn.addEventListener('click', () => {
+            track.scrollBy({ left: scrollStep, behavior: 'smooth' });
+            checkLoop(track);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            track.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+        });
+
+        // Auto-scroll and loop
+        setInterval(() => {
+            track.scrollBy({ left: scrollStep, behavior: 'smooth' });
+            checkLoop(track);
+        }, 2000);
+
+        function checkLoop(track) {
+            if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 10) {
+                setTimeout(() => {
+                    track.scrollTo({ left: 0, behavior: 'smooth' });
+                }, 500);
+            }
+        }
+    });
+</script>
+
+  
+</body>
+</html>

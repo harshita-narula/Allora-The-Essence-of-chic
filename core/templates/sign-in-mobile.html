@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Sign In- Mobile</title>
+    <style>
+        
+body {
+    background: linear-gradient(to bottom, #f7668a, #fea6ba); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+.sign-in-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center; 
+}
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff5a83;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; 
+}
+
+button:hover {
+    background-color: #e04b71;
+}
+
+
+
+#timer {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #ff5a83;
+}
+
+#resend-otp {
+    margin-top: 10px;
+    background-color: #ccc;
+    color: #333;
+    cursor: pointer;
+}
+
+#resend-otp:hover {
+    background-color: #ff5a83;
+    color: white;
+}
+
+h2 {
+    color: #ff5a83;
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="background">
+        
+        <div class="sign-in-box">
+            <h2>Sign In with Mobile</h2>
+
+           
+            <div id="mobile-step">
+                <input type="text" id="mobile-number" placeholder="Enter your mobile number" required />
+                <button type="button" onclick="sendOTP()">Send OTP</button>
+            </div>
+
+            
+            <div id="otp-step" style="display:none;">
+                <input type="text" id="otp" placeholder="Enter OTP" required />
+                <button type="button" onclick="verifyOTP()">Verify OTP</button>
+                <div id="timer"></div> 
+                <button id="resend-otp" type="button" onclick="resendOTP()" style="display:none;">Resend OTP</button>
+            </div>
+        </div>
+    </div>
+<script>
+    let timerInterval;
+let otpSent = false;
+let countdown = 30; 
+
+
+function sendOTP() {
+    const mobileNumber = document.getElementById("mobile-number").value;
+    if (!validateMobileNumber(mobileNumber)) {
+        alert("Please enter a valid mobile number.");
+        return;
+    }
+
+    
+    fetch('/send_otp', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ mobile_number: mobileNumber }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.message === 'OTP generated and saved successfully') {
+            alert('OTP sent to ' + mobileNumber);
+           
+            document.getElementById("mobile-step").style.display = "none";
+            document.getElementById("otp-step").style.display = "block";
+            
+            startTimer();
+        } else {
+            alert('Error sending OTP: ' + (data.error || 'Unknown error'));
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to send OTP.');
+    });
+}
+
+
+function verifyOTP() {
+    const mobileNumber = document.getElementById("mobile-number").value;
+    const otp = document.getElementById("otp").value;
+    if (!otp) {
+        alert("Please enter OTP.");
+        return;
+    }
+
+    
+    fetch('/verify_otp', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ mobile_number: mobileNumber, otp: otp }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.message === 'OTP verified successfully') {
+            alert("OTP Verified Successfully");
+            window.location.href = "/"; 
+        } else {
+            alert("Invalid OTP. Please try again.");
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to verify OTP.');
+    });
+}
+
+
+function resendOTP() {
+    if (countdown <= 0) {
+        
+        countdown = 30;
+        document.getElementById("resend-otp").style.display = "none"; 
+        sendOTP();
+    }
+}
+
+
+function startTimer() {
+    timerInterval = setInterval(function () {
+        if (countdown <= 0) {
+            clearInterval(timerInterval);
+            document.getElementById("resend-otp").style.display = "block"; 
+        } else {
+            document.getElementById("timer").innerHTML = `Resend OTP in ${countdown}s`;
+            countdown--;
+        }
+    }, 1000);
+}
+
+
+function validateMobileNumber(mobileNumber) {
+    const regex = /^[0-9]{10}$/; 
+    return regex.test(mobileNumber);
+}
+</script>
+</body>
+</html>

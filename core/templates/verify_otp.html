@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login / Register</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 350px;
+        }
+        h2 {
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        input[type="text"] {
+            padding: 12px 15px;
+            border: 2px solid hotpink;
+            border-radius: 8px;
+            outline: none;
+            font-size: 16px;
+        }
+        input[type="text"]:focus {
+            border-color: hotpink;
+        }
+        button {
+            background-color: hotpink;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>LOGIN / REGISTER</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="otp" placeholder="Enter OTP sent to your phone number" required>
+            <button type="submit">VERIFY</button>
+        </form>
+    </div>
+</body>
+</html>

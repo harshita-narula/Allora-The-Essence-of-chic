@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makeup Store</title>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/makeup.css' %}">        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+    
+</head>
+<body>
+    {% include 'header.html' %}
+
+
+    <div class="container">
+        <div class="header">
+            <h2>The Makeup Store</h2>
+            <p>Discover a limitless range of makeup</p>
+            <a href="/makeup-products" class="explore-link">Explore All Makeup Products →</a>
+        </div>
+        <!-- <div class="carousel-item"><img src="{% static 'images/lipstick.png' %}" alt="Lipstick"><p>Lipstick</p></div>
+        <div class="carousel-item"><img src="{% static 'images/foundation.png' %}" alt="foundation"><p>Foundation</p></div>
+        <div class="carousel-item"><img src="{% static 'images/bestseller.png' %}" alt="bestseller"><p>Bestseller</p></div>
+        <div class="carousel-item"><img src="{% static 'images/newlaunch.png' %}" alt="newlaunch"><p>New Launch</p></div>
+        <div class="carousel-item"><img src="{% static 'images/eyeshadow.png' %}" alt="eyeshadow"><p>Eye Shadow</p></div>
+        <div class="carousel-item"><img src="{% static 'images/concealer.png' %}" alt="concealer"><p>Concealer</p></div>
+        <div class="carousel-item"><img src="{% static 'images/eyeliner-kajals.png' %}" alt="eyeliner-kajals"><p>Eyeliner & Kajals</p></div>
+        <div class="carousel-item"><img src="{% static 'images/mascara.png' %}" alt="mascara"><p>Mascara</p></div>
+        <div class="carousel-item"><img src="{% static 'images/compact.png' %}" alt="compact"><p>Compact</p></div>
+        <div class="carousel-item"><img src="{% static 'images/blush.png' %}" alt="blush"><p>Blush</p></div>
+        <div class="carousel-item"><img src="{% static 'images/basemakeup.png' %}" alt="basemakeup"><p>Base Makeup</p></div>
+        <div class="carousel-item"><img src="{% static 'images/faceprimer.png' %}" alt="faceprimer"><p>Face Primer</p></div>
+        <div class="carousel-item"><img src="{% static 'images/nailpolish.png' %}" alt="nailpolish"><p>Nail Polish</p></div>
+        <div class="carousel-item"><img src="{% static 'images/tools&brushes.png' %}" alt="tools & brushes"><p>Tools & Brushes</p></div>
+            <button id="nextBtn" class="carousel-btn">❯</button>
+        </div> -->
+    </div>
+
+
+    <section class="best-of-makeup">
+        <h2>Best Of Makeup</h2>
+        <div class="scroll-container">
+            <div class="scroll-content">
+                <div class="banner"><img src="{% static 'images/florence.png' %}" alt="Florence"></div>
+                <div class="banner"><img src="{% static 'images/charlotte.png' %}" alt="charlotte"></div>
+                <div class="banner"><img src="{% static 'images/iconic-london.png' %}" alt="iconic-london"></div>
+                <div class="banner"><img src="{% static 'images/kaybeauty.png' %}" alt="kaybeauty"></div>
+                <div class="banner"><img src="{% static 'images/kiro.png' %}" alt="kiro"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="brands-section">
+        <h2>Brands You Will Love</h2>
+        <p>Your Makeup Faves</p>
+        
+        <div class="brands-container">
+            <!-- First Row -->
+            <div class="brand-card">
+                <img src="{% static 'images/mbrand1.png' %}" alt="Brand 1">
+                <p>Min 20% Off</p>
+                <span>On New Launches!</span>
+            </div>
+    
+            <div class="brand-card">
+                <img src="{% static 'images/mbrand2.png' %}" alt="Brand 2">
+                <p>Up to 10% Off</p>
+                <span>On Entire Range</span>
+            </div>
+    
+            <div class="brand-card">
+                <img src="{% static 'images/mbrand3.png' %}" alt="Brand 3">
+                <p>Up To 20% OFF*</p>
+                <span>On Entire Range</span>
+            </div>
+    
+            <div class="brand-card">
+                <img src="{% static 'images/mbrand4.png' %}" alt="Brand 4">
+                <p>Upto 25% Off</p>
+                <span>Sunkissed Glow</span>
+            </div>
+        </div>
+    
+        <div class="brands-container">
+            <!-- Second Row -->
+            <div class="brand-card">
+                <img src="{% static 'images/mbrand5.png' %}" alt="Brand 5">
+                <p>Min 20% Off</p>
+                <span>On Internet Favs!</span>
+            </div>
+    
+            <div class="brand-card">
+                <img src="{% static 'images/mbrand6.png' %}" alt="Brand 6">
+                <p>Up to 30% Off</p>
+                <span>Shop Now!</span>
+            </div>
+    
+            <div class="brand-card">
+                <img src="{% static 'images/mbrand7.png' %}" alt="Brand 7">
+                <p>Flat 20% OFF*</p>
+                <span>Clean Makeup Picks</span>
+            </div>
+    
+            <div class="brand-card">
+                <img src="{% static 'images/mbrand8.png' %}" alt="Brand 8">
+                <p>Upto 20% Off</p>
+                <span>Don't Miss Out!</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="find-match-section">
+        <h2 class="find-match-heading">Find Your Perfect Match</h2>
+        <div class="find-match-slider-container">
+            <div class="find-match-slider">
+                <img src="{% static 'images/mquiz1.avif' %}" alt="Image 1">
+                <img src="{% static 'images/mquiz2.avif' %}" alt="Image 2">
+                <img src="https://adn-static1.nykaa.com/media/wysiwyg/2023/quiz/lipfinder/desk-banner.gif" alt="Image 3">
+
+            </div>
+        </div>
+        <div class="find-match-dots">
+            <span class="find-match-dot active" onclick="moveToSlide(0)"></span>
+            <span class="find-match-dot" onclick="moveToSlide(1)"></span>
+            <span class="find-match-dot" onclick="moveToSlide(2)"></span>
+        </div>
+    </section>
+    <!-- Product Slider HTML -->
+<div class="product-slider-container">
+    <h2>On Everyone’s Wishlist</h2>
+    <div class="product-slider">
+        <div class="product-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/e/0/e0b44ac607845012351_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 1">
+            <p class="badge">NEW</p>
+            <p class="rating">4.5★/5 (10)</p>
+            <p class="name">NARS Radiant Creamy Concealer</p>
+            <p class="shades">31 Shades</p>
+            <p class="price">₹3000</p>
+        </div>
+        
+        <div class="product-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/6/f/6fd8179MAYBE00000375_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 2">
+            <p class="badge">BESTSELLER</p>
+            <p class="rating">4.4★/5 (3.6k)</p>
+            <p class="name">Maybelline Lash Sensational Mascara</p>
+            <p class="shades">4 Shades</p>
+            <p class="price">₹559 <span class="old-price">₹799</span> <span class="discount">30%</span></p>
+        </div>
+        
+        <div class="product-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/b/1/b13841c5060542725378.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 3">
+            <p class="badge">BESTSELLER</p>
+            <p class="rating">4.4★/5 (3.7k)</p>
+            <p class="name">Charlotte Tilbury Airbrush Flawless Foundation</p>
+            <p class="shades">24 Shades</p>
+            <p class="price">₹4900</p>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/c/4/c468f8f773602685189_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 4">
+            <p class="badge">BESTSELLER</p>
+            <p class="rating">4.4★/5 (8.8k)</p>
+            <p class="name">M.A.C MACximal Matte Lipstick</p>
+            <p class="shades">28 Shades</p>
+            <p class="price">₹2550</p>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/b/2/b2f924b8809679697502_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 5">
+            <p class="badge">BESTSELLER</p>
+            <p class="rating">4.3★/5 (882)</p>
+            <p class="name">TIRTIR Mask Fit Red Mini Cushion Foundation</p>
+            <p class="shades">30 Shades</p>
+            <p class="price">₹1020</p>
+        </div>
+        <div class="product-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/0/0/0060d70LAKME00000021-new_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 6">
+            <p class="badge">OFFER</p>
+            <p class="rating">4.4★/5 (57.2k))</p>
+            <p class="name">Lakme 9 To 5 Eyeconic Liquid Eyeliner..</p>
+            <p class="shades">4.5ml</p>
+            <p class="price">₹299</p>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/0/d/0d83ab3PRAUS00000005_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 7">
+            <p class="badge">OFFER</p>
+            <p class="rating">4.4★/5 (8.1k))</p>
+            <p class="name">Praush Plush Matte Lipstick</p>
+            <p class="shades">10 Shades</p>
+            <p class="price">₹499</p>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/1/9/19b50528906090495004_01.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 8">
+            <p class="badge">BESTSELLER</p>
+            <p class="rating">4.4★/5 (12.7k)</p>
+            <p class="name">SUGAR All Set To Go Translucent Powder For Face|Setting Loose Powd</p>
+            <p class="shades">6gm</p>
+            <p class="price">₹604 <span class="old-price">₹649</span> <span class="discount">7%</span></p>
+        </div>
+        <div class="product-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/6/0/609332299610_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 9">
+            <p class="badge">BESTSELER</p>
+            <p class="rating">4.5★/5 (26.3k))</p>
+            <p class="name">e.l.f. Cosmetics Lip Lacquer</p>
+            <p class="shades">11 Shades</p>
+            <p class="price">₹390</p>
+        </div>
+        <div class="product-card">
+            <img src="https://images-static.nykaa.com/media/catalog/product/9/0/90c141bPIXIX00000122_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 10">
+            <p class="badge">BESTSELER</p>
+            <p class="rating">4.5★/5 (7.4k))</p>
+            <p class="name">Pixi On The Glow Cream Blush</p>
+            <p class="shades">4 Shades</p>
+            <p class="price">₹1950</p>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<!-- Luxe Indulgences Product Slider -->
+<div class="lux-slider-container">
+    <h2 class="lux-slider-title">Luxe Indulgences</h2>
+    <p class="lux-slider-subtitle">Exquisite Makeup Marvels</p>
+    <div class="lux-slider-wrapper">
+        <button class="lux-slider-btn lux-left" onclick="luxScrollSlider(-1)">&#10094;</button>
+        <div class="lux-product-slider">
+            <div class="lux-product-card">
+                <img src="https://images-static.nykaa.com/uploads/f093e7ff-4f9e-444a-b11b-24e29f35ed7b.jpg?tr=cm-pad_resize,w-450" alt="Bobbi Brown">
+                <p class="lux-info">Bestsellers<br>Starting at ₹1150</p>
+            </div>
+            <div class="lux-product-card">
+                <img src="https://images-static.nykaa.com/uploads/a7e11bb6-deea-4823-8b83-13fa86592db5.jpg?tr=cm-pad_resize,w-450" alt="Stila">
+                <p class="lux-info">Best Selling Eyeliner<br>High Performing Makeup</p>
+            </div>
+            <div class="lux-product-card">
+                <img src="https://images-static.nykaa.com/uploads/08ee80da-ab1e-4b41-9605-f608b27d3994.jpg?tr=cm-pad_resize,w-450" alt="Too Faced">
+                <p class="lux-info">Shop Your<br>Bridal Faves</p>
+            </div>
+            <div class="lux-product-card">
+                <img src="https://images-static.nykaa.com/uploads/fda4b0ba-3b1e-4e70-aeaf-d8b3084c2c82.jpg?tr=cm-pad_resize,w-450" alt="Estée Lauder">
+                <p class="lux-info">Only on Allora<br>Limited Edition Lipsticks</p>
+            </div>
+            <div class="lux-product-card">
+                <img src="https://images-static.nykaa.com/uploads/b5c4415f-0287-484c-942a-d8b8be5cceca.jpg?tr=cm-pad_resize,w-450" alt="Benefit">
+                <p class="lux-info">Bestseller!<br>Cult Favourite Tint</p>
+            </div>
+            <div class="lux-product-card">
+                <img src="https://images-static.nykaa.com/uploads/8650757b-dfe7-46ad-8a8f-e66aaf3e59b7.jpg?tr=cm-pad_resize,w-450" alt="clinique">
+                <p class="lux-info">Ophthalmologist Tested<br>Shop Now!</p>
+            </div>
+            <div class="lux-product-card">
+                <img src="https://images-static.nykaa.com/uploads/5e609a69-2a9d-4c75-a274-4edae3342691.jpg?tr=cm-pad_resize,w-450" alt="YSL Icons">
+                <p class="lux-info">YSL Icons<br>Shop Now!</p>
+            </div>
+            <div class="lux-product-card">
+                <img src="https://images-static.nykaa.com/uploads/d7feba1a-e40f-459f-9e4e-d40965570a47.jpg?tr=cm-pad_resize,w-450" alt="SmashBox">
+                <p class="lux-info">Bestsellers!<br>Starting at ₹1200 </p>
+            </div>
+            <div class="lux-product-card">
+                <img src="https://images-static.nykaa.com/uploads/ce4ac5b1-020c-4597-9ada-f0e2b208f87c.jpg?tr=cm-pad_resize,w-450" alt="Guerlain">
+                <p class="lux-info">Discover The New!<br>Makeup Range</p>
+            </div>
+            <div class="lux-product-card">
+                <img src="https://images-static.nykaa.com/uploads/c3a27939-2450-40e3-8d85-8aaa0bae46f7.jpg?tr=cm-pad_resize,w-450" alt="NARS">
+                <p class="lux-info">Now on Allora!<br>Discover best in class</p>
+            </div>
+        </div>
+        <button class="lux-slider-btn lux-right" onclick="luxScrollSlider(1)">&#10095;</button>
+    </div>
+    <a href="#" class="lux-shop-all">Shop All</a>
+</div>
+
+<div class="makeup-banner">
+    <img src="{% static 'images/alloraevdsalemakeup.jpg' %}" alt="Makeup Sale Banner">
+</div>
+
+
+<section class="allora-brands-section">
+    <h2 class="allora-brands-title">Brands You Can't Miss</h2>
+    <p class="allora-brands-subtitle">Discover Exciting Deals</p>
+
+    <div class="allora-brands-container">
+        <div class="allora-brand-card">
+            <img src="{% static 'images/sugar.png' %}" alt="Sugar">
+            <p class="allora-brand-discount">Up To 25% Off</p>
+            <p class="allora-brand-subtext">On Entire Range</p>
+        </div>
+
+        <div class="allora-brand-card">
+            <img src="{% static 'images/forever.png' %}" alt="forever">
+            <p class="allora-brand-discount">10% Off</p>
+            <p class="allora-brand-subtext">Exclusively at Allora</p>
+        </div>
+
+        <div class="allora-brand-card">
+            <img src="{% static 'images/loreal.png' %}" alt="loreal">
+            <p class="allora-brand-discount">Up To 20% Off</p>
+            <p class="allora-brand-subtext">On Entire Range</p>
+        </div>
+
+        <div class="allora-brand-card">
+            <img src="{% static 'images/praush.png' %}" alt="praush">
+            <p class="allora-brand-discount">Up To 10% Off</p>
+            <p class="allora-brand-subtext">On Entire Range</p>
+        </div>
+
+        <div class="allora-brand-card">
+            <img src="{% static 'images/facescanada.png' %}" alt="facescanada">
+            <p class="allora-brand-discount">Up To 40% Off</p>
+            <p class="allora-brand-subtext">On Entire Range</p>
+        </div>
+    </div>
+</section>
+
+<div class="swiss-beauty-banner">
+    <img src="{% static 'images/swissbeauty.png' %}" alt="Swiss beauty">
+</div>
+
+<div class="shop-the-look-wrapper">
+    <h2 class="shop-the-look-title">Shop The Look</h2>
+    <p class="shop-the-look-subtitle">Cop These I.G-Approved Trends</p>
+    
+    <div class="shop-the-look-scroll-container">
+        <button class="shop-the-look-btn shop-the-look-left-btn" onclick="shopTheLookScrollLeft()">&#10094;</button>
+        
+        <div class="shop-the-look-cards">
+            <div class="shop-the-look-item">
+                <img src="{% static 'images/peachfuzz.png' %}" alt="Peach Fuzz Glam">
+                <p>Peach Fuzz Glam</p>
+            </div>
+            <div class="shop-the-look-item">
+                <img src="{% static 'images/colourdrenched.png' %}" alt="colour drenched">
+                <p>Colour Drenched</p>
+            </div>
+            <div class="shop-the-look-item">
+                <img src="{% static 'images/espressomakeup.png' %}" alt="espressomakeup">
+                <p>Espresso Makeup</p>
+            </div>
+            <div class="shop-the-look-item">
+                <img src="{% static 'images/cloudskin.png' %}" alt="cloudskin">
+                <p>Cloud Skin</p>
+            </div>
+            <div class="shop-the-look-item">
+                <img src="{% static 'images/frenchgirlbeauty.png' %}" alt="frenchgirlbeauty">
+                <p>French Girl Beauty</p>
+            </div>
+            <div class="shop-the-look-item">
+                <img src="{% static 'images/glazeddonutlips.png' %}" alt="glazeddonutlips">
+                <p>Glazed Donut Lips</p>
+            </div>
+            <div class="shop-the-look-item">
+                <img src="{% static 'images/glassskinlook.png' %}" alt="glassskinlook">
+                <p>Glass Skin Look</p>
+            </div>
+            <div class="shop-the-look-item">
+                <img src="{% static 'images/strawberrymakeup.png' %}" alt="strawberrymakeup">
+                <p>Strawberry Makeup</p>
+            </div>
+            <div class="shop-the-look-item">
+                <img src="{% static 'images/softglam.png' %}" alt="softglam">
+                <p>Soft Glam</p>
+            </div>
+            <div class="shop-the-look-item">
+                <img src="{% static 'images/cleangirlmakeup.png' %}" alt="cleangirlmakeup">
+                <p>Clean Girl Makeup</p>
+            </div>
+        </div>
+
+        <button class="shop-the-look-btn shop-the-look-right-btn" onclick="shopTheLookScrollRight()">&#10095;</button>
+    </div>
+</div>
+
+<div class="shop-all-makeup-container">
+    <a href="{% url 'makeup_products' %}"class="shop-all-makeup-btn">
+        <span>Shop All Makeup</span>
+        <span class="shop-all-makeup-arrow">&#10095;</span>
+    </a>
+</div>
+
+{% include 'footer.html' %}
+
+<script>
+    function shopTheLookScrollLeft() {
+    document.querySelector(".shop-the-look-cards").scrollBy({ left: -200, behavior: 'smooth' });
+}
+
+function shopTheLookScrollRight() {
+    document.querySelector(".shop-the-look-cards").scrollBy({ left: 200, behavior: 'smooth' });
+}
+
+</script>
+
+
+<script>
+function luxScrollSlider(direction) {
+    const slider = document.querySelector('.lux-product-slider');
+    const scrollAmount = 200; // Adjust as needed
+    slider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+}
+</script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const track = document.querySelector(".carousel-track");
+            const prevBtn = document.getElementById("prevBtn");
+            const nextBtn = document.getElementById("nextBtn");
+            let index = 0;
+            const itemsToShow = 7;
+            const itemWidth = document.querySelector(".carousel-item").offsetWidth + 10;
+
+            function updateCarousel() {
+                track.style.transform = `translateX(-${index * itemsToShow * itemWidth}px)`;
+            }
+
+            nextBtn.addEventListener("click", function () {
+                if (index < Math.ceil(track.children.length / itemsToShow) - 1) {
+                    index++;
+                    updateCarousel();
+                }
+            });
+
+            prevBtn.addEventListener("click", function () {
+                if (index > 0) {
+                    index--;
+                    updateCarousel();
+                }
+            });
+
+            window.addEventListener("resize", () => {
+                updateCarousel();
+            });
+        });
+    </script>
+    <script>
+    let currentIndex = 0;
+
+    function moveToSlide(index) {
+        const slider = document.querySelector(".find-match-slider");
+        const dots = document.querySelectorAll(".find-match-dot");
+        
+        currentIndex = index;
+        slider.style.transform = `translateX(-${index * 100}%)`;
+    
+        dots.forEach(dot => dot.classList.remove("active"));
+        dots[index].classList.add("active");
+    }
+</script>
+
+<script>document.addEventListener("DOMContentLoaded", function() {
+    const slider = document.querySelector(".product-slider");
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener("mousedown", (e) => {
+        isDown = true;
+        slider.classList.add("active");
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+
+    slider.addEventListener("mouseleave", () => {
+        isDown = false;
+        slider.classList.remove("active");
+    });
+
+    slider.addEventListener("mouseup", () => {
+        isDown = false;
+        slider.classList.remove("active");
+    });
+
+    slider.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2; // Scroll speed
+        slider.scrollLeft = scrollLeft - walk;
+    });
+});
+</script>
+</body>
+</html>
