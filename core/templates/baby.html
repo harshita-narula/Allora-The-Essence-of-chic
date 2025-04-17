@@ -8,170 +8,12 @@
     <link rel="stylesheet" href="{% static 'css/baby.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
+    
 </head>
 <body>
-    <header class="header-bar">
-        <div class="container">
-            <div class="header-links">
-                
-                <a href="/getapp"><i class="fa fa-mobile-alt"></i> Get App</a>
-                <span class="divider">|</span>
-                <a href="#"><i class="fa fa-map-marker-alt"></i> Store & Events</a>
-                <span class="divider">|</span>
-                <a href="/gift_cards"><i class="fa fa-gift"></i> Gift Card</a>
-                <span class="divider">|</span>
-                <a href="#"><i class="fa fa-question-circle"></i> Help</a>
-            </div>
-        </div>
-    </header>
-
-<header class="second-header">
-    <div class="container">
-        <div class="logo">
-            <h1>Allora</h1>
-        </div>
-<div id="signin-modal" class="modal">
-<div class="modal-content">
-    <span class="close-btn">&times;</span>
-    <h2>Login / Create an Account</h2>
-    <a href="{% url 'sign_in_mobile' %}" class="no-underline"></a>
-    <button class="auth-btn">
-        Sign in with Mobile
-        <span class="arrow">&#8594;</span>
-    </button>
-    </a>
-    <button class="auth-btn">
-        <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo"> 
-        Sign in with Google 
-        <span class="arrow">&#8594;</span>
-    </button>
-</div>
-</div>
-
-
-       
-        <nav class="nav-links">
-            <a href="/categories">Categories</a>
-            <a href="#">Brands</a>
-            <a href="/luxe">Luxe</a>
-            <a href="#">Beauty Advice</a>
-        </nav>
-
-        
-            <div class="search-box">
-                <i class="fas fa-search search-icon"></i>
-                <input type="text" id="search-input" placeholder="Search for Allora">
-                <i class="fas fa-camera lens-icon" id="image-capture"></i>
-                <i class="fas fa-microphone voice-icon" id="voice-search"></i>
-            </div>
-          
-            <i class="fas fa-qrcode qr-icon" id="qr-scanner"></i>
-            <button id="signin-btn" class="sign-in-btn">Sign In</button>
-            <a href="#" class="cart-icon"><i class="fa fa-shopping-cart"></i></a>
-        </div>
-    </div>
-</header>
-
-<header class="third-header">
-<div class="container">
-    <nav class="nav-menu">
-        <div class="dropdown">
-            <a href="/makeup-store" class="nav-link">Makeup</a>
-            <div class="dropdown-menu">
-                <a href="#">Lipsticks</a>
-                <a href="#">Foundations</a>
-                <a href="#">Mascaras</a>
-                <a href="#">Eyeliners</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <a href="#" class="nav-link">Skin</a>
-            <div class="dropdown-menu">
-                <a href="#">Cleansers</a>
-                <a href="#">Moisturizers</a>
-                <a href="#">Serums</a>
-                <a href="#">Sunscreens</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <a href="#" class="nav-link">Hair</a>
-            <div class="dropdown-menu">
-                <a href="#">Shampoos</a>
-                <a href="#">Conditioners</a>
-                <a href="#">Hair Masks</a>
-                <a href="#">Hair Oils</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <a href="#" class="nav-link">Appliances</a>
-            <div class="dropdown-menu">
-                <a href="#">Hair Dryers</a>
-                <a href="#">Straighteners</a>
-                <a href="#">Curlers</a>
-                <a href="#">Trimmers</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <a href="#" class="nav-link">Bath & Body</a>
-            <div class="dropdown-menu">
-                <a href="#">Body Wash</a>
-                <a href="#">Body Lotions</a>
-                <a href="#">Scrubs</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <a href="#" class="nav-link">Natural</a>
-            <div class="dropdown-menu">
-                <a href="#">Organic Products</a>
-                <a href="#">Ayurvedic</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <a href="#" class="nav-link">Mom & Baby</a>
-            <div class="dropdown-menu">
-                <a href="#">Baby Lotions</a>
-                <a href="#">Diapers</a>
-                <a href="#">Baby Oil</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <a href="#" class="nav-link">Health & Wellness</a>
-            <div class="dropdown-menu">
-                <a href="#">Supplements</a>
-                <a href="#">Proteins</a>
-                <a href="#">Vitamins</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <a href="#" class="nav-link">Fragrance</a>
-            <div class="dropdown-menu">
-                <a href="#">Perfumes</a>
-                <a href="#">Deodorants</a>
-                <a href="#">Body Mists</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <a href="#" class="nav-link">Men</a>
-            <div class="dropdown-menu">
-                <a href="#">Shaving Cream</a>
-                <a href="#">Beard Oils</a>
-                <a href="#">Trimmers</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <a href="#" class="nav-link">Lingerie & Accessories</a>
-            <div class="dropdown-menu">
-                <a href="#">Lingerie</a>
-                <a href="#">Accessories</a>
-                <a href="#">Nightwear</a>
-            </div>
-        </div>
-    </nav>
-</div>
-
-</header>
+    {% include 'header.html' %}
+    
 
 <div id="customCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
     <!-- Carousel Indicators -->
@@ -186,19 +28,21 @@
     <!-- Carousel Items -->
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="/asset/diapperingessentials.png" class="d-block w-100" alt="Slide 1">
+            <img src="{% static 'asset/diapperingessentials.png' %}" class="d-block w-100" alt="Slide 1">
+
         </div>
         <div class="carousel-item">
-            <img src="/asset/ad3.png" class="d-block w-100" alt="Slide 2"> 
+            <img src="{% static 'asset/ad3.png' %}" class="d-block w-100" alt="Slide 2">
+
         </div>
         <div class="carousel-item">
-            <img src="/asset/ad.png" class="d-block w-100" alt="Slide 3">
+            <img src="{% static 'asset/ad.png' %}" class="d-block w-100" alt="Slide 3">
         </div>
         <div class="carousel-item">
-            <img src="/asset/johnson.png" class="d-block w-100" alt="Slide 4">
+            <img src="{% static 'asset/johnson.png' %}" class="d-block w-100" alt="Slide 4">
         </div>
         <div class="carousel-item">
-            <img src="/asset/mamabby.png" class="d-block w-100" alt="Slide 5">
+            <img src="{% static 'asset/mamabby.png' %}" class="d-block w-100" alt="Slide 5">
         </div>
     </div>
 
@@ -214,126 +58,128 @@
     
     <h2>Shop By Category</h2>
     <div class="category-container">
-        <a href="{% url 'diapers' %}">
         <div class="category-card">
-            <img src="/asset/diapers.png" alt="Diapers">
-        </div>
+            <a href="{% url 'diapers' %}">
+            <img src="{% static 'asset/diapers.png' %}" alt="Diapers">
         </a>
-        <a href="{% url 'wipes' %}">
-        <div class="category-card">
-            <img src="/asset/wipes&buds.png" alt="Wipes & Buds">
-        </div>
-        </a>
-        <a href="{% url 'babypowder' %}">
-        <div class="category-card">
-            <img src="/asset/babypowder.png" alt="Baby Powder">
-        </div>
-        </a>
-        <a href="{% url 'babyoils' %}">
-        <div class="category-card">
-            <img src="/asset/babyoils.png" alt="Baby Oils">
-        </div>
-        </a>
-        <a href="{% url 'bodywash' %}">
-        <div class="category-card">
-            <img src="/asset/bodywash&soaps.png" alt="Body Wash & Soaps">
-        </div>
-        </a>
-        <div class="category-card">
-          
-            <img src="/asset/shampoo&conditioner.png" alt="Shampoo & Conditioner">
-         
         </div>
         <div class="category-card">
-            
-            <img src="/asset/lotions&creams.png" alt="Lotions & Creams">
-          
+            <a href="{% url 'wipes' %}">
+            <img src="{% static 'asset/wipes&buds.png' %}" alt="Wipes & Buds">
+            </a>
+        </div>
+        <div class="category-card">
+            <a href="{% url 'babypowder' %}">
+            <img src="{% static 'asset/babypowder.png' %}" alt="Baby Powder">
+         </a>
+        </div>
+        <div class="category-card">
+            <a href="{% url 'babyoils' %}">
+            <img src="{% static 'asset/babyoils.png' %}" alt="Baby Oils">
+            </a>
+        </div>
+        <div class="category-card">
+            <a href="{% url 'bodywash' %}">
+            <img src="{% static 'asset/bodywash&soaps.png' %}" alt="Body Wash & Soaps">
+            </a>
+        </div>
+        <div class="category-card">
+            <img src="{% static 'asset/shampoo&conditioner.png' %}" alt="Shampoo & Conditioner">
+        </div>
+        <div class="category-card">
+            <img src="{% static 'asset/lotions&creams.png' %}" alt="Lotions & Creams">
         </div>
         <div class="category-card">
            
-            <img src="/asset/stretchmark.png" alt="Stretch Mark Creams & Oils">
+            <img src="{% static 'asset/stretchmark.png' %}" alt="Stretch Mark Creams & Oils">
+
             
-        </div>
+        </div> 
     </div>
 </section>
 <section class="shop-by-brand">
     <h2 class="shop-by-brand-heading">Brands That Mothers Love</h2>
     <div class="brands-container">
-
         <div class="brand-card">
-            <img src="/asset/mamearth.png" alt="MamaEarth">
-            <div class="brand-name">MamaEarth</div>
-            <div class="discount">Up To 18% Off</div>
-        </div>
+              <img src="{% static 'asset/mamearth.png' %}" alt="MamaEarth">
+              <div class="brand-name">MamaEarth</div>
+              <div class="discount">Up To 18% Off</div>
+          </div>
         <div class="brand-card">
-            <img src="/asset/themoms.png" alt="The Moms Co.">
+            <img src="{% static 'asset/themoms.png' %}" alt="The Moms Co.">
             <div class="brand-name">The Moms Co.</div>
             <div class="discount">Up To 35% Off</div>
         </div>
         <div class="brand-card">
-            <img src="/asset/cetaphil.png" alt="Cetaphil">
+            <img src="{% static 'asset/cetaphil.png' %}" alt="Cetaphil">
             <div class="brand-name">Cetaphil</div>
             <div class="discount">Up To 20% Off</div>
         </div>
         <div class="brand-card">
-            <img src="/asset/aveeno.png" alt="Aveeno">
+            <img src="{% static 'asset/aveeno.png' %}" alt="Aveeno">
             <div class="brand-name">Aveeno</div>
             <div class="discount">Up To 15% Off</div>
         </div>
         <div class="brand-card">
-            <img src="/asset/sebamed.png" alt="Sebamed">
+            <img src="{% static 'asset/sebamed.png' %}" alt="Sebamed">
             <div class="brand-name">Sebamed</div>
             <div class="discount">Up To 10% Off</div>
         </div>
+        <br>
+        <br>
+        <br>
         <div class="brand-card">
-                <img src="/asset/himalaya.png" alt="Himalaya">
+                <img src="{% static 'asset/himalaya.png' %}" alt="Himalaya"> 
                 <div class="brand-name">Himalaya</div>
                 <div class="discount">Up To 45% Off</div>
             </div>
             <div class="brand-card">
-                <img src="/asset/johnson-2.png" alt="Johnson's">
+                <img src="{% static 'asset/johnson-2.png' %}" alt="Johnson's">
                 <div class="brand-name">Johnson's</div>
                 <div class="discount">Up To 27% Off</div>
             </div>
             <div class="brand-card">
-                <img src="/asset/bio oil.png" alt="Bio Oil">
+                <img src="{% static 'asset/bio oil.png' %}" alt="Bio Oil">
                 <div class="brand-name">Bio-Oil</div>
                 <div class="discount">Up To 35% Off</div>
             </div>
             
             <div class="brand-card">
-                <img src="/asset/mothersparsh.png" alt="Mother Sparsh">
+                <img src="{% static 'asset/mothersparsh.png' %}" alt="Mother Sparsh">
                 <div class="brand-name">Mother Sparsh</div>
                 <div class="discount">Up To 40% off </div>
             </div>
             <div class="brand-card">
-                <img src="/asset/pampers.png" alt="Pampers">
+                <img src="{% static 'asset/pampers.png' %}" alt="Pampers">
                 <div class="brand-name">Pampers</div>
                 <div class="discount">Up To 25% off</div>
             </div>
             <div class="brand-card">
-                <img src="/asset/nat habit.png" alt="Nat Habit">
+                <img src="{% static 'asset/nat habit.png' %}" alt="Nat Habit">
                 <div class="brand-name">nat habit</div>
                 <div class="discount">Up To 20% off</div>
             </div>
             <div class="brand-card">
-                <img src="/asset/balmers.png" alt="palmers">
+                <img src="{% static 'asset/balmers.png' %}" alt="Palmers">
                 <div class="brand-name">palmers</div>
                 <div class="discount">Up To 20% off</div>
             </div>
             <div class="brand-card">
-                <img src="/asset/kamaayurved.png" alt="Kama Ayurveda">
+                <img src="{% static 'asset/kamaayurved.png' %}" alt="Kama Ayurveda">
                 <div class="brand-name">Kama Ayurveda</div>
                 <div class="discount">Get Free Gift</div>
             </div>
     </div>
     </section>
     <!-- Product Slider HTML -->
-<div class="product-slider-container">
-    <h2>On Everyone’s Wishlist</h2>
+     <br>
+    <br>
+    <br>
+  <div class="product-slider-container">
+    <h2 class="product-slider-heading">On Everyone’s Wishlist</h2>
     <div class="product-slider">
         <div class="product-card">
-            <img src="https://images-static.nykaa.com/media/catalog/product/e/0/e0b44ac607845012351_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 1">
+            <img src="https://images-static.nykaa.com/media/catalog/product/c/6/c634bc510181040313_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 1">
             <p class="badge">NEW</p>
             <p class="rating">4.5★/5 (10)</p>
             <p class="name">NARS Radiant Creamy Concealer</p>
@@ -342,7 +188,7 @@
         </div>
         
         <div class="product-card">
-            <img src="https://images-static.nykaa.com/media/catalog/product/6/f/6fd8179MAYBE00000375_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 2">
+            <img src="https://images-static.nykaa.com/media/catalog/product/3/9/39019a16001159111856_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 2">
             <p class="badge">BESTSELLER</p>
             <p class="rating">4.4★/5 (3.6k)</p>
             <p class="name">Maybelline Lash Sensational Mascara</p>
@@ -351,7 +197,7 @@
         </div>
         
         <div class="product-card">
-            <img src="https://images-static.nykaa.com/media/catalog/product/b/1/b13841c5060542725378.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 3">
+            <img src="https://images-static.nykaa.com/media/catalog/product/1/4/145c627381370036647_01.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 3">
             <p class="badge">BESTSELLER</p>
             <p class="rating">4.4★/5 (3.7k)</p>
             <p class="name">Charlotte Tilbury Airbrush Flawless Foundation</p>
@@ -360,7 +206,7 @@
         </div>
 
         <div class="product-card">
-            <img src="https://images-static.nykaa.com/media/catalog/product/c/4/c468f8f773602685189_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 4">
+            <img src="https://images-static.nykaa.com/media/catalog/product/6/a/6a859ea8901138512576_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 4">
             <p class="badge">BESTSELLER</p>
             <p class="rating">4.4★/5 (8.8k)</p>
             <p class="name">M.A.C MACximal Matte Lipstick</p>
@@ -369,7 +215,7 @@
         </div>
 
         <div class="product-card">
-            <img src="https://images-static.nykaa.com/media/catalog/product/b/2/b2f924b8809679697502_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 5">
+            <img src="https://images-static.nykaa.com/media/catalog/product/1/b/1b5c1a59318637043316_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 5">
             <p class="badge">BESTSELLER</p>
             <p class="rating">4.3★/5 (882)</p>
             <p class="name">TIRTIR Mask Fit Red Mini Cushion Foundation</p>
@@ -377,7 +223,7 @@
             <p class="price">₹1020</p>
         </div>
         <div class="product-card">
-            <img src="https://images-static.nykaa.com/media/catalog/product/0/0/0060d70LAKME00000021-new_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 6">
+            <img src="https://images-static.nykaa.com/media/catalog/product/0/a/0a40fdc8906014832168_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 6">
             <p class="badge">OFFER</p>
             <p class="rating">4.4★/5 (57.2k)</p>
             <p class="name">Lakme 9 To 5 Eyeconic Liquid Eyeliner..</p>
@@ -386,7 +232,7 @@
         </div>
 
         <div class="product-card">
-            <img src="https://images-static.nykaa.com/media/catalog/product/0/d/0d83ab3PRAUS00000005_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 7">
+            <img src="https://images-static.nykaa.com/media/catalog/product/3/0/301fbda764560702889_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 7">
             <p class="badge">OFFER</p>
             <p class="rating">4.4★/5 (8.1k)</p>
             <p class="name">Praush Plush Matte Lipstick</p>
@@ -395,7 +241,7 @@
         </div>
 
         <div class="product-card">
-            <img src="https://images-static.nykaa.com/media/catalog/product/1/9/19b50528906090495004_01.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 8">
+            <img src="https://images-static.nykaa.com/media/catalog/product/2/5/2589fa78901012116944_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 8">
             <p class="badge">BESTSELLER</p>
             <p class="rating">4.4★/5 (12.7k)</p>
             <p class="name">SUGAR All Set To Go Translucent Powder For Face|Setting Loose Powd</p>
@@ -403,7 +249,7 @@
             <p class="price">₹604 <span class="old-price">₹649</span> <span class="discount">7%</span></p>
         </div>
         <div class="product-card">
-            <img src="https://images-static.nykaa.com/media/catalog/product/6/0/609332299610_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 9">
+            <img src="https://images-static.nykaa.com/media/catalog/product/d/c/dc91b1e8058664152254_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 9">
             <p class="badge">BESTSELER</p>
             <p class="rating">4.5★/5 (26.3k)</p>
             <p class="name">e.l.f. Cosmetics Lip Lacquer</p>
@@ -411,7 +257,7 @@
             <p class="price">₹390</p>
         </div>
         <div class="product-card">
-            <img src="https://images-static.nykaa.com/media/catalog/product/9/0/90c141bPIXIX00000122_1.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 10">
+            <img src="https://images-static.nykaa.com/media/catalog/product/f/2/f246d118906087770534.jpg?tr=cm-pad_resize,w-500,h-500" alt="Product 10">
             <p class="badge">BESTSELER</p>
             <p class="rating">4.5★/5 (7.4k)</p>
             <p class="name">Pixi On The Glow Cream Blush</p>
@@ -424,7 +270,8 @@
     <!-- Banner Section -->
     <section class="banner-section">
         <div class="banner">
-          <img src="/asset/banner.png" alt="Diapering Essentials" />
+            <img src="{% static 'asset/banner.png' %}" alt="Diapering Essentials" />
+
         </div>
       
         <div class="combo-section">
@@ -434,163 +281,10 @@
       </section>
         
 
+      {% include 'footer.html' %}
     
-    
-<body>
-    <footer class="allora-footer">
-        <div class="allora-footer-container">
-            <!-- Email Subscription -->
-            <div class="allora-footer-subscribe">
-                <i class="fa fa-envelope"></i>
-                <span>Get special discount on your inbox</span>
-                <div class="allora-subscribe-box">
-                    <input type="email" class="allora-email-input" placeholder="Your Email">
-                    <button class="allora-send-btn">SEND</button>
-                </div>
-            </div>
-            
-            <!-- Mobile App Download -->
-            <div class="allora-footer-app">
-                <i class="fa fa-mobile-alt"></i>
-                <span>EXPERIENCE THE ALLORA MOBILE APP</span>
-                <div class="allora-footer-app-buttons">
-                    <img src="https://png.pngtree.com/png-vector/20230817/ourmid/pngtree-google-play-app-icon-vector-png-image_9183316.png" alt="Google Play">
-                    <img src="https://cmsphoto.ww-cdn.com/superstatic/129568/art/grande/79767595-57712201.jpg?v=1713969716.0553339.png" alt="App Store">
-                </div>
-            </div>
-            
-            <!-- Customer Support Contact -->
-            <div class="allora-footer-contact">
-                <i class="fa fa-phone-alt"></i>
-                <span>FOR ANY HELP, YOU MAY CALL US AT</span>
-                <strong>1800-267-4444</strong>
-                <p>(Monday to Saturday, 8AM to 10PM and Sunday, 10AM to 7PM)</p>
-            </div>
-        </div>
-    </footer>
-
-    <footer class="allora-info-footer">
-        <div class="allora-info-container">
-            <div class="allora-info-column">
-                <h2 class="allora-info-heading">ALLORA</h2>
-                <ul class="allora-info-links">
-                    <li><a href="#">Who are we?</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Authenticity</a></li>
-                    <li><a href="#">Press</a></li>
-                    <li><a href="#">Testimonials</a></li>
-                    <li><a href="#">Allora CSR</a></li>
-                    <li><a href="#">Responsible Disclosure</a></li>
-                    <li><a href="#">Investor Relations</a></li>
-                    <li><a href="#">Link to Smart ODR</a></li>
-                </ul>
-            </div>
-            <div class="allora-info-column">
-                <h2 class="allora-info-heading">Help</h2>
-                <ul class="allora-info-links">
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Store Locator</a></li>
-                    <li><a href="#">Cancellation & Return</a></li>
-                    <li><a href="#">Shipping & Delivery</a></li>
-                    <li><a href="#">Sell on Allora</a></li>
-                </ul>
-            </div>
-            <div class="allora-info-column">
-                <h2 class="allora-info-heading">Inspire Me</h2>
-                <ul class="allora-info-links">
-                    <li><a href="#">Beauty Book</a></li>
-                    <li><a href="#">Allora Network</a></li>
-                    <li><a href="#">Buying Guides</a></li>
-                </ul>
-            </div>
-            <div class="allora-info-column">
-                <h2 class="allora-info-heading">Quick Links</h2>
-                <ul class="allora-info-links">
-                    <li><a href="#">Offer Zone</a></li>
-                    <li><a href="#">New Launches</a></li>
-                    <li><a href="#">Allora Man</a></li>
-                    <li><a href="#">Allora Fashion</a></li>
-                    <li><a href="#">Allora Pro</a></li>
-                    <li><a href="#">Sitemap</a></li>
-                </ul>
-            </div>
-            <div class="allora-info-column">
-                <h2 class="allora-info-heading">Top Categories</h2>
-                <ul class="allora-info-links">
-                    <li><a href="#">Makeup</a></li>
-                    <li><a href="#">Skin</a></li>
-                    <li><a href="#">Hair</a></li>
-                    <li><a href="#">Bath & Body</a></li>
-                    <li><a href="#">Appliances</a></li>
-                    <li><a href="#">Mom and Baby</a></li>
-                    <li><a href="#">Health & Wellness</a></li>
-                    <li><a href="#">Fragrance</a></li>
-                    <li><a href="#">Natural</a></li>
-                    <li><a href="#">Luxe</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-    <section class="features-container">
-        <div class="feature-box">
-            <img src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Free-shipping.svg" alt="Free Shipping" class="feature-icon">
-            <div class="feature-text">
-                <h5>FREE SHIPPING</h5>
-                <p>On Orders Above ₹299</p>
-            </div>
-        </div>
-        <div class="feature-box">
-            <img src="https://adn-static2.nykaa.com/media/wysiwyg/2021/return_accepted.svg" alt="Easy Returns" class="feature-icon">
-            <div class="feature-text">
-                <h5>EASY RETURNS</h5>
-                <p>15-Day Return Policy</p>
-            </div>
-        </div>
-        <div class="feature-box">
-            <img src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Authenticity.svg" alt="100% Authentic" class="feature-icon">
-            <div class="feature-text">
-                <h5>100% AUTHENTIC</h5>
-                <p>Products Sourced Directly</p>
-            </div>
-        </div>
-        <div class="feature-box">
-            <img src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Brands.svg" alt="1900+ Brands" class="feature-icon">
-            <div class="feature-text">
-                <h5>1900+ BRANDS</h5>
-                <p>1.2 Lakh+ Products</p>
-            </div>
-        </div>
-        <div class="social-media-section">
-            <p>Show us some love ❤️ on social media</p>
-            <div class="social-icons">
-                <img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-instagram-filled.svg" alt="Instagram" class="social-icon">
-                <img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-facebook-filled.svg" alt="Facebook" class="social-icon">
-                <img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-youtube-filled.svg" alt="YouTube" class="social-icon">
-                <img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-twitter-filled.svg" alt="Twitter" class="social-icon">
-                <img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-pinterest-filled.svg" alt="Pinterest" class="social-icon">
-            </div>
-        </div>
-    </section>
-    <footer class="footer-bottom">
-        <div class="footer-links">
-            <a href="#" class="footer-link">Terms & Conditions</a>
-            <a href="#" class="footer-link">Shipping Policy</a>
-            <a href="#" class="footer-link">Cancellation Policy</a>
-            <a href="#" class="footer-link">Privacy Policy</a>
-        </div>
-        <div class="footer-copyright">
-            &copy; 2025 ALLORA E-RETAIL LIMITED All Rights Reserved.
-        </div>
-    </footer>
-
-    <section class="popular-links-container">
-        <h2 class="popular-links-heading">Popular Links</h2>
-        <p class="popular-links-text">
-            Lipstick, Highlighter, Hair Serum, Concealer, Face Mask, Biotique, Lip Gloss, Perfume For Women, Facial Kit, Bb Cream, Victoria Secret, Love Beauty And Planet Shampoo, Eyeliner, Hair Mask, Face Wash For Oily Skin, Ordinary, Toner, Eyeshadow Palette, Cleanser, Chemist At Play, Mascara, Loreal Professional, Hair Extensions, Olay Cream, Fogg, Lip Tint, Under Eye Cream, Wax Strips, Shower Gel, Sunscreen For Face, Insight Cosmetics, Face Foundation, Hair Removal Machine, Mac Foundation, Choker, Oud Perfume, Makeup Pouch, Olaplex, Body Mist, Wella Shampoo, Huda Beauty Foundation, Night Cream, Facewash, Nyx, Schwarzkopf Shampoo, Blue Heaven, Peel Off Mask, Best Lip Balm, Face Scrub, Cetaphil Face Wash, Mederma Cream, Multivitamins Tablet, Himalaya Face Wash, Garnier Face Wash, Hair Color For Women, Cetaphil Moisturizers, Ponds Face Wash, Streax Hair Serum, Nivea Body Lotions, Vaseline Body Lotions, Sugar Lipstick, Biotin Tablet, Aqualogica Sunscreen, Salicylic Acid Face Wash, Clear Face Wash, Neutrogena Sunscreen, Pears Soaps, Hair Color For Men, Dry Cleansers, Face Serum
-        </p>
-    </section>
-   
-    
+  
 </body>
 </html>
+
+  
