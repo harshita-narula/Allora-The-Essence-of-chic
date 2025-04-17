@@ -7,8 +7,8 @@ from django.contrib.auth.views import LogoutView
 
 
 urlpatterns = [
-    path('', views.index, name='index'),  # Home page
-    path('sign-in-mobile/', views.sign_in_mobile, name='sign_in_mobile'),  # Sign-in page
+    path('', views.index, name='index'),  
+    path('sign-in-mobile/', views.sign_in_mobile, name='sign_in_mobile'),  
     path('makeup-store/', views.makeup_store, name='makeup_store'),
     path('gift_cards/', views.gift_cards, name='gift_cards'),
     path('corporate/', views.corporate, name='corporate'), 

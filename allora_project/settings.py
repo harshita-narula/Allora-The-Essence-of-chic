@@ -12,23 +12,19 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-sso9s4d!tkt_$wx#2q7+=5wey4!ntg*w5b(0tz3htti+e%$8$5'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
 
-# Application definition
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -44,12 +40,11 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'allauth.socialaccount.providers.google',  # Google Authentication
-    # Your app
-    'core',  # <-- Add this line
+    'allauth.socialaccount.providers.google',  
+    
+    'core', 
 ]
 SITE_ID = 1
-# SITE_URL = "http://127.0.0.1:8000"  # or your actual domain in production
 
 
 AUTHENTICATION_BACKENDS = [
@@ -97,8 +92,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'allora_project.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/5.2/ref/settings/#databases
+
 
 DATABASES = {
     'default': {
@@ -108,8 +102,6 @@ DATABASES = {
 }
 
 
-# Password validation
-# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -127,8 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/5.2/topics/i18n/
+
 
 LANGUAGE_CODE = 'en-us'
 
@@ -139,8 +130,6 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
@@ -148,14 +137,12 @@ STATICFILES_DIRS = [
 ]
 
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SOCIALACCOUNT_AUTO_SIGNUP = True
 
 ACCOUNT_AUTHENTICATION_METHOD = "email"
-# ACCOUNT_SIGNUP_FIELDS = ["email*", "username*", "password1*", "password2*"]
+
 ACCOUNT_EMAIL_VERIFICATION = "none"
 
 
@@ -173,7 +160,7 @@ SOCIALACCOUNT_PROVIDERS = {
 SOCIALACCOUNT_ADAPTER = "core.adapter.NoNewUsersAccountAdapter"
 
 
-# For logging (optional but useful)
+
 import logging
 logger = logging.getLogger('allauth')
 logger.setLevel(logging.DEBUG)

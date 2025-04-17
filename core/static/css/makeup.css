@@ -122,12 +122,12 @@ body {
 .scroll-content {
     display: flex;
     gap: 15px;
-    width: max-content; /* Ensures content fits inside */
+    width: max-content; 
 }
 
 .banner {
-    flex: 0 0 calc(33.33% - 10px); /* Shows 3 banners at a time */
-    max-width: 500px; /* Adjust banner size */
+    flex: 0 0 calc(33.33% - 10px); 
+    max-width: 500px; 
     border-radius: 10px;
     overflow: hidden;
 }
@@ -139,7 +139,7 @@ body {
     border-radius: 10px;
 }
 
-/* Hide scrollbar for a cleaner look */
+
 .scroll-container::-webkit-scrollbar {
     display: none;
 }
@@ -208,7 +208,7 @@ body {
 
 .find-match-slider-container {
     width: auto;
-    max-width: auto; /* Adjust width as needed */
+    max-width: auto; 
     overflow: hidden;
     position: relative;
     margin: auto;
@@ -254,7 +254,7 @@ body {
     background-color: black;
 }
 
-/* Product Slider Styles */
+
 .product-slider-container {
     width: 100%;
     padding: 20px;
@@ -325,13 +325,13 @@ body {
     font-weight: bold;
 }
 
-/* Hide scrollbar */
+
 .product-slider::-webkit-scrollbar {
     display: none;
 }
 
 
-/* Luxe Slider Styles */
+
 .lux-slider-container {
     text-align: center;
     background-color: #fdeff1;
@@ -364,11 +364,11 @@ body {
     gap: 15px;
     padding: 10px;
     white-space: nowrap;
-    scrollbar-width: none; /* Hide scrollbar */
+    scrollbar-width: none; 
 }
 
 .lux-product-slider::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Webkit browsers */
+    display: none; 
 }
 
 .lux-product-card {
@@ -423,7 +423,7 @@ body {
 }
 .makeup-banner img {
     width: 90%;
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 10px; 
     padding:20px
 }
 .allora-brands-section {
@@ -479,13 +479,13 @@ body {
 
 .swiss-beauty-banner img {
     width: 80%;
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 10px; 
     padding:20px
 }
 .shop-the-look-wrapper {
     text-align: center;
     padding: 20px;
-    background-color: #fef7fa; /* Light pink background */
+    background-color: #fef7fa; 
 }
 
 .shop-the-look-title {
@@ -511,11 +511,11 @@ body {
     overflow-x: auto;
     scroll-behavior: smooth;
     padding: 10px 0;
-    scrollbar-width: none; /* Hide scrollbar */
+    scrollbar-width: none; 
 }
 
 .shop-the-look-cards::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome */
+    display: none; 
 }
 
 .shop-the-look-item {

@@ -46,7 +46,7 @@ def send_otp(request):
                 defaults={'otp': otp}
             )
 
-            print(f"OTP for {mobile} is {otp}")  # Simulated SMS
+            print(f"OTP for {mobile} is {otp}")  
 
             request.session['mobile'] = mobile
             return redirect('verify_otp')
@@ -71,14 +71,13 @@ def verify_otp(request):
                 # Get or create user
                 user, created = User.objects.get_or_create(username=mobile)
 
-                # ✅ Tell Django which backend to use
+                # Tell Django which backend to use
                 backend = get_backends()[0]
                 user.backend = backend.__module__ + '.' + backend.__class__.__name__
 
-                # Log in user
                 login(request, user)
 
-                return redirect('index')  # Change 'index' to your homepage view name
+                return redirect('index') 
             except MobileOTP.DoesNotExist:
                 form.add_error('otp', 'Invalid OTP')
     else:
@@ -88,7 +87,7 @@ def verify_otp(request):
 
 
 
-# Create your views here.
+
 from django.http import HttpResponse
 
 def index(request):
@@ -159,13 +158,13 @@ def makeup_products(request):
         elif selected_price == '501-1000':
             products = products.filter(discounted_price__gt=500, discounted_price__lte=1000)
 
-    # 🧠 PAGINATION here
-    paginator = Paginator(products, 9)  # 9 per page
+    
+    paginator = Paginator(products, 9) 
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 
     context = {
-        'products': page_obj.object_list,  # use this in your for loop
+        'products': page_obj.object_list, 
         'page_obj': page_obj,
         'query': query,
         'selected_brands': selected_brands,

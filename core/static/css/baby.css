@@ -1,16 +1,16 @@
 .carousel img {
-    height: 400px; /* Adjust height as needed */
+    height: 400px; 
     object-fit: cover;
 }
 .carousel-container {
-    margin-top: 20px; /* Adjust as needed */
+    margin-top: 20px; 
 }
 
 
-/* Style for carousel navigation buttons */
+
 .custom-carousel-control {
-    background-color: white;  /* White circle */
-    color: black;  /* Black arrows */
+    background-color: white;  
+    color: black;  
     font-size: 24px;
     border-radius: 50%;
     width: 50px;
@@ -22,40 +22,40 @@
     font-weight: bold;
 }
 
-/* Positioning arrows near borders */
+
 .carousel-control-prev {
-    left: 20px;  /* Move left arrow closer to the border */
+    left: 20px;  
 }
 
 .carousel-control-next {
-    right: 20px;  /* Move right arrow closer to the border */
+    right: 20px;  
 }
 
-/* Ensure button width does not interfere with images */
+
 .carousel-control-prev, 
 .carousel-control-next {
     width: auto;
 }
 .shop-by-category {
     text-align: center;
-    margin: 80px auto; /* Adds space above and below */
+    margin: 80px auto;
     padding: 20px 0;
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers heading */
+    align-items: center; 
      justify-content: center;
 
 
 }.shop-by-category-heading {
     text-align: center;
-    font-size: 2rem; /* Adjust size if needed */
+    font-size: 2rem; 
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 
-/* Ensuring Category Cards Are Centered */
+
 .category-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -67,7 +67,7 @@
   
   .category-card {
     width: 200px;
-    aspect-ratio: 16 / 9; /* Keeps a consistent shape */
+    aspect-ratio: 16 / 9; 
     border-radius: 20px;
     overflow: hidden;
     position: relative;
@@ -82,8 +82,7 @@
   .category-card img {
     width: 100%;
     height: 100%;
-    /* object-fit: cover;
-    display: block; */
+    
     border-radius: 0;
     object-position: center;
     align-items: center;
@@ -110,28 +109,28 @@
     color: #333;
 }
 
-/* Responsive Design */
+
 @media (max-width: 1200px) {
     .category-container {
-        grid-template-columns: repeat(4, 1fr); /* 4 per row */
+        grid-template-columns: repeat(4, 1fr); 
     }
 }
 
 @media (max-width: 1024px) {
     .category-container {
-        grid-template-columns: repeat(3, 1fr); /* 3 per row */
+        grid-template-columns: repeat(3, 1fr); 
     }
 }
 
 @media (max-width: 768px) {
     .category-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 per row */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 @media (max-width: 480px) {
     .category-container {
-        grid-template-columns: repeat(1, 1fr); /* 1 per row */
+        grid-template-columns: repeat(1, 1fr); 
     }
 }
     .allora-footer {
@@ -154,19 +153,19 @@
         margin: 10px;
         max-width: 300px;
     }
-  /* Email Subscription Box */
+  
 .allora-subscribe-box {
     display: flex;
     align-items: center;
-    gap: 10px; /* Space between input and button */
+    gap: 10px; 
     margin-top:15px;
 }
 
-/* Email Input Field */
+
 .allora-email-input {
     background: transparent;
     border: none;
-    border-bottom: 2px solid white; /* Bottom line only */
+    border-bottom: 2px solid white; 
     color: white;
     padding: 8px 5px;
     width: 200px;
@@ -179,11 +178,11 @@
     font-weight: normal;
 }
 
-/* Send Button (Transparent with White Border & Text) */
+
 .allora-send-btn {
-    background: transparent;  /* No background */
-    border: 2px solid white;  /* White border */
-    color: white;  /* White text */
+    background: transparent;  
+    border: 2px solid white;  
+    color: white;  
     padding: 8px 15px;
     font-size: 14px;
     font-weight: bold;
@@ -193,7 +192,7 @@
 }
 
 .allora-send-btn:hover {
-    background: rgba(255, 255, 255, 0.2); /* Light white effect on hover */
+    background: rgba(255, 255, 255, 0.2); 
 }
 
     .allora-footer-app-buttons img {
@@ -242,7 +241,7 @@
 }
 
 .allora-info-links a:hover {
-    color: #fc53a8; /* Pink hover effect */
+    color: #fc53a8; 
 }
 .features-container {
     display: flex;
@@ -335,8 +334,8 @@ body {
  
 .shop-by-brand-heading {
     text-align: center;
-    font-size: 2.5rem; /* Adjust size if needed */
-    /* font-weight: bold; */
+    font-size: 2.5rem;
+   
     margin-bottom: 30px;
 }
 
@@ -351,51 +350,51 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px; /* Increased space between cards */
+    gap: 40px; 
     max-width: 1200px;
     margin: 40px auto;
     height: 400;
 }
 
 .brand-card {
-    width: calc(25% - 30px); /* Increased width for larger cards (4 per row) */
-    min-width: 250px; /* Ensures cards are not too small */
-    height: 400px; /* Adjusted height for larger cards */
+    width: calc(25% - 30px); 
+    min-width: 250px; 
+    height: 400px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 30px; /* Increased padding for better spacing */
+    padding: 30px; 
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .brand-card img {
     width: 100%;
-    height: 80%; /* Images cover more area of the card */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+    height: 80%; 
+    object-fit: cover; 
     border-radius: 8px;
 }
 
 .brand-name {
-    font-size: 20px; /* Increased size for the brand name */
+    font-size: 20px; 
     font-weight: bold;
-    margin: 15px 0; /* Increased margin for spacing */
+    margin: 15px 0; 
 }
 
 .discount {
-    font-size: 18px; /* Adjusted font size */
+    font-size: 18px; 
     color: #d9534f;
     font-weight: bold;
-    margin-top: 10px; /* Added space above the discount text */
+    margin-top: 10px; 
 }
 
 .brand-card:hover {
-    transform: translateY(-5px); /* Hover effect */
-    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: translateY(-5px); 
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.2); 
 }
 
 
@@ -415,11 +414,10 @@ body {
 }
 
 .product-slider::-webkit-scrollbar {
-    width: 0; /* Hide scrollbar */
-    height: 0; /* Hide scrollbar
-} */
+    width: 0; 
+    height: 0; 
 }
-/* Product Slider Styles */
+
 .product-slider-container {
     width: 100%;
     padding: 20px;
@@ -490,7 +488,7 @@ body {
     font-weight: bold;
 }
 
-/* Hide scrollbar */
+
 .product-slider::-webkit-scrollbar {
     display: none;
 }
@@ -543,7 +541,7 @@ h2 {
     display: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
-/* Banner Section Styling */
+
 .banner-section {
     text-align: center;
     margin: 40px 20px;
@@ -571,10 +569,10 @@ h2 {
   .shop-btn {
     display: inline-block;
     margin-top: 20px;
-    padding: 19px 120px; /* increased padding for width */
+    padding: 19px 120px; 
     font-size: 16px;
     color: #e91e63;
-    background-color: white; /* white background */
+    background-color: white; 
     border: 2px solid #e91e63;
     border-radius: 12px;
     text-decoration: none;
@@ -584,7 +582,7 @@ h2 {
   }
   
   .shop-btn:hover {
-    background-color: #fce4ec; /* soft pink hover background */
+    background-color: #fce4ec; 
     color: #e91e63;
     transform: scale(1.03);
   }
