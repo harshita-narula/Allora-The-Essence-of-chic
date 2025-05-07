@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Allora Luxe - Exclusive Beauty Sale</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    {% load static %}
     <style>
         * {
             margin: 0;
@@ -19,204 +20,6 @@
             overflow-x: hidden;
             text-align: center;
         }
-
-       
-.header-bar {
-    background-image: url('header.jpeg');
-    background-size: cover;
-    background-position: center;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-family: Arial, sans-serif;
-    color: #fff; 
-}
-
-.header-bar .container1 {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: flex-end; 
-    align-items: center;
-}
-
-.header-bar .header-links {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.header-bar .header-links a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 5px; 
-    transition: color 0.3s ease;
-}
-
-.header-bar .header-links a:hover {
-    color: #100f0f; 
-}
-
-
-.header-bar .divider {
-    color: rgba(255, 255, 255, 0.6); 
-}
-
-
-.header-bar i {
-    font-size: 18px;
-}
-
-.second-header {
-    background-color: #fff;
-    padding: 20px 20px;
-    border-bottom: 1px solid #e5e5e5;
-    font-family: Arial, sans-serif;
-}
-
-.second-header .container1 {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-}
-
-
-.second-header .logo h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    color: #ff5a83;
-    margin: 0;
-}
-
-
-.second-header .nav-links {
-    display: flex;
-    gap: 40px; 
-}
-
-.second-header .nav-links a {
-    text-decoration: none;
-    color: #2c2c2c;
-    font-size: 16px; 
-    font-weight: bold;
-    transition: color 0.3s ease; 
-}
-
-.second-header .nav-links a:hover {
-    color: #ff5a83; }
-
-
-.search-box {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-    width: 300px; 
-}
-
-.search-box input {
-    border: none;
-    padding: 8px 12px; 
-    font-size: 14px;
-    outline: none;
-    width: 100%;
-}
-
-.search-box button {
-    border: none;
-    background: #ff5a83;
-    color: #fff;
-    padding: 8px 12px; 
-    cursor: pointer;
-}
-
-
-.sign-in-btn {
-    background-color: #ff5a83;
-    color: #fff;
-    border: none;
-    padding: 10px 20px; 
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px; 
-    font-weight: bold;
-}
-
-.sign-in-btn:hover {
-    background-color: #e04b71;
-}
-
-
-.cart-icon {
-    color: #2c2c2c;
-    font-size: 22px; 
-    text-decoration: none;
-    margin-left: 20px; 
-}
-
-.cart-icon:hover {
-    color: #ff5a83;
-}
-
-
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 20px; 
-}
-
-        .hero {
-            background: url('main.png') no-repeat center center/cover; 
-            height: 580px; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .hero-overlay {
-            
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 85%;
-            height: 100%;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-       
-    
-        .footer {
-            text-align: center;
-            padding: 20px;
-            background: #d4006a;
-            color: white;
-            font-size: 16px;
-        }
-
-
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 42px;
-            font-weight: bold;
-            text-transform: uppercase;
-            background: linear-gradient(135deg, #7b002c, #ff66b2);
-            background-clip: text; 
-           -webkit-background-clip: text; 
-           -webkit-text-fill-color: transparent;
-            margin-bottom: 20px;
-        }
-
         .carousel-container {
             position: relative;
             overflow: hidden;
@@ -434,6 +237,7 @@
             font-size: 50px;
             font-weight: bold;
             color: #333;
+            text-align: center;
         }
         .brands {
             display: flex;
@@ -458,7 +262,7 @@
             padding: 20px;
         }
         .lux {
-            width: 400px;
+            width: 350px;
             margin: 15px;
             border-radius: 10px;
             overflow: hidden;
@@ -481,101 +285,123 @@
             margin-top: 10px;
         }
         
-#chatIcon {
-    width: 50px;
-    height: 50px;
-    background-color: #ff4da6;
-    border-radius: 50%;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+.slider-container {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            text-align: center;
+        }
 
-#chatIcon img {
-    width: 30px;
-    height: 30px;
-}
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
 
-#chatContainer {
-    width: 300px;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background: white;
-    overflow: hidden;
-    display: none; /* Initially hidden */
-}
+        .slide {
+            min-width: 100%;
+            text-align: center;
+        }
 
-#chatHeader {
-    background-color: #ff4da6;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        .slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
 
-#chatHeader img {
-    width: 20px;
-    height: 20px;
-}
+        .text-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            text-align: center;
+            margin-top: -5px;
+        }
 
-#closeChat {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
 
-#chatBody {
-    height: 200px;
-    overflow-y: auto;
-    padding: 10px;
-}
+        .text-container p {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #333;
+        }
 
-#chatInputContainer {
-    display: flex;
-    border-top: 1px solid #ddd;
-}
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.5);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+        }
 
-#chatInput {
-    flex: 1;
-    border: none;
-    padding: 10px;
-    outline: none;
-}
+        .arrow-left {
+            left: 20px;
+        }
 
-#sendButton {
-    background: #ff4da6;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-#sendButton:hover {
-    background: #e60073;
-}
-
-#chatInput:focus {
-    border: 2px solid #ff4da6;
-}
-
-#sendButton:active {
-    background: #b30059;
-}
-
+        .arrow-right {
+            right: 20px;
+        }
         
+        .carousel-containerr {
+            position: relative;
+            max-width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 180px; 
+            margin-right: 8px;
+            flex-shrink: 0;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .carousel-slide img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            padding: 8px 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .carousel-btn:hover {
+            background: white;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
         @media (max-width: 600px) {
             .product-card {
                 width: 180px;
@@ -593,51 +419,33 @@
     </style>
 </head>
 <body>
+    {% include 'header.html' %}
 
-<header class="header-bar">
-    <div class="container1">
-        <div class="header-links">
-            <a href="#"><i class="fa fa-mobile-alt"></i> Get App</a>
-            <span class="divider">|</span>
-            <a href="#"><i class="fa fa-map-marker-alt"></i> Store & Events</a>
-            <span class="divider">|</span>
-            <a href="#"><i class="fa fa-gift"></i> Gift Card</a>
-            <span class="divider">|</span>
-            <a href="#"><i class="fa fa-question-circle"></i> Help</a>
-        </div>
-    </div>
-</header>
-
-<header class="second-header">
-    <div class="container1">
-        
-        <div class="logo">
-            <h1>Allora</h1>
-        </div>
-
-        
-        <nav class="nav-links">
-            <a href="category.html">Categories</a>
-            <a href="#">Brands</a>
-            <a href="#">Luxe</a>
-            <a href="#">Beauty Advice</a>
-        </nav>
-
-        
-        <div class="header-right">
-            <div class="search-box">
-                <input type="text" placeholder="Search for Allora" />
-                <button><i class="fa fa-search"></i></button>
+<div class="headerr">THE EPITOME OF LUXURY</div>
+<div class="slider-container">
+    <div class="slider">
+        <div class="slide">
+            <img src="{% static 'images/tomford.png' %}" alt="Luxury Product">
+            <div class="text-container">
+                <p>TOM FORD New Launch</p>
             </div>
-            <button class="sign-in-btn">Sign In</button>
-            <a href="#" class="cart-icon"><i class="fa fa-shopping-cart"></i></a>
+        </div>
+        <div class="slide">
+            <img src="{% static 'images/gucci.png' %}" alt="Luxury Product">
+            <div class="text-container">
+                <p>Gucci Guilty Love Edition</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="{% static 'images/FB.png' %}" alt="Luxury Product">
+            <div class="text-container">
+                <p>Bombest Combo for ultra-juicy lips</p>
+            </div>
         </div>
     </div>
-</header>
-    
-    <div class="hero">
-        <div class="hero-overlay"></div>
-    </div>
+    <button class="arrow arrow-left" onclick="prevSlide()">&#10094;</button>
+    <button class="arrow arrow-right" onclick="nextSlide()">&#10095;</button>
+</div>
 
     <div class="headerr">LUXE BRANDS - The Best of Luxury</div>
     
@@ -663,8 +471,9 @@
         
     </div>
 
+    
+    </section>
 
-    <div class="banner"><a href='love.html'> <img src="static/images/alloraa.png" alt="Luxury Serum"></a></div>
 
     <div class="headerr">Tiny Treasures</div>
 
@@ -672,7 +481,7 @@
         <button class="arrow arrow-left" onclick="scrollLeft('productCarousel1')">&#8249;</button>
         <div class="carousel" id="productCarousel1">
             <div class="product-card">
-                <img src="static/images/oalpex.jpeg" alt="Olaplex">
+                <img src="{% static 'images/oalpex.jpeg' %}" alt="Olaplex">
                 <span class="label bestseller">BESTSELLER</span>
                 <p class="rating">⭐ 4.5/5 (801)</p>
                 <p>Olaplex No.7 Bonding Oil</p>
@@ -680,15 +489,14 @@
             </div>
 
             <div class="product-card">
-                <img src="static/images/too faced.png" alt="Too Faced Lip Injection">
-                <span class="label offer">OFFER</span>
-                <p class="rating">⭐ 4.1/5 (3.1k)</p>
-                <p>Too Faced Lip Plumper</p>
-                <p class="price">₹1490</p>
+               
+                <img src="{% static 'images/CLINIQUE.jpeg' %}" alt="Clinique moisture"></a>
+                <p class="rating">⭐ 4.4/5 (840)</p>
+                <p>Clinique Moisture 72H Hydration</p>
+                <p class="price"><span class="old-price">₹4590</span> ₹3960 <span class="discount">20% OFF</span></p>
             </div>
-
             <div class="product-card">
-                <img src="static/images/la.jpeg" alt="Lancome Serum">
+                <img src="{% static 'images/la.jpeg' %}" alt="Lancome Serum">
                 <span class="label offer">OFFER</span>
                 <p class="rating">⭐ 4.5/5 (220)</p>
                 <p>Lancome Genifique Serum</p>
@@ -696,7 +504,7 @@
             </div>
 
             <div class="product-card">
-                <img src="static/images/loccitane.jpeg" alt="L'Occitane Almond Oil">
+                <img src="{% static 'images/loccitane.jpeg' %}" alt="L'Occitane Almond Oil">
                 <span class="label bestseller">BESTSELLER</span>
                 <p class="rating">⭐ 4.5/5 (840)</p>
                 <p>L'Occitane Almond Shower Oil</p>
@@ -704,34 +512,33 @@
             </div>
 
             <div class="product-card">
-                <img src="static/images/h&m.jpeg" alt="Fable & Mane">
+                <img src="{% static 'images/h&m.jpeg' %}" alt="Fable & Mane">
                 <p class="rating">⭐ 4.5/5 (1.3k)</p>
                 <p>Fable & Mane Hair Oil</p>
                 <p class="price"><span class="old-price">₹1300</span> ₹1040 <span class="discount">20% OFF</span></p>
             </div>
             
             <div class="product-card">
-                <img src="static/images/sol de janeiro.jpeg" alt="Sol de Janeiro Body Paradise Minis">
+                <img src="{% static 'images/sol de janeiro.jpeg' %}" alt="Sol de Janeiro Body Paradise Minis">
                 <span class="label bestseller">BESTSELLER</span>
                 <p class="rating">⭐ 4.9/5 (940)</p>
                 <p>Sol de Janeiro Body Paradise Minis</p>
                 <p class="price">₹2500</p>
             </div>
             <div class="product-card">
-                <img src="static/images/mac lipstick.jpeg" alt="M.A.C Mini Lipstick">
+                <img src="{% static 'images/mac lipstick.jpeg' %}" alt="M.A.C Mini Lipstick">
                 <p class="rating">⭐ 4.2/5 (2.4k)</p>
                 <p>M.A.C MACximal Satin Mini Lipstick</p>
                 <p class="price">₹1650</p>
             </div>
-            <div class="product-card">
-                <img src="static/images/CLINIQUE.jpeg" alt="Clinique moisture">
-                <p class="rating">⭐ 4.4/5 (840)</p>
-                <p>Clinique Moisture 72H Hydration</p>
-                <p class="price"><span class="old-price">₹4590</span> ₹3960 <span class="discount">20% OFF</span></p>
-            </div>
+            
         </div>
         <button class="arrow arrow-right" onclick="scrollRight('productCarousel1')">&#8250;</button>
     </div>
+
+    <div class="banner">
+       
+        <img src="{% static 'images/alloraa.png' %}" alt="Luxury Serum"></div>
 
     <div class="headerr">Focus on: Today's standout brands</div>
 
@@ -753,7 +560,7 @@
         <button class="arrow arrow-left" onclick="scrollLeft('productCarousel2')">&#8249;</button>
         <div class="carousel" id="productCarousel2">
             <div class="product-card">
-                <img src="static/images/laneige.png" alt="LANEIGE Lip Sleeping Mask">
+                <img src="{% static 'images/laneige.png' %}" alt="LANEIGE Lip Sleeping Mask">
                 <span class="label bestseller">BESTSELLER</span>
                 <p class="rating">⭐ 4.5/5 (801)</p>
                 <p>LANEIGE Lip Sleeping Mask</p>
@@ -761,7 +568,7 @@
             </div>
 
             <div class="product-card">
-                <img src="static/images/pixi.png" alt="PIXI Toner ">
+                <img src="{% static 'images/pixi.png' %}" alt="PIXI Toner ">
                 <span class="label offer">OFFER</span>
                 <p class="rating">⭐ 4.4/5 (3.1k)</p>
                 <p>PIXI Glow Tonic Exfoliating Toner </p>
@@ -769,7 +576,7 @@
             </div>
 
             <div class="product-card">
-                <img src="static/images/lauder.png" alt="Estee Lauder ">
+                <img src="{% static 'images/lauder.png' %}" alt="Estee Lauder ">
                 <span class="label offer">OFFER</span>
                 <p class="rating">⭐ 4.5/5 (19.7k)</p>
                 <p>Estee Lauder Advanced Night Repair Synchronize...</p>
@@ -777,34 +584,34 @@
             </div>
 
             <div class="product-card">
-                <img src="static/images/clinique.png" alt="Clinique moisture">
+                <img src="{% static 'images/clinique.png' %}" alt="Clinique moisture">
                 <p class="rating">⭐ 4.4/5 (840)</p>
                 <p>Clinique Moisture 72H Hydration</p>
                 <p class="price"><span class="old-price">₹4590</span> ₹3960 <span class="discount">20% OFF</span></p>
             </div>
 
             <div class="product-card">
-                <img src="static/images/bb.png" alt="Bobbi Brown Lip Balm">
+                <img src="{% static 'images/bb.png' %}" alt="Bobbi Brown Lip Balm">
                 <p class="rating">⭐ 4.5/5 (687)</p>
                 <p>Bobbi Brown New Extra Lip Tint - Bare Raspberry (Lip Balm)</p>
                 <p class="price"><span class="old-price">₹3350</span> ₹2513 <span class="discount">25% OFF</span></p>
             </div>
             
             <div class="product-card">
-                <img src="static/images/cc.png" alt=" Charlotte's Magic Cream">
+                <img src="{% static 'images/cc.png' %}" alt=" Charlotte's Magic Cream">
                 <p class="rating">⭐ 4.9/5 (1059)</p>
                 <p>Charlotte Tilbury Charlotte's Magic Cream</p>
                 <p class="price"><span class="old-price">₹6350</span> ₹5398 <span class="discount">15% OFF</span></p>            </div>
             
                 <div class="product-card">
-                <img src="static/images/kk.png" alt="Kerastase Scalp Serum">
+                <img src="{% static 'images/kk.png' %}" alt="Kerastase Scalp Serum">
                 <p class="rating">⭐ 4.7/5 (452)</p>
                 <p>Kerastase Genesis Anti-Hair Fall Daily Scalp Serum</p>
                 <p class="price">₹5100</p>
             </div>
 
             <div class="product-card">
-                <img src="static/images/h&m.jpeg" alt="Fable & Mane">
+                <img src="{% static 'images/h&m.jpeg' %}" alt="Fable & Mane">
                 <p class="rating">⭐ 4.5/5 (1.3k)</p>
                 <p>Fable & Mane Hair Oil</p>
                 <p class="price"><span class="old-price">₹1300</span> ₹1040 <span class="discount">20% OFF</span></p>
@@ -816,49 +623,97 @@
 
     <div class="container2">
         <div class="card1">
-            <img src="static/images/riya.png" alt="Riya Kohli">
+            <img src="{% static 'images/riya.png' %}" alt="Riya Kohli">
             <h3>Riya Kohli</h3>
             <p>Budgeted Picks Under ₹999</p>
-            <a href="riyakohli.html">→</a>
+            
         </div>
 
         <div class="card1">
-            <img src="static/images/nagma.png" alt="Nagma Mirajkar">
+            <img src="{% static 'images/nagma.png' %}" alt="Nagma Mirajkar">
             <h3>Nagma Mirajkar</h3>
             <p>Makeup Vanity Under ₹1999</p>
-            <a href="nagma-store.html">→</a>
+        
         </div>
 
         <div class="card1">
-            <img src="static/images/suchita.png" alt="Suchita Mukerji">
+            <img src="{% static 'images/suchita.png' %}" alt="Suchita Mukerji">
             <h3>Suchita Mukerji</h3>
             <p>Luxe Favs To Invest In</p>
-            <a href="suchita-store.html">→</a>
+         
         </div>
 
         <div class="card1">
-            <img src="static/images/sarah.png" alt="Sarah Sarosh">
+            <img src="{% static 'images/sarah.png' %}" alt="Sarah Sarosh">
             <h3>Sarah Sarosh</h3>
             <p>Hair Routine Under ₹1999</p>
-            <a href="sarah-store.html">→</a>
+           
         </div>
 
-        <div class="card1">
-            <img src="static/images/muskan.png" alt="Muskan Rawat">
-            <h3>Muskan Rawat</h3>
-            <p>Personal Care & Fragrance Essentials</p>
-            <a href="muskan-store.html">→</a>
+        
+    </div>
+    <!-- Luxe Indulgences -->
+    <section class="container mx-auto py-8 text-center">
+        <div class="headerr">Luxe Indulgences</div>
+
+        <div class="carousel-containerr">
+            <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="carousel-track">
+                <div class="carousel-slide"><img src="https://images-static.nykaa.com/uploads/e1fce2c4-5d59-4acb-b4ca-1f1ba64ff0d3.jpg?tr=cm-pad_resize,w-300"></div>
+                <div class="carousel-slide"><img src="https://images-static.nykaa.com/uploads/3644ac9b-28ce-4cd7-bcd0-2d4fb18c5534.jpg?tr=cm-pad_resize,w-300"></div>
+                <div class="carousel-slide"><img src="https://images-static.nykaa.com/uploads/83a2297d-ca69-448c-a572-b1f4670d3eef.jpg?tr=cm-pad_resize,w-300"></div>
+                <div class="carousel-slide"><img src="https://images-static.nykaa.com/uploads/1b5e4e52-5452-4a85-a796-92e3cd496c31.jpg?tr=cm-pad_resize,w-300"></div>
+                <div class="carousel-slide"><img src="https://images-static.nykaa.com/uploads/55578aa0-ddfa-4914-b0da-57e90e4b1130.jpg?tr=cm-pad_resize,w-300"></div>
+                <div class="carousel-slide"><img src="https://images-static.nykaa.com/uploads/1d8fa92f-db06-43df-bdc9-ac4ce74e10d8.jpg?tr=cm-pad_resize,w-300"></div>
+                <div class="carousel-slide"><img src="https://images-static.nykaa.com/uploads/23bf7725-f424-4669-9452-43b73644d5a6.jpg?tr=cm-pad_resize,w-300"></div>
+                <div class="carousel-slide"><img src="https://images-static.nykaa.com/uploads/eea86478-0775-44c1-ad13-d40f68711b18.jpg?tr=cm-pad_resize,w-300"></div>
+            </div>
+            <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
         </div>
-    </div>
-    <div class="shopb">
-        <a href="main.html">Shop All Luxe</a>
-    </div>
     
     
-    <div class="footer">&copy; 2025 Allora Luxe | Luxury Beauty, Redefined.</div>
+    {% include 'footer.html' %}
 
     <script>
-        function scrollLeft(carouselId) {
+        let currentIndex = 0;
+// startvla
+function showSlide(index) {
+    const slider = document.querySelector('.slider');
+    const totalSlides = document.querySelectorAll('.slide').length;
+    if (index >= totalSlides) currentIndex = 0;
+    else if (index < 0) currentIndex = totalSlides - 1;
+    else currentIndex = index;
+    slider.style.transform = `translateX(${-currentIndex * 100}%)`;
+}
+
+function nextSlide() {
+    showSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+    showSlide(currentIndex - 1);
+}
+
+// luxescroll
+
+let index = 0;
+        const slides = document.querySelectorAll(".carousel-slide");
+        const totalSlides = slides.length;
+        const track = document.querySelector(".carousel-track");
+        const slideWidth = slides[0].offsetWidth + 8; 
+
+        function moveSlide(step) {
+            index += step;
+            if (index < 0) index = totalSlides - 4;
+            if (index > totalSlides - 4) index = 0;
+            track.style.transform = `translateX(${-index * slideWidth}px)`;
+        }
+
+     
+        setInterval(() => moveSlide(1), 3000);
+
+
+function scrollLeft(carouselId) {
     const carousel = document.getElementById(carouselId);
     carousel.scrollBy({ left: -250, behavior: "smooth" });
 }

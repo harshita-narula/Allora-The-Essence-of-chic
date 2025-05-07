@@ -25,5 +25,13 @@ urlpatterns = [
     path('send-otp/', views.send_otp, name='send_otp'),
     path('verify-otp/', views.verify_otp, name='verify_otp'),
     path('logout/', LogoutView.as_view(next_page='index'), name='logout'),
-   
+    path('skin-care/', views.skincare, name='skincare'),
+    path('men/', views.men_page, name='men_page'),
+    path('men-products/', views.men_products, name='men_products'),
+    path('natural/', views.natural_page, name='natural'),
+    path('luxe/', views.luxe, name='luxe'),
+    path('cart/', views.cart_view, name='cart'),
+    path('add-to-cart/<int:product_id>/', views.add_to_cart, name='add_to_cart'),
+    path('remove-from-cart/<int:product_id>/', views.remove_from_cart, name='remove_from_cart'),
+    path('categories/', views.categories_view, name='categories'),
 ]

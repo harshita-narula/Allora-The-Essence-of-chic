@@ -1,0 +1,82 @@
+
+{% if cart_items %}
+<!-- Show items in cart -->
+{% for item in cart_items %}
+  <div style="padding: 16px; border-bottom: 1px solid #eee;">
+    <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" style="width: 80px; height: auto;">
+    <div>
+      <h4>{{ item.product.name }}</h4>
+      <p>Quantity: {{ item.quantity }}</p>
+      <p>Price: ₹{{ item.product.discounted_price }}</p>
+      <p>Subtotal: ₹{{ item.subtotal }}</p>
+      <form method="POST" action="{% url 'remove_from_cart' item.product.id %}">
+        {% csrf_token %}
+        <button type="submit">Remove</button>
+      </form>
+    </div>
+  </div>
+{% endfor %}
+<div style="padding: 16px;">
+  <strong>Total: ₹{{ total }}</strong>
+  <button style="background-color: #ec008c; color: white; padding: 10px 20px; margin-top: 10px;">Proceed</button>
+</div>
+{% else %}
+<!-- Show empty bag -->
+
+{% load static %}
+
+<!-- Cart Drawer -->
+<div id="cartDrawer" style="
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+    transition: right 0.3s ease-in-out;
+    z-index: 9999;
+    overflow-y: auto;
+    font-family: Arial, sans-serif;
+">
+
+    <!-- Header -->
+    <div style="display: flex; align-items: center; padding: 16px; border-bottom: 1px solid #eee;">
+        <button onclick="closeCart()" style="background: none; border: none; font-size: 22px; margin-right: 12px; cursor: pointer;">&#8592;</button>
+        <h4 style="margin: 0;">Bag</h4>
+    </div>
+
+    <!-- Content -->
+    <div style="text-align: center; padding: 50px 20px;">
+        <img src="{% static 'images/empty-bag.png' %}" alt="Empty Bag"
+             style="width: 160px; margin-bottom: 30px;" />
+        <h3 style="margin-bottom: 10px;">Your Shopping Bag is Empty</h3>
+        <p style="color: #555; font-size: 16px;margin-top: 20px; margin-bottom: 30px;">
+            This feels too light! Go on, add all your favourites
+        </p>
+        <a href="{% url 'index' %}" style="
+            background-color: #ec008c;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        ">
+            Start Shopping
+        </a>
+    </div>
+</div>
+
+
+<script>
+    function openCart() {
+        document.getElementById("cartDrawer").style.right = "0";
+    }
+
+    function closeCart() {
+        document.getElementById("cartDrawer").style.right = "-100%";
+    }
+</script>
+{% endif %}
+

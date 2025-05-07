@@ -13,7 +13,7 @@
 <style>
     .signed-in-user {
     font-weight: 600;
-    color: #ff69b4; /* pink tone */
+    color: #ff69b4; 
 }
 
 .logout-btn {
@@ -436,7 +436,7 @@
         <nav class="nav-links">
             <a href="/categories">Categories</a>
             <a href="#">Brands</a>
-            <a href="/luxe">Luxe</a>
+            <a href="{% url 'luxe' %}">Luxe</a>
             <a href="#">Beauty Advice</a>
         </nav>
 
@@ -449,7 +449,7 @@
                     id="search-input" 
                     name="q" 
                     placeholder="Search for Allora" 
-                    value="{{ query }}"
+                    value="{{ query|default:'' }}"
                 >
                 <i class="fas fa-camera lens-icon" id="image-capture"></i>
                 <i class="fas fa-microphone voice-icon" id="voice-search"></i>
@@ -472,7 +472,10 @@
 {% endif %}
 
         
-            <a href="#" class="cart-icon"><i class="fa fa-shopping-cart"></i></a>
+<a href="javascript:void(0);" onclick="openCart()" class="cart-icon">
+    <i class="fa fa-shopping-cart"></i>
+</a>
+
         </div>
     </div>
 </header>
@@ -490,7 +493,7 @@
             </div>
         </div>
         <div class="dropdown">
-            <a href="#" class="nav-link">Skin</a>
+            <a href="{% url 'skincare' %}" class="nav-link">Skin</a>
             <div class="dropdown-menu">
                 <a href="#">Cleansers</a>
                 <a href="#">Moisturizers</a>
@@ -525,7 +528,7 @@
             </div>
         </div>
         <div class="dropdown">
-            <a href="#" class="nav-link">Natural</a>
+            <a href="{% url 'natural' %}" class="nav-link">Natural</a>
             <div class="dropdown-menu">
                 <a href="#">Organic Products</a>
                 <a href="#">Ayurvedic</a>
@@ -557,7 +560,7 @@
             </div>
         </div>
         <div class="dropdown">
-            <a href="#" class="nav-link">Men</a>
+            <a href="{% url 'men_page' %}"  class="nav-link">Men</a>
             <div class="dropdown-menu">
                 <a href="#">Shaving Cream</a>
                 <a href="#">Beard Oils</a>
@@ -715,4 +718,6 @@
         
     });
 </script>
+{% include 'cart.html' %}
+
 </body>

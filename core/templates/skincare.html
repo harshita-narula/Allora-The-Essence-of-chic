@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allora - Skincare Store</title>
+    {% load static %}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        
+        .carousel-container::-webkit-scrollbar {
+            display: none;
+        }
+        .carousel-container {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+{% include 'header.html' %}
+<body class="bg-gray-50">
+    
+    <!-- Banner Section -->
+    <section class="text-center py-12">
+        <h2 class="text-3xl font-bold text-gray-800">The Skincare Store</h2>
+        <p class="text-gray-600 mt-2">Discover a Limitless Range of Skincare</p>
+    </section>
+
+
+    <!-- Category Icons Carousel -->
+    <section class="container mx-auto text-center py-8 relative">
+        <div class="carousel-container overflow-hidden">
+            <div id="categoryCarousel" class="flex space-x-6 w-max transition-transform duration-500">
+                <!-- Category Items -->
+                <a href="products-sunscreens.html" class="flex flex-col items-center">
+                    <img src="https://images-static.nykaa.com/uploads/6c47b9dd-fb27-40ac-b34f-f529299285c9.jpg" class="rounded-full w-40 h-40 object-cover" alt="Sunscreens">
+                    <p class="text-gray-700 text-base">Sunscreens</p>
+                </a>
+                <a href="products-Cleansers.html" class="flex flex-col items-center">
+                    <img src="https://images-static.nykaa.com/uploads/762cb126-63d9-4ed8-b2b8-f3140138b5b9.jpg" class="rounded-full w-40 h-40 object-cover" alt="Cleansers">
+                    <p class="text-gray-700 text-base">Cleansers</p>
+                </a>
+                <a href="products-SerumsAndTreatments.html" class="flex flex-col items-center">
+                    <img src="https://images-static.nykaa.com/uploads/8c9dc7bb-a833-475e-a673-5aeeaa90951b.jpg" class="rounded-full w-40 h-40 object-cover" alt="Serums & Treatments">
+                    <p class="text-gray-700 text-base">Serums & Treatments</p>
+                </a>
+                <a href="products-Moisturisers.html" class="flex flex-col items-center">
+                    <img src="https://images-static.nykaa.com/uploads/31cb6c20-5b15-4562-9391-8f0c331db8e7.jpg" class="rounded-full w-40 h-40 object-cover" alt="Moisturisers">
+                    <p class="text-gray-700 text-base">Moisturisers</p>
+                </a>
+                <a href="products-Toners.html" class="flex flex-col items-center">
+                    <img src="https://images-static.nykaa.com/uploads/4acc1d03-d0fb-472f-82d2-704b6613a1c4.jpg" class="rounded-full w-40 h-40 object-cover" alt="Toners">
+                    <p class="text-gray-700 text-base">Toners</p>
+                </a>
+                <a href="products-EyeCare.html" class="flex flex-col items-center">
+                    <img src="https://images-static.nykaa.com/uploads/4ed42124-951b-40fe-9a60-56d954088810.jpg?tr=cm-pad_resize,w-225" class="rounded-full w-40 h-40 object-cover" alt="Eye Care">
+                    <p class="text-gray-700 text-base">Eye Care</p>
+                </a>
+                <a href="products-LipCare.html" class="flex flex-col items-center">
+                    <img src="https://images-static.nykaa.com/uploads/5c8786a3-ba12-4edd-b8ed-1af5ca4b2cae.jpg?tr=cm-pad_resize,w-225" class="rounded-full w-40 h-40 object-cover" alt="Lip Care">
+                    <p class="text-gray-700 text-base">Lip Care</p>
+                </a>
+                <a href="products-MaskaAndPeels.html" class="flex flex-col items-center">
+                    <img src="https://images-static.nykaa.com/uploads/1c0c64ad-206a-46c3-be35-32893a6fc58f.jpg?tr=cm-pad_resize,w-225" class="rounded-full w-40 h-40 object-cover" alt="Masks and Peels">
+                    <p class="text-gray-700 text-base">Masks and Peels</p>
+                </a>
+                <a href="products-NightCream.html" class="flex flex-col items-center">
+                    <img src="https://images-static.nykaa.com/uploads/1f82a1e5-2a86-443d-828d-75bb93277fd5.jpg?tr=cm-pad_resize,w-225" class="rounded-full w-40 h-40 object-cover" alt="Night Cream">
+                    <p class="text-gray-700 text-base">Night Cream</p>
+                </a>
+                <a href="NewAtNykaa.html" class="flex flex-col items-center">
+                    <img src="https://images-static.nykaa.com/uploads/0d749002-5740-45b5-bb46-ae5e5b11f49e.jpg?tr=cm-pad_resize,w-225" class="rounded-full w-40 h-40 object-cover" alt="New at Nykaa">
+                    <p class="text-gray-700 text-base">New at Nykaa</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+            <!-- Brands in Spotlight Section -->
+    <section class="container mx-auto text-center py-8 relative">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Brands in Spotlight</h2>
+        <div class="relative overflow-hidden">
+            <button id="prevBrand" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-300 p-2 rounded-full">⏮️</button>
+            <div id="brandCarousel" class="flex space-x-6 w-max transition-transform duration-500 overflow-x-auto scrollbar-hide">
+                <img src="https://images-static.nykaa.com/creatives/6cb4ab00-74be-4f52-a7b4-e2a5828938c7/default.jpg?tr=cm-pad_resize,w-900" class="rounded-lg w-90 h-80 object-cover" alt="Brand 1">
+                <img src="https://images-static.nykaa.com/creatives/a0bc1cdc-a0ad-440a-81cb-a1720a1c4c3f/default.jpg?tr=cm-pad_resize,w-900" class="rounded-lg w-90 h-80 object-cover" alt="Brand 2">
+                <img src="https://images-static.nykaa.com/creatives/961f099c-e2c6-4fb2-a92c-66e27bfbb857/default.jpg?tr=cm-pad_resize,w-900" class="rounded-lg w-90 h-80 object-cover" alt="Brand 3">
+                <img src="https://images-static.nykaa.com/creatives/87b0eaec-0ff4-4da6-bc83-bf1d176d744d/default.jpg?tr=cm-pad_resize,w-900" class="rounded-lg w-90 h-80 object-cover" alt="Brand 4">
+                <img src="https://images-static.nykaa.com/creatives/6cb4ab00-74be-4f52-a7b4-e2a5828938c7/default.jpg?tr=cm-pad_resize,w-900" class="rounded-lg w-90 h-80 object-cover" alt="Brand 5">
+                <img src="https://images-static.nykaa.com/creatives/bf5dee3b-a658-404d-9005-af390d4a5ccb/default.jpg?tr=cm-pad_resize,w-900" class="rounded-lg w-90 h-80 object-cover" alt="Brand 6">
+            </div>
+            <button id="nextBrand" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-300 p-2 rounded-full">⏭️</button>
+        </div>
+    </section>
+
+
+    <!-- Brands You Will Love Section -->
+    <section class="container mx-auto py-8">
+        <h2 class="text-2xl font-bold text-gray-800 text-center mb-6">Brands You Will Love</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Brand 1 -->
+            <div class="bg-white shadow-md p-4 rounded-lg text-center">
+                <img src="https://images-static.nykaa.com/creatives/8b6fc5ca-3c96-4c4e-b010-f6f40f84b98c/default.jpg?tr=cm-pad_resize,w-450" class="w-125 h-90 object-cover rounded-lg" alt="Brand 1">
+                <h3 class="text-lg font-semibold mt-2">Flat 10% Off
+                    On entire Range</h3>
+            </div>
+            <!-- Brand 2 -->
+            <div class="bg-white shadow-md p-4 rounded-lg text-center">
+                <img src="https://images-static.nykaa.com/creatives/cc3b565d-3603-4b9c-913c-c840137bf91e/default.jpg?tr=cm-pad_resize,w-450" class="w-125 h-90 object-cover rounded-lg" alt="Brand 2">
+                <h3 class="text-lg font-semibold mt-2">Upto 35% Off On Entire Range</h3>
+            </div>
+            <!-- Brand 3 -->
+            <div class="bg-white shadow-md p-4 rounded-lg text-center">
+                <img src="https://images-static.nykaa.com/creatives/c5315b04-f433-437a-82d4-13b8b27bb268/default.jpg?tr=cm-pad_resize,w-450" class="w-125 h-90 object-cover rounded-lg" alt="Brand 3">
+                <h3 class="text-lg font-semibold mt-2">Upto 60% Off
+                    On Bestsellers!</h3>
+            </div>
+            <!-- Brand 4 -->
+            <div class="bg-white shadow-md p-4 rounded-lg text-center">
+                <img src="https://images-static.nykaa.com/creatives/5318e657-ed57-4be4-b5d6-c8d3af7f7cc0/default.jpg?tr=cm-pad_resize,w-450" class="w-125 h-90 object-cover rounded-lg" alt="Brand 4">
+                <h3 class="text-lg font-semibold mt-2">For Glass Skin!
+                    Leaves No White Cast</h3>
+            </div>
+            <!-- Brand 5 -->
+            <div class="bg-white shadow-md p-4 rounded-lg text-center">
+                <img src="https://images-static.nykaa.com/creatives/663deef2-6ec9-4d2e-bb1d-ee7f04ee8e5f/default.jpg?tr=cm-pad_resize,w-450" class="w-125 h-90 object-cover rounded-lg" alt="Brand 5">
+                <h3 class="text-lg font-semibold mt-2">Sun Protection
+                    For All Skin Types</h3>
+            </div>
+            <!-- Brand 6 -->
+            <div class="bg-white shadow-md p-4 rounded-lg text-center">
+                <img src="https://images-static.nykaa.com/creatives/0ade15d9-2701-4589-8cc0-69fce3960f21/default.jpg?tr=cm-pad_resize,w-450" class="w-125 h-90 object-cover rounded-lg" alt="Brand 6">
+                <h3 class="text-lg font-semibold mt-2">Free Gifts on ₹999
+                    Range Starts @ ₹425</h3>
+            </div>
+            <!-- Brand 7 -->
+            <div class="bg-white shadow-md p-4 rounded-lg text-center">
+                <img src="https://images-static.nykaa.com/creatives/efc003b8-894d-43bd-87c6-22145ecea433/default.jpg?tr=cm-pad_resize,w-450" class="w-125 h-90 object-cover rounded-lg" alt="Brand 6">
+                <h3 class="text-lg font-semibold mt-2">Upto 20% Off
+                    On Entire Range</h3>
+            </div>
+            <!-- Brand 8 -->
+            <div class="bg-white shadow-md p-4 rounded-lg text-center">
+                <img src="https://images-static.nykaa.com/creatives/184c900c-557e-43dc-bd04-b53d22e27f0b/default.jpg?tr=cm-pad_resize,w-450" class="w-125 h-90 object-cover rounded-lg" alt="Brand 6">
+                <h3 class="text-lg font-semibold mt-2">Upto 35% off</h3>
+            </div>
+            <!-- Brand 9 -->
+            <div class="bg-white shadow-md p-4 rounded-lg text-center">
+                <img src="https://images-static.nykaa.com/creatives/89464d57-45c8-402a-82ce-d32770a7e30c/default.jpg?tr=cm-pad_resize,w-450" class="w-125 h-90 object-cover rounded-lg" alt="Brand 6">
+                <h3 class="text-lg font-semibold mt-2">Upto 20% Off</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Section -->
+
+    <section class="container mx-auto py-8">
+        <img src="https://images-static.nykaa.com/uploads/7fcff3aa-8069-410b-9e74-b604eff9a1bc.jpg?tr=cm-pad_resize,w-1800" class="w-full h-auto object-cover" alt="Skincare Image">
+    </section>
+
+    <!-- CSMS Test Section -->
+
+    <h2 class="text-2xl font-bold text-gray-800 text-center mb-6">Take The CSMS Test</h2>
+
+    <section class="container mx-auto py-8">
+        <a href="csmsTest.html">
+            <img src="https://images-static.nykaa.com/uploads/30924073-c030-4e09-9cf2-921ff86b80a2.gif" class="w-full h-auto object-cover" alt="Skincare Image">
+        </a>
+    </section>
+
+    <!-- Shop by Skin Type -->
+
+    <section class="container mx-auto py-8 text-center">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Shop by Skin Type</h2>
+        <div class="flex justify-center space-x-6">
+            <!-- Dry Skin -->
+            <div class="flex flex-col items-center">
+                <a href="DrySkin.html">
+                    <img src="https://images-static.nykaa.com/uploads/41e579ea-684b-4712-a687-ac2a8386287f.jpg?tr=cm-pad_resize,w-225" 
+                         class="rounded-full w-40 h-40 object-cover border-2 border-gray-300 hover:border-pink-500 transition-all" 
+                         alt="Dry Skin">
+                </a>
+                <p class="text-gray-700 mt-2">Dry Skin</p>
+            </div>
+            
+            <!-- Oily Skin -->
+            <div class="flex flex-col items-center">
+                <a href="OilySkin.html">
+                <img src="https://images-static.nykaa.com/uploads/13072a67-a812-4c9c-ba02-538446d248ff.jpg?tr=cm-pad_resize,w-225" class="rounded-full w-40 h-40 object-cover border-2 border-gray-300 hover:border-pink-500 transition-all" alt="Oily Skin">
+                </a>
+                <p class="text-gray-700 mt-2">Oily Skin</p>
+            </div>
+            <!-- Combination Skin -->
+            <div class="flex flex-col items-center">
+                <a href ="Combinational.html">
+                <img src="https://images-static.nykaa.com/uploads/7dad329b-77e6-46be-aaee-a228604e55d4.jpg?tr=cm-pad_resize,w-225" class="rounded-full w-40 h-40 object-cover border-2 border-gray-300 hover:border-pink-500 transition-all" alt="Combination Skin">
+                </a>
+                <p class="text-gray-700 mt-2">Combination Skin</p>
+            </div>
+            <!-- Sensitive Skin -->
+            <div class="flex flex-col items-center">
+                <a href="SensitiveSkin.html">
+                <img src="https://images-static.nykaa.com/uploads/55b70444-d7ff-4006-81ee-010cbc9b7115.jpg?tr=cm-pad_resize,w-225" class="rounded-full w-40 h-40 object-cover border-2 border-gray-300 hover:border-pink-500 transition-all" alt="Sensitive Skin">
+                </a>
+                <p class="text-gray-700 mt-2">Sensitive Skin</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Shop By Concern -->
+
+    <section class="container mx-auto py-8 text-center">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Shop by Concern</h2>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6 justify-center">
+            <!-- Concern 1 -->
+            <a href="AcneAndBlemishes.html" class="block">
+                <img src="https://images-static.nykaa.com/uploads/1f16ae04-6adf-41e5-8fda-fa35e9858a47.jpg?tr=cm-pad_resize,w-450" 
+                     class="w-55 h-40 object-cover rounded-lg border-2 border-gray-300 hover:border-pink-500 transition-all" 
+                     alt="Acne And Blemishes">
+                <p class="text-gray-700 mt-2 font-semibold">Acne Care</p>
+            </a>
+            <!-- Concern 2 -->
+            <a href="FineLineAndWrinkles.html" class="block">
+                <img src="https://images-static.nykaa.com/uploads/fe008477-3511-48fe-9e2b-f1e3d603801a.png?tr=cm-pad_resize,w-450" 
+                     class="w-55 h-40 object-cover rounded-lg border-2 border-gray-300 hover:border-pink-500 transition-all" 
+                     alt="Fine Lines And Wrinkles">
+                <p class="text-gray-700 mt-2 font-semibold">Dull Skin</p>
+            </a>
+            <!-- Concern 3 -->
+            <a href="EnlargedPores.html" class="block">
+                <img src="https://images-static.nykaa.com/uploads/b06505c1-c7c4-4cd8-9589-da3fe2802757.jpg?tr=cm-pad_resize,w-450" 
+                     class="w-55 h-40 object-cover rounded-lg border-2 border-gray-300 hover:border-pink-500 transition-all" 
+                     alt="Enlarged Pores">
+                <p class="text-gray-700 mt-2 font-semibold">Enlarged Pores</p>
+            </a>
+            <!-- Concern 4 -->
+            <a href="Pigmentation.html" class="block">
+                <img src="https://images-static.nykaa.com/uploads/97d65ae2-8f10-4576-a9ce-f40e987e9503.png?tr=cm-pad_resize,w-450" 
+                     class="w-55 h-40 object-cover rounded-lg border-2 border-gray-300 hover:border-pink-500 transition-all" 
+                     alt="Pigmentation">
+                <p class="text-gray-700 mt-2 font-semibold">Pigmentation</p>
+            </a>
+            <!-- Concern 5 -->
+            <a href="DarkUnderEyeCircles.html" class="block">
+                <img src="https://images-static.nykaa.com/uploads/8cc47257-163a-4f0f-91e6-c072c7283acc.jpg?tr=cm-pad_resize,w-450" 
+                     class="w-55 h-40 object-cover rounded-lg border-2 border-gray-300 hover:border-pink-500 transition-all" 
+                     alt="Dark under eye circles">
+                <p class="text-gray-700 mt-2 font-semibold">Dark Under Eye Circles</p>
+            </a>
+        </div>
+    </section>
+    
+    <!-- Curated Stores -->
+    <h2 class="text-2xl font-bold text-gray-800 text-center mb-6">Curated Section</h2>
+    <section class="container mx-auto py-8">
+        <img src="https://images-static.nykaa.com/uploads/c7390cdd-95b0-42cb-99bd-bd10d65fbac4.JPG?tr=cm-pad_resize,w-1800" class="w-full h-auto object-cover" alt="Skincare Image">
+    </section>
+
+    <!-- Trending Now -->
+
+    <section class="container mx-auto py-8 text-center">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Trending Now</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 -mx-2 justify-items-center">
+            <!-- Trending 1 -->
+            <a href="Sunscreens.html" class="block">
+                <img src="https://images-static.nykaa.com/uploads/5b62aff0-73de-4d3e-9b81-8df2c3cb6342.jpg?tr=cm-pad_resize,w-300" 
+                     class="w-60 lg:w-60 h-30 object-cover rounded-lg border-2 border-gray-300 hover:border-pink-500 transition-all" 
+                     alt="Sunscreens">
+                <p class="text-gray-700 mt-2 font-semibold">Sunscreens</p>
+            </a>
+            <!-- Trending 2 -->
+            <a href="BarrierBoosters.html" class="block">
+                <img src="https://images-static.nykaa.com/uploads/10e7b44c-81f9-44a2-9cd3-2e410da1128a.jpg?tr=cm-pad_resize,w-300" 
+                     class="w-60 lg:w-60 h-30 object-cover rounded-lg border-2 border-gray-300 hover:border-pink-500 transition-all" 
+                     alt="Barrier Boosters">
+                <p class="text-gray-700 mt-2 font-semibold">Barrier Boosters</p>
+            </a>
+            <!-- Trending 3 -->
+            <a href="Niacinamide.html" class="block">
+                <img src="https://images-static.nykaa.com/uploads/a14e050d-78a8-42b2-ba40-8aa4a9cbb091.jpg?tr=cm-pad_resize,w-300" 
+                     class="w-60 lg:w-60 h-30 object-cover rounded-lg border-2 border-gray-300 hover:border-pink-500 transition-all" 
+                     alt="Niacinamide">
+                <p class="text-gray-700 mt-2 font-semibold">Niacinamide</p>
+            </a>
+            <!-- Trending 4 -->
+            <a href="ElevatedLipCare.html" class="block">
+                <img src="https://images-static.nykaa.com/uploads/8ec588e2-9bbf-43fc-bdb8-28a06699f801.jpg?tr=cm-pad_resize,w-300" 
+                     class="w-60 lg:w-60 h-30 object-cover rounded-lg border-2 border-gray-300 hover:border-pink-500 transition-all" 
+                     alt="Elevated Lip Care">
+                <p class="text-gray-700 mt-2 font-semibold">Elevated Lip care</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Luxe Indulgences -->
+    <section class="container mx-auto py-8 text-center">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Luxe Indulgences</h2>
+        <p class="text-gray-600 mt-2">For the Love of your Skin</p>
+        <section class="container mx-auto text-center py-8 relative">
+            <div class="carousel-container overflow-hidden">
+                <div id="luxuryCarousel" class="flex space-x-6 w-max transition-transform duration-500">
+       
+                <!-- Product 1 -->
+                <a href="LuxuryProduct1.html" class="block">
+                    <img src="https://images-static.nykaa.com/uploads/e1fce2c4-5d59-4acb-b4ca-1f1ba64ff0d3.jpg?tr=cm-pad_resize,w-450"
+                         class="w-90 h-60 object-cover rounded-lg border-2 border-gray-300 hover:border-gold-500 transition-all" 
+                         alt="Luxury Product 1">
+                </a>
+                <!-- Product 2 -->
+                <a href="LuxuryProduct2.html" class="block">
+                    <img src="https://images-static.nykaa.com/uploads/3644ac9b-28ce-4cd7-bcd0-2d4fb18c5534.jpg?tr=cm-pad_resize,w-450"
+                         class="w-90 h-60 object-cover rounded-lg border-2 border-gray-300 hover:border-gold-500 transition-all" 
+                         alt="Luxury Product 2">
+                </a>
+                <!-- Product 3 -->
+                <a href="LuxuryProduct3.html" class="block">
+                    <img src="https://images-static.nykaa.com/uploads/83a2297d-ca69-448c-a572-b1f4670d3eef.jpg?tr=cm-pad_resize,w-450"
+                         class="w-90 h-60 object-cover rounded-lg border-2 border-gray-300 hover:border-gold-500 transition-all" 
+                         alt="Luxury Product 3">
+                </a>
+                <!-- Product 4 -->
+                <a href="LuxuryProduct4.html" class="block">
+                    <img src="https://images-static.nykaa.com/uploads/1b5e4e52-5452-4a85-a796-92e3cd496c31.jpg?tr=cm-pad_resize,w-450"
+                         class="w-90 h-60 object-cover rounded-lg border-2 border-gray-300 hover:border-gold-500 transition-all" 
+                         alt="Luxury Product 4">
+                </a>
+                <!-- Product 5 -->
+                <a href="LuxuryProduct4.html" class="block">
+                    <img src="https://images-static.nykaa.com/uploads/55578aa0-ddfa-4914-b0da-57e90e4b1130.jpg?tr=cm-pad_resize,w-450"
+                         class="w-90 h-60 object-cover rounded-lg border-2 border-gray-300 hover:border-gold-500 transition-all" 
+                         alt="Luxury Product 4">
+                </a>
+                <!-- Product 6 -->
+                <a href="LuxuryProduct4.html" class="block">
+                    <img src="https://images-static.nykaa.com/uploads/1d8fa92f-db06-43df-bdc9-ac4ce74e10d8.jpg?tr=cm-pad_resize,w-450"
+                         class="w-90 h-60 object-cover rounded-lg border-2 border-gray-300 hover:border-gold-500 transition-all" 
+                         alt="Luxury Product 4">
+                </a>
+                <!-- Product 7 -->
+                <a href="LuxuryProduct4.html" class="block">
+                    <img src="https://images-static.nykaa.com/uploads/23bf7725-f424-4669-9452-43b73644d5a6.jpg?tr=cm-pad_resize,w-450"
+                         class="w-90 h-60 object-cover rounded-lg border-2 border-gray-300 hover:border-gold-500 transition-all" 
+                         alt="Luxury Product 4">
+                </a>
+                <!-- Product 8 -->
+                <a href="LuxuryProduct4.html" class="block">
+                    <img src="https://images-static.nykaa.com/uploads/eea86478-0775-44c1-ad13-d40f68711b18.jpg?tr=cm-pad_resize,w-450"
+                         class="w-90 h-60 object-cover rounded-lg border-2 border-gray-300 hover:border-gold-500 transition-all" 
+                         alt="Luxury Product 4">
+                </a>
+            </div>
+        </div>
+    
+       
+    <!-- Budget Buys -->
+
+    <section class="container mx-auto py-8 text-center">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Budget Buys</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 -mx-2 justify-items-center">
+            <!-- Trending 1 -->
+            <a href="At99.html" class="block">
+                <img src="https://images-static.nykaa.com/uploads/cceb3575-c2fd-4662-aa4e-a90b5d17c5ea.jpg?tr=cm-pad_resize,w-300" 
+                     class="w-60 lg:w-60 h-30 object-cover rounded-lg border-2 border-gray-300 hover:border-pink-500 transition-all" 
+                     alt="Cleansers at Rs.99">
+                <p class="text-gray-700 mt-2 font-semibold">Cleansers at Rs.99</p>
+            </a>
+            <!-- Trending 2 -->
+            <a href="At199.html" class="block">
+                <img src="https://images-static.nykaa.com/uploads/49857e0e-ad3b-4f8b-8b48-989101dcbd68.jpg?tr=cm-pad_resize,w-300" 
+                     class="w-60 lg:w-60 h-30 object-cover rounded-lg border-2 border-gray-300 hover:border-pink-500 transition-all" 
+                     alt="Moisturisers starting at Rs.199">
+                <p class="text-gray-700 mt-2 font-semibold">Moisturisers starting at Rs.199</p>
+            </a>
+            <!-- Trending 3 -->
+            <a href="At249.html" class="block">
+                <img src="https://images-static.nykaa.com/uploads/4a29fba9-ba00-4c7d-95ee-d1842d28d8d8.jpg?tr=cm-pad_resize,w-300" 
+                     class="w-60 lg:w-60 h-30 object-cover rounded-lg border-2 border-gray-300 hover:border-pink-500 transition-all" 
+                     alt="Serums starting at Rs.249">
+                <p class="text-gray-700 mt-2 font-semibold">Serums starting at Rs.249</p>
+            </a>
+            <!-- Trending 4 -->
+            <a href="Under199.html" class="block">
+                <img src="https://images-static.nykaa.com/uploads/9ba8069f-5345-4248-ad55-e9078d7a9fff.jpg?tr=cm-pad_resize,w-300" 
+                     class="w-60 lg:w-60 h-30 object-cover rounded-lg border-2 border-gray-300 hover:border-pink-500 transition-all" 
+                     alt="Sunscreens under Rs.199">
+                <p class="text-gray-700 mt-2 font-semibold">Sunscreens under Rs.199</p>
+            </a>
+        </div>
+    </section>
+
+    {% include 'footer.html' %}
+
+    
+    <!-- Auto-slide Script -->
+    <script>
+        function startCarousel() {
+            const carousel = document.getElementById("categoryCarousel");
+            let scrollAmount = 0;
+            const slideWidth = 200; 
+
+            setInterval(() => {
+                if (scrollAmount >= carousel.scrollWidth - carousel.parentElement.clientWidth) {
+                    scrollAmount = 0;
+                } else {
+                    scrollAmount += slideWidth;
+                }
+                carousel.parentElement.scrollTo({ left: scrollAmount, behavior: "smooth" });
+            }, 2000);
+        }
+        startCarousel();
+    </script>
+
+<script>
+    function startCarousel() {
+        const carousel = document.getElementById("brandCarousel");
+        let scrollAmount = 0;
+        const slideWidth = 200; 
+
+        setInterval(() => {
+            if (scrollAmount >= carousel.scrollWidth - carousel.parentElement.clientWidth) {
+                scrollAmount = 0;
+            } else {
+                scrollAmount += slideWidth;
+            }
+            carousel.parentElement.scrollTo({ left: scrollAmount, behavior: "smooth" });
+        }, 2000);
+    }
+    startCarousel();
+</script>
+
+<script>
+    function startCarousel() {
+        const carousel = document.getElementById("luxuryCarousel");
+        let scrollAmount = 0;
+        const slideWidth = 200; 
+
+        setInterval(() => {
+            if (scrollAmount >= carousel.scrollWidth - carousel.parentElement.clientWidth) {
+                scrollAmount = 0;
+            } else {
+                scrollAmount += slideWidth;
+            }
+            carousel.parentElement.scrollTo({ left: scrollAmount, behavior: "smooth" });
+        }, 2000);
+    }
+    startCarousel();
+</script>
+</body>
+</html>

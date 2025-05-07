@@ -118,7 +118,10 @@
 {% endif %}
 
             
-                <a href="#" class="cart-icon"><i class="fa fa-shopping-cart"></i></a>
+<a href="javascript:void(0);" onclick="openCart()" class="cart-icon">
+    <i class="fa fa-shopping-cart"></i>
+</a>
+
             </div>
         </div>
     </header>
@@ -136,7 +139,7 @@
                 </div>
             </div>
             <div class="dropdown">
-                <a href="#" class="nav-link">Skin</a>
+                <a href="{% url 'skincare' %}" class="nav-link">Skin</a>
                 <div class="dropdown-menu">
                     <a href="#">Cleansers</a>
                     <a href="#">Moisturizers</a>
@@ -171,7 +174,7 @@
                 </div>
             </div>
             <div class="dropdown">
-                <a href="#" class="nav-link">Natural</a>
+                <a href="{% url 'natural' %}" class="nav-link">Natural</a>
                 <div class="dropdown-menu">
                     <a href="#">Organic Products</a>
                     <a href="#">Ayurvedic</a>
@@ -203,7 +206,7 @@
                 </div>
             </div>
             <div class="dropdown">
-                <a href="#" class="nav-link">Men</a>
+                <a href="{% url 'men_page' %}"  class="nav-link">Men</a>
                 <div class="dropdown-menu">
                     <a href="#">Shaving Cream</a>
                     <a href="#">Beard Oils</a>
@@ -776,6 +779,8 @@
         
     
         {% include 'footer.html' %}
+        {% include 'cart.html' %}
+
 
 </body>
 </html>

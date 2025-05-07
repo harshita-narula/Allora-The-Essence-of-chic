@@ -68,10 +68,10 @@ def verify_otp(request):
             try:
                 otp_obj = MobileOTP.objects.get(mobile_number=mobile, otp=entered_otp)
                 
-                # Get or create user
+              
                 user, created = User.objects.get_or_create(username=mobile)
 
-                # Tell Django which backend to use
+                
                 backend = get_backends()[0]
                 user.backend = backend.__module__ + '.' + backend.__class__.__name__
 
@@ -98,6 +98,10 @@ def sign_in_mobile(request):
 
 def makeup_store(request):
     return render(request, 'makeup.html')
+
+
+def skincare(request):
+    return render(request, 'skincare.html')
 
 def gift_cards(request):
     return render(request, 'gift_cards.html') 
@@ -128,6 +132,10 @@ def babyoils_page(request):
 
 def bodywash_page(request):
     return render(request, 'bodywash.html')
+
+def men_page(request):
+    return render(request, 'men.html')
+
 
 from django.db.models import Q
 from django.core.paginator import Paginator
@@ -173,3 +181,107 @@ def makeup_products(request):
     }
 
     return render(request, 'makeup_products.html', context)
+
+from .models import MenProduct
+
+def men_products(request):
+    products = MenProduct.objects.all()
+
+    # Filters
+    selected_brands = request.GET.getlist('brand')
+    selected_categories = request.GET.getlist('category')
+    selected_price = request.GET.get('price')
+    query = request.GET.get('q')
+
+    if query:
+        products = products.filter(name__icontains=query)
+
+    if selected_brands:
+        products = products.filter(brand__in=selected_brands)
+
+    if selected_categories:
+        products = products.filter(category__in=selected_categories)
+
+    if selected_price:
+        price_range = selected_price.split('-')
+        if len(price_range) == 2:
+            min_price = float(price_range[0])
+            max_price = float(price_range[1])
+            products = products.filter(discounted_price__gte=min_price, discounted_price__lte=max_price)
+
+    # Pagination
+    from django.core.paginator import Paginator
+    paginator = Paginator(products, 9)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {
+        'products': page_obj,
+        'page_obj': page_obj,
+        'selected_brands': selected_brands,
+        'selected_categories': selected_categories,
+        'selected_price': selected_price,
+        'query': query,
+    }
+
+    return render(request, 'men_products.html', context)
+
+def natural_page(request):
+    return render(request, 'natural.html')
+
+def luxe(request):
+    return render(request, 'luxe.html')
+
+
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import MenProduct  
+
+def cart_view(request):
+   
+    cart = request.session.get('cart', {})
+    cart_items = []
+    total = 0
+
+
+    if cart:
+        for product_id, quantity in cart.items():
+            product = get_object_or_404(MenProduct, id=product_id)  
+            subtotal = product.discounted_price * quantity
+            total += subtotal
+            cart_items.append({
+                'product': product,
+                'quantity': quantity,
+                'subtotal': subtotal
+            })
+
+    context = {
+        'cart_items': cart_items,
+        'total': total
+    }
+
+    return render(request, 'cart.html', context)
+
+def add_to_cart(request, product_id):
+    product = get_object_or_404(MenProduct, id=product_id)  
+    cart = request.session.get('cart', {})
+
+    if str(product_id) in cart:
+        cart[str(product_id)] += 1
+    else:
+        cart[str(product_id)] = 1
+
+    request.session['cart'] = cart
+
+    
+    return redirect('cart')
+
+def remove_from_cart(request, product_id):
+    cart = request.session.get('cart', {})
+    if str(product_id) in cart:
+        del cart[str(product_id)]
+        request.session['cart'] = cart
+    return redirect('cart')
+
+def categories_view(request):
+    
+    return render(request, 'categories.html')

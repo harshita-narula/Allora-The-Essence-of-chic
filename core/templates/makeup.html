@@ -386,7 +386,7 @@ function shopTheLookScrollRight() {
 <script>
 function luxScrollSlider(direction) {
     const slider = document.querySelector('.lux-product-slider');
-    const scrollAmount = 200; // Adjust as needed
+    const scrollAmount = 200; 
     slider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
 }
 </script>
@@ -466,7 +466,7 @@ function luxScrollSlider(direction) {
         if (!isDown) return;
         e.preventDefault();
         const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 2; // Scroll speed
+        const walk = (x - startX) * 2; 
         slider.scrollLeft = scrollLeft - walk;
     });
 });
