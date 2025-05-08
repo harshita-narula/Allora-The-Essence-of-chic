@@ -285,3 +285,6 @@ def remove_from_cart(request, product_id):
 def categories_view(request):
     
     return render(request, 'categories.html')
+
+def chatbot_view(request):
+    return render(request, 'chatbot.html')

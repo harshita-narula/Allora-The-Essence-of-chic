@@ -3,9 +3,6 @@ from . import views
 from .views import google_login_redirect
 from django.contrib.auth.views import LogoutView
 
-
-
-
 urlpatterns = [
     path('', views.index, name='index'),  
     path('sign-in-mobile/', views.sign_in_mobile, name='sign_in_mobile'),  
@@ -34,4 +31,5 @@ urlpatterns = [
     path('add-to-cart/<int:product_id>/', views.add_to_cart, name='add_to_cart'),
     path('remove-from-cart/<int:product_id>/', views.remove_from_cart, name='remove_from_cart'),
     path('categories/', views.categories_view, name='categories'),
+    path('chatbot/', views.chatbot_view, name='chatbot'),
 ]
